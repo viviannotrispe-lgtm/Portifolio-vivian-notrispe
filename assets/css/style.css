@@ -1,0 +1,490 @@
+/* ============================================
+   DESIGN TOKENS
+   Troque estas variáveis para mudar a identidade
+   visual inteira do site.
+   ============================================ */
+:root {
+  --paper: #F3F2ED;
+  --paper-2: #EAE7DD;
+  --ink: #15151A;
+  --ink-soft: #5B5B63;
+  --accent: #1F6F5C;      /* verde petróleo — usado em links/destaques */
+  --accent-warm: #D9645C; /* usado só em pequenos toques (tags, hover) */
+  --line: rgba(21, 21, 26, 0.14);
+  --line-strong: rgba(21, 21, 26, 0.3);
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --gutter: clamp(20px, 5vw, 64px);
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 96px;
+  padding: 32px 0 48px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* ============================================
+   HOME — HERO
+   ============================================ */
+.hero {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.02;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero-sub {
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  max-width: 46ch;
+  margin-top: 20px;
+}
+
+.spec-sheet {
+  border-left: 1px solid var(--line-strong);
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.spec-row dt { color: var(--ink-soft); }
+.spec-row dd { margin: 0; text-align: right; }
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 88px 0 28px;
+}
+
+.section-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+/* ============================================
+   PROJECT CARDS (home + lista)
+   ============================================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 64px;
+}
+
+.project-card {
+  background: var(--paper);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background 0.2s ease;
+}
+
+.project-card:hover { background: var(--paper-2); }
+
+.project-card .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.project-card .thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+}
+
+.project-card .meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  padding: 3px 8px;
+  border-radius: 100px;
+  color: var(--ink-soft);
+}
+
+/* ============================================
+   FILTROS DO ÍNDICE DE PROJETOS
+   ============================================ */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.filter-tab {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 100px;
+  padding: 6px 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-tab.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* ============================================
+   ÍNDICE DE PROJETOS (catálogo com dot-leaders)
+   ============================================ */
+.catalog {
+  border-top: 1px solid var(--line-strong);
+}
+
+.catalog-row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto auto 24px;
+  align-items: baseline;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding-left 0.2s ease;
+}
+
+.catalog-row:hover { padding-left: 8px; }
+
+.catalog-num {
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.catalog-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.catalog-title .leader {
+  flex: 1;
+  border-bottom: 1px dotted var(--line-strong);
+  height: 0;
+  margin: 0 4px;
+  transform: translateY(-6px);
+}
+
+.catalog-cat {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.catalog-year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.catalog-arrow {
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.catalog-row:hover .catalog-arrow { transform: translateX(4px); }
+
+@media (max-width: 720px) {
+  .catalog-row {
+    grid-template-columns: 32px 1fr;
+    grid-template-areas:
+      "num title"
+      ". cat"
+      ". year";
+    row-gap: 4px;
+  }
+  .catalog-num { grid-area: num; }
+  .catalog-title { grid-area: title; white-space: normal; }
+  .catalog-cat { grid-area: cat; }
+  .catalog-year { grid-area: year; }
+  .catalog-arrow { display: none; }
+}
+
+/* ============================================
+   PÁGINA DE PROJETO (case study)
+   ============================================ */
+.case-header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-header h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  max-width: 20ch;
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.case-meta dt { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--ink-soft); }
+.case-meta dd { margin: 6px 0 0; font-family: var(--font-body); }
+
+.case-cover {
+  margin: 40px 0 0;
+  aspect-ratio: 16/9;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.case-cover img { width: 100%; height: 100%; object-fit: cover; }
+
+.case-body {
+  max-width: 720px;
+  margin: 56px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.case-body h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.case-body p { color: var(--ink-soft); }
+
+.case-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.case-gallery .ph {
+  aspect-ratio: 4/3;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+}
+
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 80px;
+  border-top: 1px solid var(--line-strong);
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.case-nav a:hover { color: var(--accent); }
+
+@media (max-width: 720px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .spec-sheet { border-left: none; padding-left: 0; border-top: 1px solid var(--line-strong); padding-top: 20px; }
+  .project-grid { grid-template-columns: 1fr; }
+  .case-meta { grid-template-columns: repeat(2, 1fr); }
+  .case-gallery { grid-template-columns: 1fr; }
+}
+
+/* Estado vazio (quando ainda não há projetos cadastrados) */
+.empty-state {
+  padding: 48px 0;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  border: 1px dashed var(--line-strong);
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  padding: 10px 18px;
+  margin-top: 24px;
+}
+.btn:hover { background: var(--ink); color: var(--paper); }

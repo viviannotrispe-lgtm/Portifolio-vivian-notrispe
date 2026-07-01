@@ -1,0 +1,15 @@
+{
+  "projects": [
+    {
+      "id": "projeto-exemplo",
+      "titulo": "Nome do Projeto",
+      "ano": "2026",
+      "categoria": "Design",
+      "resumo": "Uma frase curta que resume o desafio e o que você entregou.",
+      "capa": "",
+      "tags": ["UX", "Mobile", "0→1"],
+      "link": "projetos/projeto-exemplo.html",
+      "destaque": true
+    }
+  ]
+}
