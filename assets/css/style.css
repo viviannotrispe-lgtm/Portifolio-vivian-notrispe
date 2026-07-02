@@ -456,6 +456,14 @@ h1, h2, h3 {
   font-size: 0.85rem;
 }
 
+.stat-chart img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+  border: 1px solid var(--line);
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;

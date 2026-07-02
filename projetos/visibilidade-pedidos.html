@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visibilidade de Pedidos: destravando a instalação — Vivian Notrispe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Projetos</a></li>
+          <li><a href="../sobre.html">Sobre</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-header wrap">
+      <span class="mono">Design · 2026</span>
+      <h1>Visibilidade de Pedidos: destravando a instalação</h1>
+
+      <dl class="case-meta">
+        <div><dt>Papel</dt><dd>PM + UX Principal (PMX), DRI da iniciativa</dd></div>
+        <div><dt>Time</dt><dd>1 designer estagiária, 3 devs, 1 engineering manager</dd></div>
+        <div><dt>Duração</dt><dd>2 meses (discovery → entrega)</dd></div>
+        <div><dt>Ferramentas</dt><dd>Figma, Hubspot, Mixpanel</dd></div>
+      </dl>
+
+      <div class="case-cover">
+        <img src="../assets/img/pedidos-timeline.jpg" alt="Tela do produto mostrando a linha do tempo de status de um pedido, da compra ao envio e instalação dos dispositivos.">
+      </div>
+    </section>
+
+    <section class="case-body wrap">
+      <div>
+        <h2>Contexto</h2>
+        <p>Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes — maior até do que o processo comercial ou o próprio CS. Atuo como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes na mesma plataforma B2B de telemetria veicular (hardware + software para gestão de frotas).</p>
+        <p>O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado — o que afeta a operação da frota — até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
+      </div>
+
+      <div>
+        <h2>Problema</h2>
+        <p>Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o único caminho era abrir um ticket com atendimento ou CS. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente — só não estava traduzida para o cliente.</p>
+      </div>
+
+      <div>
+        <h2>Processo</h2>
+        <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade — desde o pedido do dispositivo até a instalação concluída.</p>
+        <p>O diagnóstico confirmou o que a pesquisa da Basic Value já indicava: a maior fonte de atrito não era a instalação em si, mas a tradução entre o que a operação enxergava internamente — tickets e status no Hubspot — e o que o cliente conseguia entender sozinho, sem precisar perguntar.</p>
+      </div>
+
+      <div>
+        <h2>Solução</h2>
+        <p>A entrega central foi uma linha do tempo detalhada de status do pedido, dentro da própria página de pedidos do produto — traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
+
+        <figure class="stat-chart">
+          <span class="mono">Página de pedidos · linha do tempo de status</span>
+          <img src="../assets/img/pedidos-timeline.jpg" alt="Tela da página de pedidos mostrando a linha do tempo com as etapas de instalação, envio dos dispositivos e pedido realizado, cada uma com endereço, previsão de chegada e ticket relacionado.">
+          <figcaption>A linha do tempo traduz os status internos de operação (tickets do Hubspot) para uma nomenclatura que o cliente entende sozinho, sem contato com atendimento.</figcaption>
+        </figure>
+
+        <p>Ao lado da timeline, desenhamos uma visão de detalhe por dispositivo, que resolve o caso mais comum de dúvida do CS: pedidos com múltiplos dispositivos e datas de instalação diferentes, em que o cliente só queria saber quais já tinham sido instalados.</p>
+
+        <figure class="stat-chart">
+          <span class="mono">Página de pedidos · detalhe por dispositivo</span>
+          <img src="../assets/img/pedidos-detalhe-dispositivo.jpg" alt="Tela da página de pedidos mostrando uma tabela com o status individual de cada dispositivo do pedido, veículo associado, endereço de entrega e ticket relacionado.">
+          <figcaption>Visão detalhada por dispositivo, criada para pedidos com múltiplos itens e datas de instalação diferentes.</figcaption>
+        </figure>
+
+        <p>Como parte do mesmo esforço, o time também entregou um atalho de agendamento direto pela página de pedidos, conectado a um agente de agendamento por IA — uma entrega que vou detalhar num case à parte.</p>
+      </div>
+
+      <div>
+        <h2>Resultado</h2>
+        <p>Nos meses seguintes ao lançamento, o acesso ao fluxo de pedidos e agendamento cresceu 19%, e 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+        <p>O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informação que já existe internamente e nunca foi traduzida para quem precisa dela. Tornar essa tradução visível — e não a resposta de um atendente — é o que de fato reduz o atrito e a dependência de suporte.</p>
+      </div>
+    </section>
+
+    <nav class="case-nav wrap">
+      <a href="index.html">← Todos os projetos</a>
+      <a href="basic-value.html">Próximo projeto →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="mono">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html">contato</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

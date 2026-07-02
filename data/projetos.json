@@ -10,6 +10,17 @@
       "tags": ["Pesquisa", "Onboarding", "Retenção"],
       "link": "projetos/basic-value.html",
       "destaque": true
+    },
+    {
+      "id": "visibilidade-pedidos",
+      "titulo": "Visibilidade de Pedidos: destravando a instalação",
+      "ano": "2026",
+      "categoria": "Design",
+      "resumo": "Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.",
+      "capa": "",
+      "tags": ["Design", "Onboarding", "Visibilidade"],
+      "link": "projetos/visibilidade-pedidos.html",
+      "destaque": true
     }
   ]
 }
