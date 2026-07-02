@@ -37,7 +37,7 @@
       </dl>
 
       <div class="case-cover">
-        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ilustração combinando o fluxo do pedido — pedido realizado, envio, agendamento e instalação — com uma versão simplificada da página de pedidos, mostrando o resumo por tipo de pedido e a tabela de status.">
+        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ilustração combinando o fluxo do pedido (pedido realizado, envio, agendamento e instalação) com uma versão simplificada da página de pedidos, mostrando o resumo por tipo de pedido e a tabela de status.">
           <defs>
             <marker id="pedidosCoverArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
@@ -120,8 +120,8 @@
     <section class="case-body wrap">
       <div>
         <h2>Contexto</h2>
-        <p>Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes — maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes na mesma plataforma B2B de telemetria veicular (hardware + software para gestão de frotas).</p>
-        <p>O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado — o que afeta a operação da frota — até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
+        <p>Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes, maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes na mesma plataforma B2B de telemetria veicular (hardware + software para gestão de frotas).</p>
+        <p>O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado, o que afeta a operação da frota, até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
       </div>
 
       <div>
@@ -131,12 +131,18 @@
 
       <div>
         <h2>Processo</h2>
-        <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade — desde o pedido do dispositivo até a instalação concluída.</p>
-        <p>O diagnóstico apontou quatro causas específicas para a falta de clareza: a data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos — menos relevante pro cliente naquele momento — tinha mais destaque na tela; cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas; o painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes; e, na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</p>
+        <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade, desde o pedido do dispositivo até a instalação concluída.</p>
+        <p>O diagnóstico apontou quatro causas específicas para a falta de clareza:</p>
+        <ul>
+          <li>A data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos, menos relevante pro cliente naquele momento, tinha mais destaque na tela.</li>
+          <li>Cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas.</li>
+          <li>O painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes.</li>
+          <li>Na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</li>
+        </ul>
 
         <figure class="stat-chart stat-chart--wide">
           <span class="mono">Fluxo do pedido · onde o cliente dependia do CS</span>
-          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do fluxo do pedido em quatro etapas — pedido realizado, envio dos dispositivos, agendamento e instalação — mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
+          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do fluxo do pedido em quatro etapas (pedido realizado, envio dos dispositivos, agendamento e instalação), mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
             <defs>
               <marker id="pedidosArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
@@ -195,11 +201,13 @@
           </svg>
           <figcaption>Mapeamento do fluxo de onboarding-instalação: em três das quatro etapas do pedido, a falta de visibilidade só era resolvida com um contato reativo ao CS.</figcaption>
         </figure>
+
+        <p>Trabalhar com o Hubspot e com processos operacionais fora da esfera de produto foi um desafio à parte. Encontramos gaps que não dava para resolver só no front, porque vinham de operações maiores que o time não controlava, e os dados de envio, instalação e devolução viviam em pipelines diferentes, sem nenhum ponto único que os conectasse. Para lidar com isso, especificamos uma nova API que concentrasse essas informações antes de traduzi-las para o cliente, e enxugamos boa parte dessas etapas internas sem comprometer a visibilidade que o cliente via do outro lado.</p>
       </div>
 
       <div>
         <h2>Solução</h2>
-        <p>A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos — hoje espalhadas em tickets internos separados — junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
+        <p>A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos, hoje espalhadas em tickets internos separados, junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
 
         <figure class="stat-chart">
           <span class="mono">Página de pedidos · visão geral</span>
@@ -207,7 +215,7 @@
           <figcaption>Visão geral da página de pedidos, com o resumo por tipo de pedido e uma recomendação automática para agendar instalações pendentes.</figcaption>
         </figure>
 
-        <p>A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status — traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
+        <p>A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status, traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
 
         <figure class="stat-chart">
           <span class="mono">Página de pedidos · linha do tempo de status</span>
@@ -223,7 +231,7 @@
           <figcaption>Visão detalhada por dispositivo, criada para pedidos com múltiplos itens e datas de instalação diferentes.</figcaption>
         </figure>
 
-        <p>Como parte do mesmo esforço, o time também entregou um atalho de agendamento direto pela página de pedidos, conectado a um agente de agendamento por IA — uma entrega que vou detalhar num case à parte.</p>
+        <p>Como parte do mesmo esforço, o time também entregou um atalho de agendamento direto pela página de pedidos, conectado a um agente de agendamento por IA, entrega que vou detalhar num case à parte.</p>
       </div>
 
       <div>
@@ -231,8 +239,8 @@
 
         <div class="result-stats">
           <div class="result-stat">
-            <span class="value">19%</span>
-            <span class="label">adoção do novo fluxo em 3 meses — meta era 20%</span>
+            <span class="value">32%</span>
+            <span class="label">das frotas acessando a página de pedidos em junho (partiu de 0% antes do lançamento)</span>
           </div>
           <div class="result-stat">
             <span class="value">40%</span>
@@ -240,7 +248,58 @@
           </div>
         </div>
 
-        <p>Antes do lançamento, estabelecemos a meta de 20% de adoção do novo fluxo de pedidos e agendamento nos primeiros três meses. Batemos 19% — muito próximo da meta — e, junto disso, 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+        <p>Antes do lançamento, estabelecemos a meta de 20% de adoção da nova página de pedidos nos primeiros três meses. Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março. A partir daí a adoção saltou de 0% para um pico de 35% em maio, se estabilizando em 32% em junho, superando a meta com folga. Junto disso, 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+
+        <figure class="stat-chart">
+          <span class="mono">Acesso à página de pedidos · % das frotas · jan-jun/26</span>
+          <svg viewBox="0 0 900 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando o acesso à página de pedidos subindo de 0% em janeiro e fevereiro para 21% em março, 29% em abril, um pico de 35% em maio, e se estabilizando em 32% em junho, superando a meta de 20%.">
+            <defs>
+              <linearGradient id="pedidosResultGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <line x1="80" y1="40" x2="880" y2="40" stroke="var(--line)" stroke-width="1"/>
+            <line x1="80" y1="150" x2="880" y2="150" stroke="var(--line)" stroke-width="1"/>
+            <line x1="80" y1="260" x2="880" y2="260" stroke="var(--ink-soft)" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <line x1="80" y1="370" x2="880" y2="370" stroke="var(--line)" stroke-width="1"/>
+            <line x1="80" y1="480" x2="880" y2="480" stroke="var(--line-strong)" stroke-width="1"/>
+
+            <text x="68" y="45" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">40%</text>
+            <text x="68" y="155" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">30%</text>
+            <text x="68" y="265" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink)" font-weight="600">20%</text>
+            <text x="68" y="375" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">10%</text>
+            <text x="68" y="485" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">0%</text>
+            <text x="85" y="253" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">meta: 20%</text>
+
+            <path d="M 80 480 L 240 480 L 400 249 L 560 161 L 720 95 L 880 128 L 880 480 L 80 480 Z" fill="url(#pedidosResultGradient)" stroke="none"/>
+            <path d="M 80 480 L 240 480 L 400 249 L 560 161 L 720 95 L 880 128" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <g fill="var(--paper-2)" stroke="var(--accent)" stroke-width="2">
+              <circle cx="80" cy="480" r="4"/>
+              <circle cx="240" cy="480" r="4"/>
+              <circle cx="400" cy="249" r="4"/>
+              <circle cx="560" cy="161" r="4"/>
+            </g>
+
+            <circle cx="720" cy="95" r="6.5" fill="var(--accent-warm)"/>
+            <text x="720" y="72" text-anchor="middle" font-family="var(--font-display)" font-size="20" font-weight="700" fill="var(--accent-warm)">35%</text>
+            <text x="720" y="112" text-anchor="middle" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">pico em maio</text>
+
+            <circle cx="880" cy="128" r="5.5" fill="var(--paper-2)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="855" y="150" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink)" font-weight="600">32%</text>
+
+            <text x="80" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jan</text>
+            <text x="240" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">fev</text>
+            <text x="400" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">mar</text>
+            <text x="560" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">abr</text>
+            <text x="720" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">mai</text>
+            <text x="880" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jun</text>
+          </svg>
+          <figcaption>Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março. Julho ficou de fora por ter dados incompletos no momento da leitura.</figcaption>
+        </figure>
+
         <p>O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informação que já existe internamente e nunca foi traduzida para quem precisa dela. Tornar essa tradução visível é o que de fato reduz o atrito e a dependência de suporte.</p>
       </div>
     </section>
