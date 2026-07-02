@@ -476,6 +476,41 @@ h1, h2, h3 {
   border: 1px solid var(--line);
 }
 
+/* ============================================
+   NÚMEROS EM DESTAQUE (dentro de Resultado)
+   ============================================ */
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.result-stat {
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: 24px;
+}
+
+.result-stat .value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--accent);
+  line-height: 1;
+}
+
+.result-stat .value .accent-warm { color: var(--accent-warm); }
+
+.result-stat .label {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
