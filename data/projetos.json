@@ -1,14 +1,14 @@
 {
   "projects": [
     {
-      "id": "projeto-exemplo",
-      "titulo": "Nome do Projeto",
+      "id": "basic-value",
+      "titulo": "Basic Value: métrica de ativação para reduzir churn",
       "ano": "2026",
-      "categoria": "Design",
-      "resumo": "Uma frase curta que resume o desafio e o que você entregou.",
+      "categoria": "Pesquisa & Produto",
+      "resumo": "Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.",
       "capa": "",
-      "tags": ["UX", "Mobile", "0→1"],
-      "link": "projetos/projeto-exemplo.html",
+      "tags": ["Pesquisa", "Onboarding", "Retenção"],
+      "link": "projetos/basic-value.html",
       "destaque": true
     }
   ]
