@@ -416,6 +416,7 @@ h1, h2, h3 {
   overflow: hidden;
 }
 .case-cover img { width: 100%; height: 100%; object-fit: cover; }
+.case-cover svg { width: 100%; height: 100%; display: block; }
 
 .case-body {
   max-width: 720px;
@@ -432,6 +433,29 @@ h1, h2, h3 {
 
 .case-body p { color: var(--ink-soft); }
 
+/* ============================================
+   GRÁFICO DE ESTATÍSTICA (dentro de case-body)
+   ============================================ */
+.stat-chart {
+  margin: 8px 0;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: 24px clamp(12px, 3vw, 28px) 16px;
+}
+
+.stat-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+}
+
+.stat-chart figcaption {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -443,6 +467,45 @@ h1, h2, h3 {
   aspect-ratio: 4/3;
   background: var(--paper-2);
   border: 1px solid var(--line);
+}
+
+/* ============================================
+   FRENTES DE INICIATIVA (cards com ícone)
+   ============================================ */
+.initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 8px 0;
+}
+
+.initiative-card {
+  border-top: 3px solid var(--accent);
+  padding-top: 16px;
+}
+
+.initiative-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.initiative-card h3 {
+  font-size: 1.05rem;
+  margin: 14px 0 10px;
+}
+
+.initiative-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.initiative-card li::marker {
+  color: var(--accent);
 }
 
 .case-nav {
@@ -464,6 +527,7 @@ h1, h2, h3 {
   .project-grid { grid-template-columns: 1fr; }
   .case-meta { grid-template-columns: repeat(2, 1fr); }
   .case-gallery { grid-template-columns: 1fr; }
+  .initiative-grid { grid-template-columns: 1fr; }
 }
 
 /* Estado vazio (quando ainda não há projetos cadastrados) */
