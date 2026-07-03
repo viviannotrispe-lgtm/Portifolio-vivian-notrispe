@@ -433,6 +433,17 @@ h1, h2, h3 {
 
 .case-body p { color: var(--ink-soft); }
 
+.case-body ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-body ul li { color: var(--ink-soft); }
+.case-body ul li::marker { color: var(--accent); }
+
 /* ============================================
    GRÁFICO DE ESTATÍSTICA (dentro de case-body)
    ============================================ */
@@ -454,6 +465,61 @@ h1, h2, h3 {
   margin-top: 10px;
   color: var(--ink-soft);
   font-size: 0.85rem;
+}
+
+/* Versão mais larga do .stat-chart, para diagramas que precisam de mais espaço
+   do que a coluna de leitura de 720px permite. Sem efeito abaixo de 1000px de
+   viewport, onde a coluna já ocupa a largura disponível. */
+@media (min-width: 1000px) {
+  .stat-chart--wide {
+    width: calc(100% + 240px);
+    max-width: 960px;
+    margin-left: -120px;
+    margin-right: -120px;
+  }
+}
+
+.stat-chart img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+  border: 1px solid var(--line);
+}
+
+/* ============================================
+   NÚMEROS EM DESTAQUE (dentro de Resultado)
+   ============================================ */
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.result-stat {
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: 24px;
+}
+
+.result-stat .value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--accent);
+  line-height: 1;
+}
+
+.result-stat .value .accent-warm { color: var(--accent-warm); }
+
+.result-stat .label {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
 }
 
 .case-gallery {
