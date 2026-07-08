@@ -21,6 +21,17 @@
       "tags": ["Design", "Onboarding", "Visibilidade"],
       "link": "projetos/visibilidade-pedidos.html",
       "destaque": true
+    },
+    {
+      "id": "recomendacoes-inteligentes",
+      "titulo": "Recomendações Inteligentes: a régua determinística por trás da IA",
+      "ano": "2026",
+      "categoria": "Pesquisa & Produto",
+      "resumo": "Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.",
+      "capa": "",
+      "tags": ["IA", "Priorização", "Onboarding"],
+      "link": "projetos/recomendacoes-inteligentes.html",
+      "destaque": true
     }
   ]
 }
