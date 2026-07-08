@@ -1,0 +1,421 @@
+/* ============================================
+   DESIGN SYSTEM — COMPONENTES (v2, exploração)
+   Depende de design-system-tokens.css
+   ============================================ */
+
+.ds-page {
+  background: var(--ds-background);
+  color: var(--ds-foreground);
+  font-family: var(--ds-font-body);
+  line-height: 1.5;
+}
+
+.ds-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 56px);
+}
+
+.ds-section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-section h2 {
+  font-family: var(--ds-font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.ds-section .ds-section-sub {
+  color: var(--ds-muted-foreground);
+  font-size: 0.95rem;
+  margin: 0 0 32px;
+  max-width: 60ch;
+}
+
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ============================================
+   CORES — swatches
+   ============================================ */
+.ds-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.ds-swatch {
+  border-radius: var(--ds-radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--ds-border);
+}
+
+.ds-swatch-color {
+  height: 64px;
+}
+
+.ds-swatch-label {
+  font-family: var(--ds-font-mono);
+  font-size: 0.72rem;
+  padding: 8px 10px;
+  background: var(--ds-card);
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.ds-swatch-label span:last-child { color: var(--ds-muted-foreground); }
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--ds-font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-full);
+  padding: 11px 22px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.ds-btn:active { transform: translateY(1px); }
+
+.ds-btn:focus-visible {
+  outline: 2px solid var(--ds-ring);
+  outline-offset: 2px;
+}
+
+.ds-btn--sm { padding: 7px 14px; font-size: 0.8rem; }
+.ds-btn--lg { padding: 14px 28px; font-size: 1rem; }
+
+.ds-btn--primary {
+  background: var(--ds-primary);
+  color: var(--ds-primary-foreground);
+}
+.ds-btn--primary:hover { background: var(--ds-primary-hover); }
+
+.ds-btn--secondary {
+  background: var(--ds-btn-secondary-bg);
+  color: var(--ds-btn-secondary-fg);
+  border-color: var(--ds-btn-secondary-border);
+}
+.ds-btn--secondary:hover { background: var(--ds-btn-secondary-bg-hover); }
+
+.ds-btn--rose {
+  background: var(--ds-btn-rose-bg);
+  color: var(--ds-btn-rose-fg);
+  border-color: var(--ds-btn-rose-border);
+}
+.ds-btn--rose:hover { background: var(--ds-btn-rose-bg-hover); }
+
+.ds-btn--accent {
+  background: var(--ds-accent);
+  color: var(--ds-accent-foreground);
+}
+.ds-btn--accent:hover { background: var(--ds-accent-700); }
+
+.ds-btn--outline {
+  background: transparent;
+  border-color: var(--ds-border);
+  color: var(--ds-foreground);
+}
+.ds-btn--outline:hover { background: var(--ds-muted); border-color: var(--ds-gray-300); }
+
+.ds-btn--ghost {
+  background: transparent;
+  color: var(--ds-accent-600);
+}
+.ds-btn--ghost:hover { background: var(--ds-accent-50); }
+
+.ds-btn:disabled,
+.ds-btn[aria-disabled="true"] {
+  background: var(--ds-gray-200);
+  color: var(--ds-gray-400);
+  border-color: var(--ds-gray-200);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================
+   TAG / BADGE
+   ============================================ */
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--ds-font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: var(--ds-secondary);
+  color: var(--ds-secondary-foreground);
+  border-radius: var(--ds-radius-full);
+  padding: 4px 10px;
+}
+
+/* Mantida por compatibilidade de markup — mesmo estilo neutro do .ds-tag,
+   pra não pesar o DS com mais uma cor. */
+.ds-tag--accent {
+  background: var(--ds-secondary);
+  color: var(--ds-secondary-foreground);
+}
+
+/* ============================================
+   CARDS (uso na home)
+   ============================================ */
+.ds-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.ds-card {
+  background: var(--ds-card);
+  color: var(--ds-card-foreground);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ds-card:hover {
+  box-shadow: var(--ds-shadow);
+  transform: translateY(-2px);
+}
+
+.ds-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-brand-100);
+  color: var(--ds-brand-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ds-card__icon--accent { background: var(--ds-accent-100); color: var(--ds-accent-700); }
+
+.ds-card__title {
+  font-family: var(--ds-font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ds-card__desc {
+  color: var(--ds-muted-foreground);
+  font-size: 0.9rem;
+  margin: 0;
+  flex: 1;
+}
+
+.ds-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+/* Cards de destaque em fundo sólido — hero/CTA na home.
+   --feature = maroon, --feature-accent = ciano escuro. Texto e ícone
+   claros; .ds-card__icon já funciona sem alteração (fundo claro
+   próprio, contrasta em qualquer um dos dois fundos escuros). */
+.ds-card--feature,
+.ds-card--feature-accent {
+  color: #fff;
+  border: none;
+}
+
+.ds-card--feature { background: var(--ds-brand-900); }
+.ds-card--feature-accent { background: var(--ds-accent-700); }
+
+.ds-card--feature .ds-card__desc,
+.ds-card--feature-accent .ds-card__desc {
+  color: rgba(255,255,255,0.78);
+}
+
+/* ============================================
+   CARD COM IMAGEM
+   ============================================ */
+.ds-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--ds-gray-100);
+  color: var(--ds-muted-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ds-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ds-card__image-placeholder {
+  font-family: var(--ds-font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Layout vertical: imagem em cima, conteúdo embaixo */
+.ds-card--media {
+  padding: 0;
+  overflow: hidden;
+}
+
+.ds-card--media .ds-card__body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Layout horizontal: imagem à esquerda, conteúdo à direita —
+   pensado pra cards mais largos (destaques de página inicial). */
+.ds-card--media-split {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
+  gap: 0;
+}
+
+.ds-card--media-split .ds-card__image {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.ds-card--media-split .ds-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .ds-card--media-split {
+    grid-template-columns: 1fr;
+  }
+  .ds-card--media-split .ds-card__image {
+    aspect-ratio: 16 / 10;
+    height: auto;
+  }
+}
+
+/* Par de botões lado a lado (cards com imagem) — cada botão ocupa
+   espaço igual; quebra pra baixo em colunas estreitas (ex.: dentro
+   do .ds-card--media-split). */
+.ds-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.ds-card__actions .ds-btn {
+  flex: 1 1 140px;
+}
+
+/* ============================================
+   LISTA DE PROJETOS
+   ============================================ */
+.ds-list {
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-list-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto 20px;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 12px;
+  border-bottom: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease, padding-left 0.15s ease;
+}
+
+.ds-list-item:hover {
+  background: var(--ds-muted);
+  padding-left: 18px;
+}
+
+.ds-list-item__swatch {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--ds-radius-sm);
+  flex-shrink: 0;
+}
+
+.ds-list-item__body { min-width: 0; }
+
+.ds-list-item__title {
+  font-family: var(--ds-font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-list-item__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ds-list-item__year {
+  font-family: var(--ds-font-mono);
+  font-size: 0.82rem;
+  color: var(--ds-muted-foreground);
+  white-space: nowrap;
+}
+
+.ds-list-item__arrow {
+  color: var(--ds-brand-500);
+  transition: transform 0.15s ease;
+}
+
+.ds-list-item:hover .ds-list-item__arrow { transform: translateX(4px); }
+
+@media (max-width: 640px) {
+  .ds-list-item {
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+      "swatch title"
+      ".      year";
+    row-gap: 6px;
+  }
+  .ds-list-item__swatch { grid-area: swatch; }
+  .ds-list-item__body { grid-area: title; }
+  .ds-list-item__year { grid-area: year; }
+  .ds-list-item__arrow { display: none; }
+}

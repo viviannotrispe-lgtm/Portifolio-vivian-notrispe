@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System v2 (exploração) — Vivian Notrispe</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/design-system-tokens.css">
+  <link rel="stylesheet" href="assets/css/design-system-components.css">
+  <style>
+    body { margin: 0; }
+    .ds-hero {
+      padding: 64px 0 40px;
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-hero h1 {
+      font-family: var(--ds-font-display);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin: 0 0 12px;
+    }
+    .ds-hero p {
+      color: var(--ds-muted-foreground);
+      max-width: 60ch;
+      margin: 0;
+    }
+    .ds-hero .ds-tag { margin-bottom: 16px; }
+    svg.ds-icon { width: 22px; height: 22px; }
+  </style>
+</head>
+<body class="ds-page">
+
+  <div class="ds-hero">
+    <div class="ds-wrap">
+      <span class="ds-tag ds-tag--accent">Exploração — não publicado</span>
+      <h1>Design System v2</h1>
+      <p>
+        Nova identidade visual (vermelho/rosa/ciano, estilo shadcn) sendo testada
+        lado a lado com o design system atual do portfólio, sem substituir nada ainda.
+        Classes com prefixo <code>ds-</code> em <code>design-system-tokens.css</code> e
+        <code>design-system-components.css</code>.
+      </p>
+    </div>
+  </div>
+
+  <section class="ds-section">
+    <div class="ds-wrap">
+      <h2>Cores primárias</h2>
+      <p class="ds-section-sub">Escala do brand (maroon → crimson → rosa), usada em CTAs e destaques principais.</p>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-900)"></div><div class="ds-swatch-label"><span>900</span><span>#880D1E</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-700)"></div><div class="ds-swatch-label"><span>700</span><span>#A81530</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-600)"></div><div class="ds-swatch-label"><span>600</span><span>#DD2D4A</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-500)"></div><div class="ds-swatch-label"><span>500</span><span>#E5486A</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-400)"></div><div class="ds-swatch-label"><span>400</span><span>#EC5C7E</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-300)"></div><div class="ds-swatch-label"><span>300</span><span>#F26A8D</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-200)"></div><div class="ds-swatch-label"><span>200</span><span>#F49CBB</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-brand-100)"></div><div class="ds-swatch-label"><span>100</span><span>#F9C4D6</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="ds-wrap">
+      <h2>Cor de accent</h2>
+      <p class="ds-section-sub">Escala ciano/teal, usada com moderação: ícones secundários, tags, pequenos destaques.</p>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-700)"></div><div class="ds-swatch-label" style="color:#fff;background:var(--ds-accent-700)"><span>700</span><span style="color:#fff">#006C79</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-600)"></div><div class="ds-swatch-label"><span>600</span><span>#2B96A5</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-500)"></div><div class="ds-swatch-label"><span>500</span><span>#3AAEBD</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-400)"></div><div class="ds-swatch-label"><span>400</span><span>#51C7D6</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-300)"></div><div class="ds-swatch-label"><span>300</span><span>#7AD4E0</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-200)"></div><div class="ds-swatch-label"><span>200</span><span>#A2E1E9</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-accent-100)"></div><div class="ds-swatch-label"><span>100</span><span>#CBEEF3</span></div></div>
+      </div>
+      <p class="ds-section-sub" style="margin:12px 0 0;">700 (<code>#006C79</code>) é o tom escuro reservado pra texto/ícone sobre fundo ciano claro (100) — usado em <code>.ds-card__icon--accent</code>. As tags (<code>.ds-tag</code>) usam cinza neutro, não essa escala, pra não pesar o DS.</p>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="ds-wrap">
+      <h2>Neutros (cinza)</h2>
+      <p class="ds-section-sub">Base de fundo, texto e bordas — independente da paleta de cor.</p>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-900)"></div><div class="ds-swatch-label" style="color:#fff;background:var(--ds-gray-900)"><span>900</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-700)"></div><div class="ds-swatch-label"><span>700</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-500)"></div><div class="ds-swatch-label"><span>500</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-300)"></div><div class="ds-swatch-label"><span>300</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-200)"></div><div class="ds-swatch-label"><span>200</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-100)"></div><div class="ds-swatch-label"><span>100</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:var(--ds-gray-50)"></div><div class="ds-swatch-label"><span>50</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="ds-wrap">
+      <h2>Botões</h2>
+      <p class="ds-section-sub">Variantes por função + 3 tamanhos.</p>
+      <div class="ds-row" style="margin-bottom:16px;">
+        <button class="ds-btn ds-btn--primary">Primary</button>
+        <button class="ds-btn ds-btn--secondary">Secondary</button>
+        <button class="ds-btn ds-btn--rose">Rose</button>
+        <button class="ds-btn ds-btn--accent">Accent</button>
+        <button class="ds-btn ds-btn--outline">Outline</button>
+        <button class="ds-btn ds-btn--ghost">Ghost</button>
+        <button class="ds-btn ds-btn--primary" disabled>Disabled</button>
+      </div>
+      <p class="ds-section-sub" style="margin:0 0 16px;">
+        <code>rose</code> ainda não é usado em nenhuma tela — reservado pro projeto quando precisar de um bordado mais suave que o primary.
+      </p>
+      <div class="ds-row">
+        <button class="ds-btn ds-btn--primary ds-btn--sm">Small</button>
+        <button class="ds-btn ds-btn--primary">Medium</button>
+        <button class="ds-btn ds-btn--primary ds-btn--lg">Large</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="ds-wrap">
+      <h2>Cards</h2>
+      <p class="ds-section-sub">Pra usar na home: destaques, serviços, ou blocos de resumo.</p>
+
+      <h3 style="font-family:var(--ds-font-display); font-size:0.95rem; margin:0 0 12px;">Ícone + link (ghost)</h3>
+      <div class="ds-card-grid" style="margin-bottom:32px;">
+        <div class="ds-card">
+          <div class="ds-card__icon">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="ds-card__title">Product Design</h3>
+          <p class="ds-card__desc">Do diagnóstico à especificação: pesquisa, fluxos e telas prontas pra dev.</p>
+          <div class="ds-card__footer">
+            <a href="#" class="ds-btn ds-btn--ghost ds-btn--sm">Ver mais →</a>
+          </div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-card__icon ds-card__icon--accent">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3 class="ds-card__title">Pesquisa</h3>
+          <p class="ds-card__desc">Entrevistas, síntese e priorização orientadas por dado, não por achismo.</p>
+          <div class="ds-card__footer">
+            <a href="#" class="ds-btn ds-btn--ghost ds-btn--sm">Ver mais →</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--ds-font-display); font-size:0.95rem; margin:0 0 12px;">Com imagem</h3>
+      <p class="ds-section-sub" style="margin-top:-6px;">
+        Imagem em <code>.ds-card__image</code> — cada card recebe a sua própria ilustração; esta é só o exemplo.
+      </p>
+      <div class="ds-card-grid" style="margin-bottom:20px;">
+        <div class="ds-card ds-card--media">
+          <div class="ds-card__image"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
+          <div class="ds-card__body">
+            <h3 class="ds-card__title">Teste de card</h3>
+            <p class="ds-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac feugiat metus.</p>
+            <div class="ds-card__actions">
+              <button class="ds-btn ds-btn--secondary ds-btn--sm">Button</button>
+              <button class="ds-btn ds-btn--accent ds-btn--sm">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ds-card ds-card--media-split" style="margin-bottom:32px;">
+        <div class="ds-card__image"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
+        <div class="ds-card__body">
+          <div class="ds-card__icon ds-card__icon--accent">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l3 9-3 9M12 3l3 9-3 9"/></svg>
+          </div>
+          <h3 class="ds-card__title">Teste de card</h3>
+          <p class="ds-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac feugiat metus. Etiam ut odio a felis malesuada sagittis.</p>
+          <div class="ds-card__actions">
+            <button class="ds-btn ds-btn--secondary ds-btn--sm">Button</button>
+            <button class="ds-btn ds-btn--accent ds-btn--sm">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--ds-font-display); font-size:0.95rem; margin:0 0 12px;">Fundo sólido</h3>
+      <div class="ds-card-grid">
+        <div class="ds-card ds-card--feature-accent">
+          <div class="ds-card__icon ds-card__icon--accent">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l3 9-3 9M12 3l3 9-3 9"/></svg>
+          </div>
+          <h3 class="ds-card__title">Teste de card</h3>
+          <p class="ds-card__desc">Teste de texto maior com mais informação.</p>
+          <div class="ds-card__footer">
+            <button class="ds-btn ds-btn--secondary ds-btn--sm">Button</button>
+          </div>
+        </div>
+        <div class="ds-card ds-card--feature">
+          <div class="ds-card__icon">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l3 9-3 9M12 3l3 9-3 9"/></svg>
+          </div>
+          <h3 class="ds-card__title">Teste de card</h3>
+          <p class="ds-card__desc">Teste de texto maior com mais informação.</p>
+          <div class="ds-card__footer">
+            <button class="ds-btn ds-btn--rose ds-btn--sm">Button</button>
+          </div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-card__icon ds-card__icon--accent">
+            <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l3 9-3 9M12 3l3 9-3 9"/></svg>
+          </div>
+          <h3 class="ds-card__title">Teste de card</h3>
+          <p class="ds-card__desc">Teste de texto maior com mais informação.</p>
+          <div class="ds-card__footer">
+            <button class="ds-btn ds-btn--accent ds-btn--sm">Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section" style="border-bottom:none;">
+    <div class="ds-wrap">
+      <h2>Lista de projetos</h2>
+      <p class="ds-section-sub">Componente pra listar cases — usa os mesmos dados de <code>data/projetos.json</code>.</p>
+      <div class="ds-list" id="ds-project-list"></div>
+    </div>
+  </section>
+
+  <script>
+    const swatchColors = ['var(--ds-brand-400)', 'var(--ds-accent-400)', 'var(--ds-brand-600)'];
+    fetch('data/projetos.json')
+      .then(r => r.json())
+      .then(data => {
+        const list = document.getElementById('ds-project-list');
+        data.projects.forEach((p, i) => {
+          const a = document.createElement('a');
+          a.className = 'ds-list-item';
+          a.href = p.link;
+          a.innerHTML = `
+            <div class="ds-list-item__swatch" style="background:${swatchColors[i % swatchColors.length]}"></div>
+            <div class="ds-list-item__body">
+              <h3 class="ds-list-item__title">${p.titulo}</h3>
+              <div class="ds-list-item__tags">
+                ${p.tags.map(t => `<span class="ds-tag">${t}</span>`).join('')}
+              </div>
+            </div>
+            <span class="ds-list-item__year">${p.ano}</span>
+            <span class="ds-list-item__arrow">→</span>
+          `;
+          list.appendChild(a);
+        });
+      });
+  </script>
+</body>
+</html>
