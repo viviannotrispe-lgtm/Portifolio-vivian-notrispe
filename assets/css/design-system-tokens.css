@@ -87,4 +87,21 @@
   --ds-font-display: "Space Grotesk", sans-serif;
   --ds-font-body: "Inter", sans-serif;
   --ds-font-mono: "IBM Plex Mono", monospace;
+
+  /* --- compat com o design system antigo (style.css) ---
+     As capas .case-cover das páginas de projeto (ainda não migradas)
+     usam essas variáveis. Como a home busca esse SVG em runtime e injeta
+     aqui, sem isso ele renderiza com var() indefinida (preto/quebrado).
+     Remover quando as páginas de projeto migrarem pros tokens --ds-*. */
+  --paper: var(--ds-background);
+  --paper-2: var(--ds-muted);
+  --ink: var(--ds-foreground);
+  --ink-soft: var(--ds-muted-foreground);
+  --line: var(--ds-border);
+  --line-strong: var(--ds-gray-300);
+  --accent: var(--ds-brand-600);
+  --accent-warm: var(--ds-accent-600);
+  --font-display: var(--ds-font-display);
+  --font-body: var(--ds-font-body);
+  --font-mono: var(--ds-font-mono);
 }
