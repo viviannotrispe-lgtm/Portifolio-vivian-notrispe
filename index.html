@@ -6,17 +6,126 @@
   <title>Vivian Notrispe — Design & Produto</title>
   <meta name="description" content="Portfólio de design e produto de Vivian Notrispe.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/design-system-tokens.css">
+  <link rel="stylesheet" href="assets/css/design-system-components.css">
+  <style>
+    body { margin: 0; }
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">Vivian Notrispe<span>.</span></a>
+    .home-wrap { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+    .home-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--ds-background);
+    }
+    .home-header .home-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .home-logo {
+      font-family: var(--ds-font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ds-foreground);
+      text-decoration: none;
+    }
+    .home-nav { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .home-nav a {
+      font-family: var(--ds-font-body);
+      font-size: 0.92rem;
+      color: var(--ds-muted-foreground);
+      text-decoration: none;
+    }
+    .home-nav a:hover { color: var(--ds-foreground); }
+    .home-nav a[aria-current="page"] { color: var(--ds-primary); font-weight: 600; }
+
+    .home-hero {
+      padding: 64px 0 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .home-hero h1 {
+      font-family: var(--ds-font-display);
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 20px;
+    }
+    .home-hero h1 .accent { color: var(--ds-primary); }
+    .home-hero-sub {
+      color: var(--ds-muted-foreground);
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      max-width: 56ch;
+      margin: 0 auto 40px;
+    }
+    .home-hero-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      text-align: left;
+    }
+    .home-hero-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .home-hero-meta .ds-tag {
+      text-transform: none;
+      letter-spacing: normal;
+      font-family: var(--ds-font-body);
+      font-size: 0.85rem;
+      padding: 6px 14px;
+    }
+
+    .home-section { padding: 48px 0; }
+    .home-section + .home-section { border-top: 1px solid var(--ds-border); }
+    .home-section h2 {
+      font-family: var(--ds-font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      margin: 0 0 24px;
+    }
+
+    .home-featured { margin-top: 20px; }
+
+    .home-footer {
+      border-top: 1px solid var(--ds-border);
+      padding: 32px 0 48px;
+    }
+    .home-footer .home-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--ds-font-mono);
+      font-size: 0.82rem;
+      color: var(--ds-muted-foreground);
+    }
+    .home-footer a { color: inherit; text-decoration: none; }
+    .home-footer a:hover { color: var(--ds-foreground); }
+
+    .icon-badge-text {
+      font-family: var(--ds-font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .home-hero-row { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body class="ds-page">
+
+  <header class="home-header">
+    <div class="home-wrap">
+      <a class="home-logo" href="index.html">Vivian Notrispe.</a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
+        <ul class="home-nav">
+          <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="projetos/index.html">Projetos</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="contato.html">Contato</a></li>
@@ -26,43 +135,132 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <h1>Design de produto,<br><em>com raciocínio.</em></h1>
-          <p class="hero-sub">
-            Sou Vivian Notrispe, designer de produto focado em transformar problemas
-            complexos em interfaces simples de usar. Abaixo estão alguns
-            projetos recentes.
-          </p>
+    <section class="home-hero">
+      <div class="home-wrap">
+        <h1>Vivian <span class="accent">Notrispe.</span></h1>
+        <p class="home-hero-sub">
+          Transformando problemas complexos em produtos simples.<br>
+          Criando experiências intuitivas para decisões mais claras.
+        </p>
+        <div class="home-hero-row">
+          <div class="home-hero-meta">
+            <span class="ds-tag">Rio de Janeiro - RJ</span>
+            <span class="ds-tag">Product &amp; UX Design</span>
+            <a href="contato.html" class="ds-btn ds-btn--ghost ds-btn--sm">Ver contato</a>
+          </div>
+          <a href="projetos/index.html" class="ds-btn ds-btn--accent">Ver projetos</a>
         </div>
-        <dl class="spec-sheet">
-          <div class="spec-row"><dt>Baseado em</dt><dd>Rio de Janeiro, BR</dd></div>
-          <div class="spec-row"><dt>Foco</dt><dd>Product &amp; UX Design</dd></div>
-          <div class="spec-row"><dt>Disponível para</dt><dd>Novos projetos</dd></div>
-          <div class="spec-row"><dt>Contato</dt><dd><a href="contato.html">Ver contato →</a></dd></div>
-        </dl>
       </div>
     </section>
 
-    <section class="wrap">
-      <div class="section-head">
+    <section class="home-section">
+      <div class="home-wrap">
         <h2>Trabalhos selecionados</h2>
-        <a class="mono" href="projetos/index.html">Ver todos →</a>
+
+        <div class="ds-card-grid">
+          <div class="ds-card ds-card--media">
+            <div class="ds-card__image" data-cover="projetos/visibilidade-pedidos.html"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
+            <div class="ds-card__body">
+              <h3 class="ds-card__title">Visibilidade de Pedidos: destravando a instalação</h3>
+              <p class="ds-card__desc">Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.</p>
+              <div class="ds-card__footer">
+                <a href="projetos/visibilidade-pedidos.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+              </div>
+            </div>
+          </div>
+          <div class="ds-card ds-card--media">
+            <div class="ds-card__image" data-cover="projetos/recomendacoes-inteligentes.html"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
+            <div class="ds-card__body">
+              <h3 class="ds-card__title">Recomendações Inteligentes: a régua determinística por trás da IA</h3>
+              <p class="ds-card__desc">Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.</p>
+              <div class="ds-card__footer">
+                <a href="projetos/recomendacoes-inteligentes.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-card ds-card--media-split home-featured">
+          <div class="ds-card__image" data-cover="projetos/basic-value.html"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
+          <div class="ds-card__body">
+            <div class="ds-card__icon ds-card__icon--accent">
+              <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+            </div>
+            <h3 class="ds-card__title">Basic Value: métrica de ativação para reduzir churn</h3>
+            <p class="ds-card__desc">Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.</p>
+            <div class="ds-card__footer">
+              <a href="projetos/basic-value.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project-grid" data-destaques>
-        <!-- Preenchido via JS a partir de data/projetos.json -->
+    </section>
+
+    <section class="home-section">
+      <div class="home-wrap">
+        <div class="ds-card-grid">
+          <div class="ds-card ds-card--feature">
+            <div class="ds-card__icon">
+              <span class="icon-badge-text">in</span>
+            </div>
+            <h3 class="ds-card__title">LinkedIn</h3>
+            <p class="ds-card__desc">Acompanhe bastidores e atualizações sobre os projetos.</p>
+            <div class="ds-card__footer">
+              <a href="https://www.linkedin.com/in/viviannotrispe/" target="_blank" rel="noopener" class="ds-btn ds-btn--rose ds-btn--sm">Ver perfil</a>
+            </div>
+          </div>
+          <div class="ds-card ds-card--feature-accent">
+            <div class="ds-card__icon ds-card__icon--accent">
+              <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
+            </div>
+            <h3 class="ds-card__title">GitHub</h3>
+            <p class="ds-card__desc">Código e experimentos por trás dos produtos.</p>
+            <div class="ds-card__footer">
+              <a href="https://github.com/viviannotrispe-lgtm" target="_blank" rel="noopener" class="ds-btn ds-btn--secondary ds-btn--sm">Ver repositórios</a>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card__icon ds-card__icon--accent">
+              <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <h3 class="ds-card__title">Contato</h3>
+            <p class="ds-card__desc">Vamos conversar sobre o seu próximo produto.</p>
+            <div class="ds-card__footer">
+              <a href="contato.html" class="ds-btn ds-btn--accent ds-btn--sm">Enviar mensagem</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="contato.html">contato</a> · <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a></span>
+  <footer class="home-footer">
+    <div class="home-wrap">
+      <span>© 2026 Vivian Notrispe</span>
+      <span>
+        <a href="https://github.com/viviannotrispe-lgtm" target="_blank" rel="noopener">Github</a> ·
+        <a href="https://www.linkedin.com/in/viviannotrispe/" target="_blank" rel="noopener">Linkedin</a> ·
+        <a href="contato.html">Contato</a>
+      </span>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    // Busca a ilustração de capa (.case-cover) direto da página de cada
+    // projeto, em vez de duplicar a imagem como asset separado — assim a
+    // home reflete automaticamente qualquer atualização feita no case.
+    document.querySelectorAll('[data-cover]').forEach(async (el) => {
+      try {
+        const res = await fetch(el.dataset.cover);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const cover = doc.querySelector('.case-cover');
+        if (cover) el.innerHTML = cover.innerHTML;
+      } catch (err) {
+        console.error(`Não foi possível carregar a capa de ${el.dataset.cover}:`, err);
+      }
+    });
+  </script>
 </body>
 </html>

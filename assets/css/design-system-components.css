@@ -276,6 +276,12 @@
   display: block;
 }
 
+.ds-card__image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .ds-card__image-placeholder {
   font-family: var(--ds-font-mono);
   font-size: 0.72rem;
