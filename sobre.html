@@ -23,7 +23,16 @@
           <li><a href="sobre.html" aria-current="page" data-i18n="nav.about">Sobre</a></li>
           <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
-        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>

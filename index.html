@@ -46,7 +46,12 @@
 
     .home-header nav { display: flex; align-items: center; gap: 24px; }
 
-    .lang-toggle {
+    .lang-switch { position: relative; }
+
+    .lang-switch__trigger {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-family: var(--ds-font-body);
       font-size: 0.82rem;
       font-weight: 600;
@@ -58,7 +63,44 @@
       cursor: pointer;
       transition: border-color 0.15s ease, color 0.15s ease;
     }
-    .lang-toggle:hover { border-color: var(--ds-primary); color: var(--ds-primary); }
+    .lang-switch__trigger:hover,
+    .lang-switch[data-open] .lang-switch__trigger { border-color: var(--ds-primary); color: var(--ds-primary); }
+
+    .lang-switch__caret { flex-shrink: 0; }
+
+    .lang-switch__menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      min-width: 100%;
+      background: var(--ds-card);
+      border: 1px solid var(--ds-border);
+      border-radius: var(--ds-radius);
+      padding: 4px;
+      margin: 0;
+      list-style: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      z-index: 30;
+    }
+    .lang-switch__menu[hidden] { display: none; }
+
+    .lang-switch__option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      font-family: var(--ds-font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: none;
+      border: none;
+      border-radius: var(--ds-radius-sm);
+      padding: 7px 10px;
+      color: var(--ds-muted-foreground);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .lang-switch__option:hover { background: var(--ds-muted); color: var(--ds-foreground); }
+    .lang-switch__option.is-active { color: var(--ds-primary); font-weight: 600; }
 
     .home-hero {
       padding: 64px 0 48px;
@@ -147,7 +189,16 @@
           <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
           <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
-        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
