@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vivian Notrispe — Design & Produto</title>
+  <title data-i18n="home.title">Vivian Notrispe — Design & Produto</title>
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <meta name="description" content="Portfólio de design e produto de Vivian Notrispe.">
+  <meta name="description" content="Portfólio de design e produto de Vivian Notrispe." data-i18n-attr="content=home.metaDescription">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/design-system-tokens.css">
@@ -43,6 +43,64 @@
     }
     .home-nav a:hover { color: var(--ds-foreground); }
     .home-nav a[aria-current="page"] { color: var(--ds-primary); font-weight: 600; }
+
+    .home-header nav { display: flex; align-items: center; gap: 24px; }
+
+    .lang-switch { position: relative; }
+
+    .lang-switch__trigger {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--ds-font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: none;
+      border: 1px solid var(--ds-border);
+      border-radius: var(--ds-radius-full);
+      padding: 5px 12px;
+      color: var(--ds-muted-foreground);
+      cursor: pointer;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .lang-switch__trigger:hover,
+    .lang-switch[data-open] .lang-switch__trigger { border-color: var(--ds-primary); color: var(--ds-primary); }
+
+    .lang-switch__caret { flex-shrink: 0; }
+
+    .lang-switch__menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      min-width: 100%;
+      background: var(--ds-card);
+      border: 1px solid var(--ds-border);
+      border-radius: var(--ds-radius);
+      padding: 4px;
+      margin: 0;
+      list-style: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      z-index: 30;
+    }
+    .lang-switch__menu[hidden] { display: none; }
+
+    .lang-switch__option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      font-family: var(--ds-font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: none;
+      border: none;
+      border-radius: var(--ds-radius-sm);
+      padding: 7px 10px;
+      color: var(--ds-muted-foreground);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .lang-switch__option:hover { background: var(--ds-muted); color: var(--ds-foreground); }
+    .lang-switch__option.is-active { color: var(--ds-primary); font-weight: 600; }
 
     .home-hero {
       padding: 64px 0 48px;
@@ -126,11 +184,21 @@
       <a class="home-logo" href="index.html">Vivian Notrispe.</a>
       <nav>
         <ul class="home-nav">
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="projetos/index.html">Projetos</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Início</a></li>
+          <li><a href="projetos/index.html" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -139,43 +207,43 @@
     <section class="home-hero">
       <div class="home-wrap">
         <h1>Vivian <span class="accent">Notrispe.</span></h1>
-        <p class="home-hero-sub">
+        <p class="home-hero-sub" data-i18n-html="home.heroSub">
           Transformando problemas complexos em produtos simples.<br>
           Criando experiências intuitivas para decisões mais claras.
         </p>
         <div class="home-hero-row">
           <div class="home-hero-meta">
-            <span class="ds-tag">Rio de Janeiro - RJ</span>
-            <span class="ds-tag">Product &amp; UX Design</span>
-            <a href="contato.html" class="ds-btn ds-btn--ghost ds-btn--sm">Ver contato</a>
+            <span class="ds-tag" data-i18n="home.location">Rio de Janeiro - RJ</span>
+            <span class="ds-tag" data-i18n="home.focus">Product &amp; UX Design</span>
+            <a href="contato.html" class="ds-btn ds-btn--ghost ds-btn--sm" data-i18n="home.viewContact">Ver contato</a>
           </div>
-          <a href="projetos/index.html" class="ds-btn ds-btn--accent">Ver projetos</a>
+          <a href="projetos/index.html" class="ds-btn ds-btn--accent" data-i18n="home.viewProjects">Ver projetos</a>
         </div>
       </div>
     </section>
 
     <section class="home-section">
       <div class="home-wrap">
-        <h2>Trabalhos selecionados</h2>
+        <h2 data-i18n="home.selectedWork">Trabalhos selecionados</h2>
 
         <div class="ds-card-grid">
           <div class="ds-card ds-card--media">
             <div class="ds-card__image" data-cover="projetos/visibilidade-pedidos.html"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
             <div class="ds-card__body">
-              <h3 class="ds-card__title">Visibilidade de Pedidos: destravando a instalação</h3>
-              <p class="ds-card__desc">Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.</p>
+              <h3 class="ds-card__title" data-i18n="home.cardPedidosTitle">Visibilidade de Pedidos: destravando a instalação</h3>
+              <p class="ds-card__desc" data-i18n="home.cardPedidosDesc">Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.</p>
               <div class="ds-card__footer">
-                <a href="projetos/visibilidade-pedidos.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+                <a href="projetos/visibilidade-pedidos.html" class="ds-btn ds-btn--accent ds-btn--sm" data-i18n="common.viewCase">Ver case</a>
               </div>
             </div>
           </div>
           <div class="ds-card ds-card--media">
             <div class="ds-card__image" data-cover="projetos/recomendacoes-inteligentes.html"><img src="assets/img/ilustracao-placeholder-card.png" alt=""></div>
             <div class="ds-card__body">
-              <h3 class="ds-card__title">Recomendações Inteligentes: a régua determinística por trás da IA</h3>
-              <p class="ds-card__desc">Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.</p>
+              <h3 class="ds-card__title" data-i18n="home.cardRecomendacoesTitle">Recomendações Inteligentes: a régua determinística por trás da IA</h3>
+              <p class="ds-card__desc" data-i18n="home.cardRecomendacoesDesc">Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.</p>
               <div class="ds-card__footer">
-                <a href="projetos/recomendacoes-inteligentes.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+                <a href="projetos/recomendacoes-inteligentes.html" class="ds-btn ds-btn--accent ds-btn--sm" data-i18n="common.viewCase">Ver case</a>
               </div>
             </div>
           </div>
@@ -187,10 +255,10 @@
             <div class="ds-card__icon ds-card__icon--accent">
               <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
             </div>
-            <h3 class="ds-card__title">Basic Value: métrica de ativação para reduzir churn</h3>
-            <p class="ds-card__desc">Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.</p>
+            <h3 class="ds-card__title" data-i18n="home.cardBasicValueTitle">Basic Value: métrica de ativação para reduzir churn</h3>
+            <p class="ds-card__desc" data-i18n="home.cardBasicValueDesc">Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.</p>
             <div class="ds-card__footer">
-              <a href="projetos/basic-value.html" class="ds-btn ds-btn--accent ds-btn--sm">Ver case</a>
+              <a href="projetos/basic-value.html" class="ds-btn ds-btn--accent ds-btn--sm" data-i18n="common.viewCase">Ver case</a>
             </div>
           </div>
         </div>
@@ -204,30 +272,30 @@
             <div class="ds-card__icon">
               <span class="icon-badge-text">in</span>
             </div>
-            <h3 class="ds-card__title">LinkedIn</h3>
-            <p class="ds-card__desc">Acompanhe bastidores e atualizações sobre os projetos.</p>
+            <h3 class="ds-card__title" data-i18n="home.linkedinTitle">LinkedIn</h3>
+            <p class="ds-card__desc" data-i18n="home.linkedinDesc">Acompanhe bastidores e atualizações sobre os projetos.</p>
             <div class="ds-card__footer">
-              <a href="https://www.linkedin.com/in/viviannotrispe/" target="_blank" rel="noopener" class="ds-btn ds-btn--rose ds-btn--sm">Ver perfil</a>
+              <a href="https://www.linkedin.com/in/viviannotrispe/" target="_blank" rel="noopener" class="ds-btn ds-btn--rose ds-btn--sm" data-i18n="home.linkedinCta">Ver perfil</a>
             </div>
           </div>
           <div class="ds-card ds-card--feature-accent">
             <div class="ds-card__icon ds-card__icon--accent">
               <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
             </div>
-            <h3 class="ds-card__title">GitHub</h3>
-            <p class="ds-card__desc">Código e experimentos por trás dos produtos.</p>
+            <h3 class="ds-card__title" data-i18n="home.githubTitle">GitHub</h3>
+            <p class="ds-card__desc" data-i18n="home.githubDesc">Código e experimentos por trás dos produtos.</p>
             <div class="ds-card__footer">
-              <a href="https://github.com/viviannotrispe-lgtm" target="_blank" rel="noopener" class="ds-btn ds-btn--secondary ds-btn--sm">Ver repositórios</a>
+              <a href="https://github.com/viviannotrispe-lgtm" target="_blank" rel="noopener" class="ds-btn ds-btn--secondary ds-btn--sm" data-i18n="home.githubCta">Ver repositórios</a>
             </div>
           </div>
           <div class="ds-card">
             <div class="ds-card__icon ds-card__icon--accent">
               <svg class="ds-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             </div>
-            <h3 class="ds-card__title">Contato</h3>
-            <p class="ds-card__desc">Vamos conversar sobre o seu próximo produto.</p>
+            <h3 class="ds-card__title" data-i18n="home.contactCardTitle">Contato</h3>
+            <p class="ds-card__desc" data-i18n="home.contactCardDesc">Vamos conversar sobre o seu próximo produto.</p>
             <div class="ds-card__footer">
-              <a href="contato.html" class="ds-btn ds-btn--accent ds-btn--sm">Enviar mensagem</a>
+              <a href="contato.html" class="ds-btn ds-btn--accent ds-btn--sm" data-i18n="home.contactCardCta">Enviar mensagem</a>
             </div>
           </div>
         </div>
@@ -237,15 +305,16 @@
 
   <footer class="home-footer">
     <div class="home-wrap">
-      <span>© 2026 Vivian Notrispe</span>
+      <span data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
       <span>
         <a href="https://github.com/viviannotrispe-lgtm" target="_blank" rel="noopener">Github</a> ·
         <a href="https://www.linkedin.com/in/viviannotrispe/" target="_blank" rel="noopener">Linkedin</a> ·
-        <a href="contato.html">Contato</a>
+        <a href="contato.html" data-i18n="nav.contact">Contato</a>
       </span>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script>
     // Busca a ilustração de capa (.case-cover) direto da página de cada
     // projeto, em vez de duplicar a imagem como asset separado — assim a

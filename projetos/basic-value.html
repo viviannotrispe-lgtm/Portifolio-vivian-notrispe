@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Basic Value: métrica de ativação para reduzir churn — Vivian Notrispe</title>
+  <title data-i18n="projects.basicValue.title">Basic Value: métrica de ativação para reduzir churn — Vivian Notrispe</title>
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,29 +17,39 @@
       <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index.html" aria-current="page">Projetos</a></li>
-          <li><a href="../sobre.html">Sobre</a></li>
-          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="../index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="../sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="../contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="case-header wrap">
-      <span class="mono">Pesquisa & Produto · 2026</span>
-      <h1>Basic Value: uma métrica para transformar churn em ativação</h1>
+      <span class="mono"><span data-i18n="projects.basicValue.category">Pesquisa & Produto</span> · <span data-i18n="projects.basicValue.year">2026</span></span>
+      <h1 data-i18n="projects.basicValue.heading">Basic Value: uma métrica para transformar churn em ativação</h1>
 
       <dl class="case-meta">
-        <div><dt>Papel</dt><dd>Product Manager (DRI da iniciativa)</dd></div>
-        <div><dt>Time</dt><dd>Squad multidisciplinar — CS, Supply/Logística e Produto</dd></div>
-        <div><dt>Duração</dt><dd>~8 meses (discovery → lançamento → validação)</dd></div>
-        <div><dt>Ferramentas</dt><dd>Análise de dados, entrevistas com CS, Segment/Mixpanel</dd></div>
+        <div><dt data-i18n="common.roleLabel">Papel</dt><dd data-i18n="projects.basicValue.role">Product Manager (DRI da iniciativa)</dd></div>
+        <div><dt data-i18n="common.teamLabel">Time</dt><dd data-i18n="projects.basicValue.team">Squad multidisciplinar — CS, Supply/Logística e Produto</dd></div>
+        <div><dt data-i18n="common.durationLabel">Duração</dt><dd data-i18n="projects.basicValue.duration">~8 meses (discovery → lançamento → validação)</dd></div>
+        <div><dt data-i18n="common.toolsLabel">Ferramentas</dt><dd data-i18n="projects.basicValue.tools">Análise de dados, entrevistas com CS, Segment/Mixpanel</dd></div>
       </dl>
 
       <div class="case-cover">
-        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando a evolução da Basic Value estável de 35% para 51% da base entre outubro de 2025 e junho de 2026.">
+        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.coverAlt" aria-label="Gráfico de linha mostrando a evolução da Basic Value estável de 35% para 51% da base entre outubro de 2025 e junho de 2026.">
           <defs>
             <linearGradient id="bvCoverGradient" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.3"/>
@@ -47,7 +57,7 @@
             </linearGradient>
           </defs>
 
-          <text x="60" y="66" font-family="var(--font-mono)" font-size="18" letter-spacing="1" fill="var(--ink-soft)">BASIC VALUE ESTÁVEL · % DE MRR</text>
+          <text x="60" y="66" font-family="var(--font-mono)" font-size="18" letter-spacing="1" fill="var(--ink-soft)" data-i18n="projects.basicValue.coverLabel">BASIC VALUE ESTÁVEL · % DE MRR</text>
           <text x="60" y="118" font-family="var(--font-display)" font-size="44" font-weight="700" fill="var(--ink)">35% <tspan fill="var(--ink-soft)" font-size="30">→</tspan> <tspan fill="var(--accent-warm)">51%</tspan></text>
 
           <path d="M 60.00 420.8 C 84.71 420.8, 84.71 394.4, 109.41 394.4 C 134.12 394.4, 134.12 407.6, 158.82 407.6 C 183.53 407.6, 183.53 407.6, 208.24 407.6 C 232.94 407.6, 232.94 394.4, 257.65 394.4 C 282.35 394.4, 282.35 394.4, 307.06 394.4 C 331.76 394.4, 331.76 381.2, 356.47 381.2 C 381.18 381.2, 381.18 368, 405.88 368 C 430.59 368, 430.59 368, 455.29 368 C 480.00 368, 480.00 381.2, 504.71 381.2 C 529.41 381.2, 529.41 368, 554.12 368 C 578.82 368, 578.82 394.4, 603.53 394.4 C 628.24 394.4, 628.24 354.8, 652.94 354.8 C 677.65 354.8, 677.65 328.4, 702.35 328.4 C 727.06 328.4, 727.06 315.2, 751.76 315.2 C 776.47 315.2, 776.47 302, 801.18 302 C 825.88 302, 825.88 275.6, 850.59 275.6 C 875.29 275.6, 875.29 222.8, 900.00 222.8 L 900 500 L 60 500 Z" fill="url(#bvCoverGradient)" stroke="none"/>
@@ -57,117 +67,119 @@
           <circle cx="60" cy="420.8" r="5.5" fill="var(--paper-2)" stroke="var(--accent)" stroke-width="2"/>
           <circle cx="900" cy="222.8" r="8.5" fill="var(--accent-warm)"/>
 
-          <text x="60" y="524" font-family="var(--font-mono)" font-size="15" fill="var(--ink-soft)">out/25</text>
-          <text x="900" y="524" text-anchor="end" font-family="var(--font-mono)" font-size="15" fill="var(--ink-soft)">jun/26</text>
+          <text x="60" y="524" font-family="var(--font-mono)" font-size="15" fill="var(--ink-soft)" data-i18n="projects.basicValue.coverStart">out/25</text>
+          <text x="900" y="524" text-anchor="end" font-family="var(--font-mono)" font-size="15" fill="var(--ink-soft)" data-i18n="projects.basicValue.coverEnd">jun/26</text>
         </svg>
       </div>
     </section>
 
     <section class="case-body wrap">
       <div>
-        <h2>A empresa</h2>
-        <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
-        <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <div data-i18n-html="common.companyBody">
+          <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
+          <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        </div>
       </div>
 
       <div>
-        <h2>Contexto</h2>
-        <p>Redução de churn era um dos poucos objetivos estratégicos da empresa para o ciclo, e eu era a responsável direta por uma frente ligada a esse objetivo, com patrocínio de um diretor e um grupo de trabalho formado por CS, Supply e agendamento. A demanda inicial era vaga — "o onboarding não está funcionando" — sem um diagnóstico claro do que exatamente estava quebrado nem de qual time deveria agir.</p>
+        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <p data-i18n="projects.basicValue.context.body">Redução de churn era um dos poucos objetivos estratégicos da empresa para o ciclo, e eu era a responsável direta por uma frente ligada a esse objetivo, com patrocínio de um diretor e um grupo de trabalho formado por CS, Supply e agendamento. A demanda inicial era vaga — "o onboarding não está funcionando" — sem um diagnóstico claro do que exatamente estava quebrado nem de qual time deveria agir.</p>
       </div>
 
       <div>
-        <h2>Problema</h2>
-        <p>Comecei investigando os dados de churn dos últimos 12 meses cruzados com o histórico de configuração de cada cliente. O achado principal: a grande maioria do churn do período vinha de clientes que nunca tinham completado nem 60% da configuração básica da plataforma. O problema não era "churn" de forma genérica — era ativação. Aprofundando a investigação, encontrei três causas raízes específicas: perda de contexto na transição entre Vendas e Pós-venda (o cliente precisava se reapresentar do zero); atrito operacional no processo físico de instalação dos dispositivos (agendamento, no-show, disponibilidade de veículo); e uma experiência de primeiro acesso com alta carga cognitiva, sem nenhuma priorização clara do que o cliente devia fazer primeiro.</p>
+        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <p data-i18n="projects.basicValue.problem.body">Comecei investigando os dados de churn dos últimos 12 meses cruzados com o histórico de configuração de cada cliente. O achado principal: a grande maioria do churn do período vinha de clientes que nunca tinham completado nem 60% da configuração básica da plataforma. O problema não era "churn" de forma genérica — era ativação. Aprofundando a investigação, encontrei três causas raízes específicas: perda de contexto na transição entre Vendas e Pós-venda (o cliente precisava se reapresentar do zero); atrito operacional no processo físico de instalação dos dispositivos (agendamento, no-show, disponibilidade de veículo); e uma experiência de primeiro acesso com alta carga cognitiva, sem nenhuma priorização clara do que o cliente devia fazer primeiro.</p>
       </div>
 
       <div>
-        <h2>Processo</h2>
-        <p>Para dar visibilidade e ação a esse diagnóstico, defini e especifiquei a <strong>Basic Value</strong>: um score de 0 a 4, calculado diariamente por cliente, que resume o quão "ativada" uma frota está na plataforma a partir de quatro pilares — instalação, setup, configuração e uso contínuo. A métrica virou o termômetro oficial de risco de churn usado por CS para priorizar conversas de retenção, e passou a alimentar recomendações automáticas exibidas dentro do próprio produto.</p>
-        <p>Depois do lançamento, conduzi uma pesquisa qualitativa com o time de CS para entender, na prática, por que alguns clientes atingem uma Basic Value saudável em poucos meses enquanto outros ficam estagnados. Essa etapa revelou pontos que os dados quantitativos sozinhos não mostravam: instalação era o maior gargalo — mais do que o processo comercial ou o próprio CS; a ferramenta de checklist interna era simples demais para clientes maiores; o conteúdo de ajuda estava desatualizado; e havia confusão recorrente sobre cobranças de reagendamento, o que gerava atrito emocional logo no início da relação com o cliente.</p>
+        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <p data-i18n-html="projects.basicValue.process.body1">Para dar visibilidade e ação a esse diagnóstico, defini e especifiquei a <strong>Basic Value</strong>: um score de 0 a 4, calculado diariamente por cliente, que resume o quão "ativada" uma frota está na plataforma a partir de quatro pilares — instalação, setup, configuração e uso contínuo. A métrica virou o termômetro oficial de risco de churn usado por CS para priorizar conversas de retenção, e passou a alimentar recomendações automáticas exibidas dentro do próprio produto.</p>
+        <p data-i18n="projects.basicValue.process.body2">Depois do lançamento, conduzi uma pesquisa qualitativa com o time de CS para entender, na prática, por que alguns clientes atingem uma Basic Value saudável em poucos meses enquanto outros ficam estagnados. Essa etapa revelou pontos que os dados quantitativos sozinhos não mostravam: instalação era o maior gargalo — mais do que o processo comercial ou o próprio CS; a ferramenta de checklist interna era simples demais para clientes maiores; o conteúdo de ajuda estava desatualizado; e havia confusão recorrente sobre cobranças de reagendamento, o que gerava atrito emocional logo no início da relação com o cliente.</p>
         <figure class="stat-chart">
-          <span class="mono">Pilares da Basic Value · nota média (0–4)</span>
-          <svg viewBox="0 0 700 230" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de barras mostrando a nota média dos 4 pilares da Basic Value: Instalação 1,3, Setup 1,1, Configuração básica 0,7, Ativação (heavy users) 0,3, em escala de 0 a 4.">
+          <span class="mono" data-i18n="projects.basicValue.process.chart1.label">Pilares da Basic Value · nota média (0–4)</span>
+          <svg viewBox="0 0 700 230" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.process.chart1.alt" aria-label="Gráfico de barras mostrando a nota média dos 4 pilares da Basic Value: Instalação 1,3, Setup 1,1, Configuração básica 0,7, Ativação (heavy users) 0,3, em escala de 0 a 4.">
             <g font-family="var(--font-mono)" font-size="15" fill="var(--ink)">
-              <text x="165" y="37" text-anchor="end">Instalação</text>
+              <text x="165" y="37" text-anchor="end" data-i18n="projects.basicValue.process.chart1.instalacao">Instalação</text>
               <rect x="175" y="20" width="480" height="24" rx="9" fill="var(--line)"/>
               <rect x="175" y="20" width="156" height="24" rx="9" fill="var(--accent)"/>
               <text x="665" y="37" fill="var(--ink-soft)">1,3</text>
 
-              <text x="165" y="97" text-anchor="end">Setup</text>
+              <text x="165" y="97" text-anchor="end" data-i18n="projects.basicValue.process.chart1.setup">Setup</text>
               <rect x="175" y="80" width="480" height="24" rx="9" fill="var(--line)"/>
               <rect x="175" y="80" width="132" height="24" rx="9" fill="var(--accent)"/>
               <text x="665" y="97" fill="var(--ink-soft)">1,1</text>
 
-              <text x="165" y="157" text-anchor="end">Config. básica</text>
+              <text x="165" y="157" text-anchor="end" data-i18n="projects.basicValue.process.chart1.configBasica">Config. básica</text>
               <rect x="175" y="140" width="480" height="24" rx="9" fill="var(--line)"/>
               <rect x="175" y="140" width="84" height="24" rx="9" fill="var(--accent)"/>
               <text x="665" y="157" fill="var(--ink-soft)">0,7</text>
 
-              <text x="165" y="217" text-anchor="end">Heavy users</text>
+              <text x="165" y="217" text-anchor="end" data-i18n="projects.basicValue.process.chart1.heavyUsers">Heavy users</text>
               <rect x="175" y="200" width="480" height="24" rx="9" fill="var(--line)"/>
               <rect x="175" y="200" width="36" height="24" rx="9" fill="var(--accent-warm)"/>
               <text x="665" y="217" fill="var(--ink-soft)">0,3</text>
             </g>
           </svg>
-          <figcaption>Diagnóstico inicial sobre ~4.200 frotas analisadas. Instalação e Setup já vinham puxando a média para cima; Configuração e, principalmente, o engajamento de uso (Heavy Users) eram os elos mais fracos.</figcaption>
+          <figcaption data-i18n="projects.basicValue.process.chart1.caption">Diagnóstico inicial sobre ~4.200 frotas analisadas. Instalação e Setup já vinham puxando a média para cima; Configuração e, principalmente, o engajamento de uso (Heavy Users) eram os elos mais fracos.</figcaption>
         </figure>
 
         <figure class="stat-chart">
-          <span class="mono">Adoção por feature · % das frotas</span>
-          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de barras mostrando adoção por feature: motoristas cadastrados 87%, usuários ativos 75%, limite de velocidade 60%, identificação de motoristas 54%, geocercas 45%, grupos configurados 42%, políticas de frota 38%, checklists 21%.">
+          <span class="mono" data-i18n="projects.basicValue.process.chart2.label">Adoção por feature · % das frotas</span>
+          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.process.chart2.alt" aria-label="Gráfico de barras mostrando adoção por feature: motoristas cadastrados 87%, usuários ativos 75%, limite de velocidade 60%, identificação de motoristas 54%, geocercas 45%, grupos configurados 42%, políticas de frota 38%, checklists 21%.">
             <g font-family="var(--font-mono)" font-size="14" fill="var(--ink)">
-              <text x="195" y="31" text-anchor="end">Motoristas cadastrados</text>
+              <text x="195" y="31" text-anchor="end" data-i18n="projects.basicValue.process.chart2.motoristas">Motoristas cadastrados</text>
               <rect x="205" y="16" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="16" width="374" height="20" rx="8" fill="var(--accent)"/>
               <text x="645" y="31" fill="var(--ink-soft)">87%</text>
 
-              <text x="195" y="73" text-anchor="end">Usuários ativos</text>
+              <text x="195" y="73" text-anchor="end" data-i18n="projects.basicValue.process.chart2.usuarios">Usuários ativos</text>
               <rect x="205" y="58" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="58" width="323" height="20" rx="8" fill="var(--accent)"/>
               <text x="645" y="73" fill="var(--ink-soft)">75%</text>
 
-              <text x="195" y="115" text-anchor="end">Limite de velocidade</text>
+              <text x="195" y="115" text-anchor="end" data-i18n="projects.basicValue.process.chart2.limiteVelocidade">Limite de velocidade</text>
               <rect x="205" y="100" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="100" width="258" height="20" rx="8" fill="var(--accent)" fill-opacity="0.8"/>
               <text x="645" y="115" fill="var(--ink-soft)">60%</text>
 
-              <text x="195" y="157" text-anchor="end">Identif. de motoristas</text>
+              <text x="195" y="157" text-anchor="end" data-i18n="projects.basicValue.process.chart2.identifMotoristas">Identif. de motoristas</text>
               <rect x="205" y="142" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="142" width="232" height="20" rx="8" fill="var(--accent)" fill-opacity="0.72"/>
               <text x="645" y="157" fill="var(--ink-soft)">54%</text>
 
-              <text x="195" y="199" text-anchor="end">Geocercas</text>
+              <text x="195" y="199" text-anchor="end" data-i18n="projects.basicValue.process.chart2.geocercas">Geocercas</text>
               <rect x="205" y="184" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="184" width="194" height="20" rx="8" fill="var(--accent)" fill-opacity="0.62"/>
               <text x="645" y="199" fill="var(--ink-soft)">45%</text>
 
-              <text x="195" y="241" text-anchor="end">Grupos configurados</text>
+              <text x="195" y="241" text-anchor="end" data-i18n="projects.basicValue.process.chart2.grupos">Grupos configurados</text>
               <rect x="205" y="226" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="226" width="181" height="20" rx="8" fill="var(--accent)" fill-opacity="0.56"/>
               <text x="645" y="241" fill="var(--ink-soft)">42%</text>
 
-              <text x="195" y="283" text-anchor="end">Políticas de frota</text>
+              <text x="195" y="283" text-anchor="end" data-i18n="projects.basicValue.process.chart2.politicas">Políticas de frota</text>
               <rect x="205" y="268" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="268" width="163" height="20" rx="8" fill="var(--accent)" fill-opacity="0.5"/>
               <text x="645" y="283" fill="var(--ink-soft)">38%</text>
 
-              <text x="195" y="325" text-anchor="end">Checklists</text>
+              <text x="195" y="325" text-anchor="end" data-i18n="projects.basicValue.process.chart2.checklists">Checklists</text>
               <rect x="205" y="310" width="430" height="20" rx="8" fill="var(--line)"/>
               <rect x="205" y="310" width="90" height="20" rx="8" fill="var(--accent-warm)"/>
               <text x="645" y="325" fill="var(--ink-soft)">21%</text>
             </g>
           </svg>
-          <figcaption>A baixa adoção de checklists e políticas de frota apontou os dois pontos de maior prioridade para a fase seguinte do projeto.</figcaption>
+          <figcaption data-i18n="projects.basicValue.process.chart2.caption">A baixa adoção de checklists e políticas de frota apontou os dois pontos de maior prioridade para a fase seguinte do projeto.</figcaption>
         </figure>
       </div>
 
       <div>
-        <h2>Solução</h2>
-        <p>Com o diagnóstico validado, o projeto avançou em duas frentes que ajudei a especificar:</p>
-        <p><strong>Governança da métrica.</strong> Alinhei com lideranças de Produto, CS e Supply os critérios oficiais da Basic Value — o que cada pilar mede, como cada time deveria acompanhar por safra de clientes, e uma métrica complementar de "tempo até a ativação básica" — transformando a métrica em linguagem comum entre áreas que antes media sucesso cada uma à sua maneira.</p>
-        <p><strong>Onboarding inteligente.</strong> Escrevi o PRD de um sistema de onboarding progressivo guiado por IA, que usa o contexto coletado no primeiro acesso para priorizar automaticamente uma única recomendação por vez — em vez de sobrecarregar o cliente com tudo de uma vez —, com bloqueio de funcionalidades avançadas até os pré-requisitos básicos serem cumpridos e planos de ativação cada vez mais personalizados nas versões seguintes do produto.</p>
+        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <p data-i18n="projects.basicValue.solution.intro">Com o diagnóstico validado, o projeto avançou em duas frentes que ajudei a especificar:</p>
+        <p><strong data-i18n="projects.basicValue.solution.governancaTitle">Governança da métrica.</strong> <span data-i18n="projects.basicValue.solution.governancaBody">Alinhei com lideranças de Produto, CS e Supply os critérios oficiais da Basic Value — o que cada pilar mede, como cada time deveria acompanhar por safra de clientes, e uma métrica complementar de "tempo até a ativação básica" — transformando a métrica em linguagem comum entre áreas que antes media sucesso cada uma à sua maneira.</span></p>
+        <p><strong data-i18n="projects.basicValue.solution.onboardingTitle">Onboarding inteligente.</strong> <span data-i18n="projects.basicValue.solution.onboardingBody">Escrevi o PRD de um sistema de onboarding progressivo guiado por IA, que usa o contexto coletado no primeiro acesso para priorizar automaticamente uma única recomendação por vez — em vez de sobrecarregar o cliente com tudo de uma vez —, com bloqueio de funcionalidades avançadas até os pré-requisitos básicos serem cumpridos e planos de ativação cada vez mais personalizados nas versões seguintes do produto.</span></p>
 
-        <p>Ao longo do semestre seguinte, as iniciativas de fato executadas se organizaram em três frentes paralelas:</p>
+        <p data-i18n="projects.basicValue.solution.frentesIntro">Ao longo do semestre seguinte, as iniciativas de fato executadas se organizaram em três frentes paralelas:</p>
 
         <div class="initiative-grid">
           <div class="initiative-card">
@@ -182,11 +194,11 @@
               <line x1="14" y1="23" x2="14" y2="28"/>
               <line x1="19" y1="23" x2="19" y2="28"/>
             </svg>
-            <h3>Produto</h3>
+            <h3 data-i18n="projects.basicValue.solution.produtoTitle">Produto</h3>
             <ul>
-              <li>Recomendações de onboarding geradas por IA</li>
-              <li>Fluxos de cadastro conduzidos por agentes de IA</li>
-              <li>Cadastro em massa para acelerar o setup de frotas enterprise</li>
+              <li data-i18n="projects.basicValue.solution.produtoItem1">Recomendações de onboarding geradas por IA</li>
+              <li data-i18n="projects.basicValue.solution.produtoItem2">Fluxos de cadastro conduzidos por agentes de IA</li>
+              <li data-i18n="projects.basicValue.solution.produtoItem3">Cadastro em massa para acelerar o setup de frotas enterprise</li>
             </ul>
           </div>
 
@@ -195,10 +207,10 @@
               <path d="M6 8h20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H14l-6 5v-5H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/>
               <path d="M11 16l3 3 7-7"/>
             </svg>
-            <h3>CS</h3>
+            <h3 data-i18n="projects.basicValue.solution.csTitle">CS</h3>
             <ul>
-              <li>Campanhas e treinamentos extras com a base de clientes</li>
-              <li>Processo de onboarding mais estruturado, com etapas e responsáveis claros</li>
+              <li data-i18n="projects.basicValue.solution.csItem1">Campanhas e treinamentos extras com a base de clientes</li>
+              <li data-i18n="projects.basicValue.solution.csItem2">Processo de onboarding mais estruturado, com etapas e responsáveis claros</li>
             </ul>
           </div>
 
@@ -209,23 +221,23 @@
               <circle cx="9" cy="24" r="2.3"/>
               <circle cx="22" cy="24" r="2.3"/>
             </svg>
-            <h3>Supply</h3>
+            <h3 data-i18n="projects.basicValue.solution.supplyTitle">Supply</h3>
             <ul>
-              <li>Agentes dedicados à instalação</li>
-              <li>Mais visibilidade de agendamento no painel do cliente — o que falta instalar e como agendar fica mais fácil</li>
+              <li data-i18n="projects.basicValue.solution.supplyItem1">Agentes dedicados à instalação</li>
+              <li data-i18n="projects.basicValue.solution.supplyItem2">Mais visibilidade de agendamento no painel do cliente — o que falta instalar e como agendar fica mais fácil</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div>
-        <h2>Resultado</h2>
-        <p>A Basic Value deixou de ser um projeto de produto isolado e virou meta estratégica compartilhada entre CS, Supply e Produto, com grupos de trabalho próprios formados a partir dela. Nos primeiros meses após o lançamento das primeiras iniciativas — checklist de ativação, indicadores de completude e FAQ no painel — o engajamento com tarefas de ativação dobrou na comparação anual, e quase metade dos clientes que interagiram pela primeira vez com essas tarefas completou pelo menos uma etapa da Basic Value.</p>
-        <p>No momento em que a meta foi definida, apenas 35% da base tinha uma Basic Value estável. Estabelecemos a meta de chegar a 50% ao longo do semestre seguinte — e, com um conjunto de iniciativas cross-funcionais entre CS, Supply e Produto, batemos 51%, superando o objetivo.</p>
+        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <p data-i18n="projects.basicValue.result.body1">A Basic Value deixou de ser um projeto de produto isolado e virou meta estratégica compartilhada entre CS, Supply e Produto, com grupos de trabalho próprios formados a partir dela. Nos primeiros meses após o lançamento das primeiras iniciativas — checklist de ativação, indicadores de completude e FAQ no painel — o engajamento com tarefas de ativação dobrou na comparação anual, e quase metade dos clientes que interagiram pela primeira vez com essas tarefas completou pelo menos uma etapa da Basic Value.</p>
+        <p data-i18n="projects.basicValue.result.body2">No momento em que a meta foi definida, apenas 35% da base tinha uma Basic Value estável. Estabelecemos a meta de chegar a 50% ao longo do semestre seguinte — e, com um conjunto de iniciativas cross-funcionais entre CS, Supply e Produto, batemos 51%, superando o objetivo.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Basic Value estável · % de MRR · out/25 – jun/26</span>
-          <svg viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando o percentual de MRR com Basic Value estável subindo de 35% em outubro de 2025 para 51% em junho de 2026, superando a meta de 50%.">
+          <span class="mono" data-i18n="projects.basicValue.result.chart1.label">Basic Value estável · % de MRR · out/25 – jun/26</span>
+          <svg viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.result.chart1.alt" aria-label="Gráfico de linha mostrando o percentual de MRR com Basic Value estável subindo de 35% em outubro de 2025 para 51% em junho de 2026, superando a meta de 50%.">
             <defs>
               <linearGradient id="bvGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
@@ -250,7 +262,7 @@
             <text x="68" y="396" text-anchor="end" font-family="var(--font-mono)" font-size="14" fill="var(--ink-soft)">35%</text>
 
             <!-- meta label -->
-            <text x="85" y="121" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">meta: 50%</text>
+            <text x="85" y="121" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.metaLabel">meta: 50%</text>
 
             <!-- area fill -->
             <path d="M 80.00 374.4 C 104.71 374.4, 104.71 339.2, 129.41 339.2 C 154.12 339.2, 154.12 356.8, 178.82 356.8 C 203.53 356.8, 203.53 356.8, 228.24 356.8 C 252.94 356.8, 252.94 339.2, 277.65 339.2 C 302.35 339.2, 302.35 339.2, 327.06 339.2 C 351.76 339.2, 351.76 321.6, 376.47 321.6 C 401.18 321.6, 401.18 304, 425.88 304 C 450.59 304, 450.59 304, 475.29 304 C 500.00 304, 500.00 321.6, 524.71 321.6 C 549.41 321.6, 549.41 304, 574.12 304 C 598.82 304, 598.82 339.2, 623.53 339.2 C 648.24 339.2, 648.24 286.4, 672.94 286.4 C 697.65 286.4, 697.65 251.2, 722.35 251.2 C 747.06 251.2, 747.06 233.6, 771.76 233.6 C 796.47 233.6, 796.47 216, 821.18 216 C 845.88 216, 845.88 180.8, 870.59 180.8 C 895.29 180.8, 895.29 110.4, 920.00 110.4 L 920 480 L 80 480 Z" fill="url(#bvGradient)" stroke="none"/>
@@ -280,100 +292,101 @@
 
             <!-- start point -->
             <circle cx="80" cy="374.4" r="4.5" fill="var(--paper-2)" stroke="var(--accent)" stroke-width="2"/>
-            <text x="85" y="405" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">~35% no início</text>
+            <text x="85" y="405" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.startLabel">~35% no início</text>
 
             <!-- end point (destaque) -->
             <circle cx="920" cy="110.4" r="6.5" fill="var(--accent-warm)"/>
             <text x="920" y="75" text-anchor="end" font-family="var(--font-display)" font-size="26" font-weight="700" fill="var(--accent-warm)">51%</text>
-            <text x="920" y="95" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">meta batida</text>
+            <text x="920" y="95" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.endLabel">meta batida</text>
 
             <!-- x axis labels -->
-            <text x="80" y="505" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">out/25</text>
-            <text x="228.24" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">dez/25</text>
-            <text x="425.88" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">fev/26</text>
-            <text x="672.94" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">abr/26</text>
-            <text x="920" y="505" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jun/26</text>
+            <text x="80" y="505" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.out">out/25</text>
+            <text x="228.24" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.dez">dez/25</text>
+            <text x="425.88" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.fev">fev/26</text>
+            <text x="672.94" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.abr">abr/26</text>
+            <text x="920" y="505" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart1.jun">jun/26</text>
           </svg>
-          <figcaption>Evolução mês a mês do percentual de MRR com Basic Value estável, desde o diagnóstico inicial até o fechamento do semestre de iniciativas.</figcaption>
+          <figcaption data-i18n="projects.basicValue.result.chart1.caption">Evolução mês a mês do percentual de MRR com Basic Value estável, desde o diagnóstico inicial até o fechamento do semestre de iniciativas.</figcaption>
         </figure>
 
         <figure class="stat-chart">
-          <span class="mono">Antes → depois · adoção por feature</span>
-          <svg viewBox="0 0 700 375" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico comparando adoção por feature antes e depois do semestre de iniciativas: motoristas cadastrados de 87% para 91%, usuários ativos de 75% para 88%, limite de velocidade de 60% para 73%, identificação de motoristas de 54% para 46%, geocercas de 45% para 67%, grupos configurados de 42% para 70%, políticas de frota de 38% para 67%, checklists de 21% para 36%.">
+          <span class="mono" data-i18n="projects.basicValue.result.chart2.label">Antes → depois · adoção por feature</span>
+          <svg viewBox="0 0 700 375" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.result.chart2.alt" aria-label="Gráfico comparando adoção por feature antes e depois do semestre de iniciativas: motoristas cadastrados de 87% para 91%, usuários ativos de 75% para 88%, limite de velocidade de 60% para 73%, identificação de motoristas de 54% para 46%, geocercas de 45% para 67%, grupos configurados de 42% para 70%, políticas de frota de 38% para 67%, checklists de 21% para 36%.">
             <circle cx="212" cy="14" r="5" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
-            <text x="222" y="18" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">antes</text>
+            <text x="222" y="18" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart2.antes">antes</text>
             <circle cx="272" cy="14" r="5" fill="var(--accent)"/>
-            <text x="282" y="18" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">depois</text>
+            <text x="282" y="18" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.basicValue.result.chart2.depois">depois</text>
 
             <g font-family="var(--font-mono)" font-size="14">
-              <text x="195" y="61" text-anchor="end" fill="var(--ink)">Motoristas cadastrados</text>
+              <text x="195" y="61" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.motoristas">Motoristas cadastrados</text>
               <line x1="579.1" y1="56" x2="596.3" y2="56" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="579.1" cy="56" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="596.3" cy="56" r="7" fill="var(--accent)"/>
               <text x="650" y="61" fill="var(--accent)" font-weight="600">+4</text>
 
-              <text x="195" y="103" text-anchor="end" fill="var(--ink)">Usuários ativos</text>
+              <text x="195" y="103" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.usuarios">Usuários ativos</text>
               <line x1="527.5" y1="98" x2="583.4" y2="98" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="527.5" cy="98" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="583.4" cy="98" r="7" fill="var(--accent)"/>
               <text x="650" y="103" fill="var(--accent)" font-weight="600">+13</text>
 
-              <text x="195" y="145" text-anchor="end" fill="var(--ink)">Limite de velocidade</text>
+              <text x="195" y="145" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.limiteVelocidade">Limite de velocidade</text>
               <line x1="463.0" y1="140" x2="518.9" y2="140" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="463.0" cy="140" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="518.9" cy="140" r="7" fill="var(--accent)"/>
               <text x="650" y="145" fill="var(--accent)" font-weight="600">+13</text>
 
-              <text x="195" y="187" text-anchor="end" fill="var(--ink)">Identif. de motoristas</text>
+              <text x="195" y="187" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.identifMotoristas">Identif. de motoristas</text>
               <line x1="402.8" y1="182" x2="437.2" y2="182" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="437.2" cy="182" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="402.8" cy="182" r="7" fill="var(--accent-warm)"/>
               <text x="650" y="187" fill="var(--accent-warm)" font-weight="600">-8</text>
 
-              <text x="195" y="229" text-anchor="end" fill="var(--ink)">Geocercas</text>
+              <text x="195" y="229" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.geocercas">Geocercas</text>
               <line x1="398.5" y1="224" x2="493.1" y2="224" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="398.5" cy="224" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="493.1" cy="224" r="7" fill="var(--accent)"/>
               <text x="650" y="229" fill="var(--accent)" font-weight="600">+22</text>
 
-              <text x="195" y="271" text-anchor="end" fill="var(--ink)">Grupos configurados</text>
+              <text x="195" y="271" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.grupos">Grupos configurados</text>
               <line x1="385.6" y1="266" x2="506.0" y2="266" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="385.6" cy="266" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="506.0" cy="266" r="7" fill="var(--accent)"/>
               <text x="650" y="271" fill="var(--accent)" font-weight="600">+28</text>
 
-              <text x="195" y="313" text-anchor="end" fill="var(--ink)">Políticas de frota</text>
+              <text x="195" y="313" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.politicas">Políticas de frota</text>
               <line x1="368.4" y1="308" x2="493.1" y2="308" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="368.4" cy="308" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="493.1" cy="308" r="7" fill="var(--accent)"/>
               <text x="650" y="313" fill="var(--accent)" font-weight="600">+29</text>
 
-              <text x="195" y="355" text-anchor="end" fill="var(--ink)">Checklists</text>
+              <text x="195" y="355" text-anchor="end" fill="var(--ink)" data-i18n="projects.basicValue.result.chart2.checklists">Checklists</text>
               <line x1="295.3" y1="350" x2="359.8" y2="350" stroke="var(--line-strong)" stroke-width="2"/>
               <circle cx="295.3" cy="350" r="6" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
               <circle cx="359.8" cy="350" r="7" fill="var(--accent)"/>
               <text x="650" y="355" fill="var(--accent)" font-weight="600">+15</text>
             </g>
           </svg>
-          <figcaption>Comparação por feature entre o início do diagnóstico e o fechamento do semestre de iniciativas. Quase todos os pontos avançaram de forma consistente — a exceção foi identificação de motoristas, que registrou uma leve queda, provavelmente por rotatividade de motoristas nas frotas.</figcaption>
+          <figcaption data-i18n="projects.basicValue.result.chart2.caption">Comparação por feature entre o início do diagnóstico e o fechamento do semestre de iniciativas. Quase todos os pontos avançaram de forma consistente — a exceção foi identificação de motoristas, que registrou uma leve queda, provavelmente por rotatividade de motoristas nas frotas.</figcaption>
         </figure>
 
-        <p>Meu maior aprendizado neste projeto foi como uma métrica bem desenhada funciona como ferramenta de alinhamento organizacional, não só de produto: a Basic Value deu a times historicamente desconectados — CS, logística e produto — uma linguagem comum para priorizar o que realmente importava para o cliente perceber valor mais rápido.</p>
+        <p data-i18n="projects.basicValue.result.closing">Meu maior aprendizado neste projeto foi como uma métrica bem desenhada funciona como ferramenta de alinhamento organizacional, não só de produto: a Basic Value deu a times historicamente desconectados — CS, logística e produto — uma linguagem comum para priorizar o que realmente importava para o cliente perceber valor mais rápido.</p>
       </div>
     </section>
 
     <nav class="case-nav wrap">
-      <a href="index.html">← Todos os projetos</a>
-      <a href="index.html">Próximo projeto →</a>
+      <a href="index.html" data-i18n="common.allProjects">← Todos os projetos</a>
+      <a href="index.html" data-i18n="common.nextProject">Próximo projeto →</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="../contato.html">contato</a></span>
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html" data-i18n="common.footerContact">contato</a></span>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n.js"></script>
 </body>
 </html>

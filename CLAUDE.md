@@ -22,6 +22,16 @@ Ao escrever ou revisar qualquer texto de case (`projetos/*.html`), seguir o padr
 
 Ver `[[feedback-portfolio-conventions]]` na memória — resumo: sempre SVG inline usando as variáveis de `assets/css/style.css` (nunca screenshot embutido ou lib de gráfico externa), preferir blocos `.stat-chart` de largura cheia a colunas apertadas.
 
+## Idiomas (pt/en)
+
+O site tem botão de troca de idioma (canto superior direito, `data-lang-toggle`) usando um mecanismo próprio em `assets/js/i18n.js`, sem framework: todo texto traduzível ganha `data-i18n="chave"` (troca `textContent`), `data-i18n-html="chave"` (quando o texto tem tags inline como `<strong>`/`<em>`/`<br>`) ou `data-i18n-attr="attr=chave"` (para `alt`, `aria-label`, `content` de meta tags). As traduções ficam em `data/i18n/pt.json` e `data/i18n/en.json`, com a mesma estrutura de chaves nos dois arquivos.
+
+- Textos de UI compartilhados (nav, footer, "Ver case", títulos de seção como "Contexto"/"Resultado") ficam em `common.*`.
+- Cada case tem sua própria chave em `projects.<slug>` (ex: `projects.basicValue`), incluindo os textos dos gráficos SVG (`<text>`/`<tspan>` de cada gráfico também levam `data-i18n`).
+- `projetos/_template.html` já vem com os `data-i18n` e comentário explicando o padrão — ao criar um case novo, trocar `SLUG` pelo id do projeto e adicionar as chaves correspondentes nos dois JSONs. Sem isso, o texto some ao trocar de idioma (a chave não existe, então nada substitui o texto padrão).
+- `data/projetos.json` guarda os campos traduzíveis (título, categoria, resumo, tags) dentro de `pt`/`en` por projeto, consumidos por `assets/js/main.js` na home e no catálogo.
+- Números em gráficos (percentuais, valores) não são traduzidos — só os rótulos/labels.
+
 ## Confidencialidade
 
 Dados de documentos internos reais (nome da empresa, nomes de colegas, valores financeiros exatos) devem ser anonimizados por padrão em qualquer case novo, a menos que Vivian diga explicitamente o contrário para aquele projeto.

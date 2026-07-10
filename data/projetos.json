@@ -2,36 +2,60 @@
   "projects": [
     {
       "id": "basic-value",
-      "titulo": "Basic Value: métrica de ativação para reduzir churn",
       "ano": "2026",
-      "categoria": "Pesquisa & Produto",
-      "resumo": "Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.",
       "capa": "",
-      "tags": ["Pesquisa", "Onboarding", "Retenção"],
       "link": "projetos/basic-value.html",
-      "destaque": true
+      "destaque": true,
+      "pt": {
+        "titulo": "Basic Value: métrica de ativação para reduzir churn",
+        "categoria": "Pesquisa & Produto",
+        "resumo": "Como identifiquei que a maior parte do churn vinha de clientes que nunca ativaram a plataforma, e criei uma métrica que virou meta estratégica entre CS, Supply e Produto.",
+        "tags": ["Pesquisa", "Onboarding", "Retenção"]
+      },
+      "en": {
+        "titulo": "Basic Value: an activation metric to reduce churn",
+        "categoria": "Research & Product",
+        "resumo": "How I identified that most churn came from customers who never activated the platform, and created a metric that became a strategic goal shared by CS, Supply and Product.",
+        "tags": ["Research", "Onboarding", "Retention"]
+      }
     },
     {
       "id": "visibilidade-pedidos",
-      "titulo": "Visibilidade de Pedidos: destravando a instalação",
       "ano": "2026",
-      "categoria": "Design",
-      "resumo": "Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.",
       "capa": "",
-      "tags": ["Design", "Onboarding", "Visibilidade"],
       "link": "projetos/visibilidade-pedidos.html",
-      "destaque": true
+      "destaque": true,
+      "pt": {
+        "titulo": "Visibilidade de Pedidos: destravando a instalação",
+        "categoria": "Design",
+        "resumo": "Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.",
+        "tags": ["Design", "Onboarding", "Visibilidade"]
+      },
+      "en": {
+        "titulo": "Order Visibility: unblocking installation",
+        "categoria": "Design",
+        "resumo": "How I identified that the lack of visibility into orders and installation scheduling was overloading support, and designed a timeline that translates internal operations status for the customer.",
+        "tags": ["Design", "Onboarding", "Visibility"]
+      }
     },
     {
       "id": "recomendacoes-inteligentes",
-      "titulo": "Recomendações Inteligentes: a régua determinística por trás da IA",
       "ano": "2026",
-      "categoria": "Pesquisa & Produto",
-      "resumo": "Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.",
       "capa": "",
-      "tags": ["IA", "Priorização", "Onboarding"],
       "link": "projetos/recomendacoes-inteligentes.html",
-      "destaque": true
+      "destaque": true,
+      "pt": {
+        "titulo": "Recomendações Inteligentes: a régua determinística por trás da IA",
+        "categoria": "Pesquisa & Produto",
+        "resumo": "Como construí a lógica determinística — sinais, farol de saúde e régua de criticidade — que decide o que recomendar antes de qualquer LLM entrar em cena.",
+        "tags": ["IA", "Priorização", "Onboarding"]
+      },
+      "en": {
+        "titulo": "Smart Recommendations: the deterministic ruleset behind the AI",
+        "categoria": "Research & Product",
+        "resumo": "How I built the deterministic logic — signals, health status and a criticality ruleset — that decides what to recommend before any LLM enters the picture.",
+        "tags": ["AI", "Prioritization", "Onboarding"]
+      }
     }
   ]
 }
