@@ -4,13 +4,19 @@
   2. Preencha os campos marcados com [ ]
   3. Adicione uma entrada correspondente em ../data/projetos.json
      (o "link" deve ser "projetos/nome-do-projeto.html")
+
+  IDIOMAS (pt/en)
+  Troque todo "SLUG" abaixo pelo id do projeto (ex: "nomeDoProjeto", camelCase)
+  e adicione as chaves projects.SLUG.* correspondentes em
+  ../data/i18n/pt.json e ../data/i18n/en.json — sem isso, o texto
+  desaparece ao trocar de idioma (data-i18n só troca o que existe no JSON).
 -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Nome do Projeto] — Vivian Notrispe</title>
+  <title data-i18n="projects.SLUG.title">[Nome do Projeto] — Vivian Notrispe</title>
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,46 +29,52 @@
       <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index.html" aria-current="page">Projetos</a></li>
-          <li><a href="../sobre.html">Sobre</a></li>
-          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="../index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="../sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="../contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="case-header wrap">
-      <span class="mono">[Categoria] · [Ano]</span>
-      <h1>[Nome do Projeto]</h1>
+      <span class="mono"><span data-i18n="projects.SLUG.category">[Categoria]</span> · <span data-i18n="projects.SLUG.year">[Ano]</span></span>
+      <h1 data-i18n="projects.SLUG.heading">[Nome do Projeto]</h1>
 
       <dl class="case-meta">
-        <div><dt>Papel</dt><dd>[ex: Product Designer]</dd></div>
-        <div><dt>Time</dt><dd>[ex: 1 designer, 2 devs]</dd></div>
-        <div><dt>Duração</dt><dd>[ex: 3 meses]</dd></div>
-        <div><dt>Ferramentas</dt><dd>[ex: Figma, Notion]</dd></div>
+        <div><dt data-i18n="common.roleLabel">Papel</dt><dd data-i18n="projects.SLUG.role">[ex: Product Designer]</dd></div>
+        <div><dt data-i18n="common.teamLabel">Time</dt><dd data-i18n="projects.SLUG.team">[ex: 1 designer, 2 devs]</dd></div>
+        <div><dt data-i18n="common.durationLabel">Duração</dt><dd data-i18n="projects.SLUG.duration">[ex: 3 meses]</dd></div>
+        <div><dt data-i18n="common.toolsLabel">Ferramentas</dt><dd data-i18n="projects.SLUG.tools">[ex: Figma, Notion]</dd></div>
       </dl>
 
       <div class="case-cover">
-        <!-- <img src="../assets/img/[nome]-capa.jpg" alt="Capa do projeto [Nome do Projeto]"> -->
+        <!-- <img src="../assets/img/[nome]-capa.jpg" data-i18n-attr="alt=projects.SLUG.coverAlt" alt="Capa do projeto [Nome do Projeto]"> -->
       </div>
     </section>
 
     <section class="case-body wrap">
       <div>
-        <h2>Contexto</h2>
-        <p>[Qual era a situação antes do projeto? Quem pediu, por quê, e qual era a expectativa inicial.]</p>
+        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <div data-i18n-html="common.companyBody"></div>
       </div>
 
       <div>
-        <h2>Problema</h2>
-        <p>[Qual problema específico você estava resolvendo? O que tornava isso difícil?]</p>
+        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <p data-i18n="projects.SLUG.context.body">[Qual era a situação antes do projeto? Quem pediu, por quê, e qual era a expectativa inicial.]</p>
       </div>
 
       <div>
-        <h2>Processo</h2>
-        <p>[Como você chegou na solução: pesquisa, hipóteses, iterações, decisões-chave.]</p>
+        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <p data-i18n="projects.SLUG.problem.body">[Qual problema específico você estava resolvendo? O que tornava isso difícil?]</p>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <p data-i18n="projects.SLUG.process.body">[Como você chegou na solução: pesquisa, hipóteses, iterações, decisões-chave.]</p>
         <div class="case-gallery">
           <div class="ph"></div>
           <div class="ph"></div>
@@ -70,28 +82,29 @@
       </div>
 
       <div>
-        <h2>Solução</h2>
-        <p>[O que foi entregue de fato. Pode incluir mais imagens/telas aqui.]</p>
+        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <p data-i18n="projects.SLUG.solution.body">[O que foi entregue de fato. Pode incluir mais imagens/telas aqui.]</p>
       </div>
 
       <div>
-        <h2>Resultado</h2>
-        <p>[Qual foi o impacto: métricas, aprendizados, feedback. Se não tiver números, fale do impacto qualitativo.]</p>
+        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <p data-i18n="projects.SLUG.result.body">[Qual foi o impacto: métricas, aprendizados, feedback. Se não tiver números, fale do impacto qualitativo.]</p>
       </div>
     </section>
 
     <nav class="case-nav wrap">
-      <a href="index.html">← Todos os projetos</a>
-      <a href="index.html">Próximo projeto →</a>
+      <a href="index.html" data-i18n="common.allProjects">← Todos os projetos</a>
+      <a href="index.html" data-i18n="common.nextProject">Próximo projeto →</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="../contato.html">contato</a></span>
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html" data-i18n="common.footerContact">contato</a></span>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n.js"></script>
 </body>
 </html>

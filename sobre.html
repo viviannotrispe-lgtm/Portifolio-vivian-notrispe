@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sobre — Vivian Notrispe</title>
+  <title data-i18n="about.title">Sobre — Vivian Notrispe</title>
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <meta name="description" content="Um pouco sobre Vivian Notrispe, designer de produto.">
+  <meta name="description" content="Um pouco sobre Vivian Notrispe, designer de produto." data-i18n-attr="content=about.metaDescription">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -18,56 +18,58 @@
       <a class="logo" href="index.html">Vivian Notrispe<span>.</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos/index.html">Projetos</a></li>
-          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="projetos/index.html" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="sobre.html" aria-current="page" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="case-header wrap">
-      <span class="mono">Sobre</span>
-      <h1>[Uma frase curta que resume quem você é como profissional.]</h1>
+      <span class="mono" data-i18n="about.eyebrow">Sobre</span>
+      <h1 data-i18n="about.heading">[Uma frase curta que resume quem você é como profissional.]</h1>
 
       <dl class="case-meta">
-        <div><dt>Baseado em</dt><dd>[Cidade, país]</dd></div>
-        <div><dt>Foco</dt><dd>[ex: Product & UX Design]</dd></div>
-        <div><dt>Experiência</dt><dd>[ex: 5 anos]</dd></div>
-        <div><dt>Disponibilidade</dt><dd>[ex: Novos projetos]</dd></div>
+        <div><dt data-i18n="about.baseadoEmLabel">Baseado em</dt><dd data-i18n="about.baseadoEmValue">[Cidade, país]</dd></div>
+        <div><dt data-i18n="about.focoLabel">Foco</dt><dd data-i18n="about.focoValue">[ex: Product & UX Design]</dd></div>
+        <div><dt data-i18n="about.experienciaLabel">Experiência</dt><dd data-i18n="about.experienciaValue">[ex: 5 anos]</dd></div>
+        <div><dt data-i18n="about.disponibilidadeLabel">Disponibilidade</dt><dd data-i18n="about.disponibilidadeValue">[ex: Novos projetos]</dd></div>
       </dl>
     </section>
 
     <section class="case-body wrap">
       <div>
-        <h2>Trajetória</h2>
-        <p>[Conte como chegou até aqui: formação, empresas por onde passou, o tipo de problema que mais te interessa resolver.]</p>
+        <h2 data-i18n="about.trajetoriaHeading">Trajetória</h2>
+        <p data-i18n="about.trajetoriaBody">[Conte como chegou até aqui: formação, empresas por onde passou, o tipo de problema que mais te interessa resolver.]</p>
       </div>
 
       <div>
-        <h2>Como eu trabalho</h2>
-        <p>[Seu processo, valores ou princípios de design. O que te diferencia como profissional.]</p>
+        <h2 data-i18n="about.comoEuTrabalhoHeading">Como eu trabalho</h2>
+        <p data-i18n="about.comoEuTrabalhoBody">[Seu processo, valores ou princípios de design. O que te diferencia como profissional.]</p>
       </div>
 
       <div>
-        <h2>Fora do trabalho</h2>
-        <p>[Opcional — um toque pessoal para humanizar a página.]</p>
+        <h2 data-i18n="about.foraDoTrabalhoHeading">Fora do trabalho</h2>
+        <p data-i18n="about.foraDoTrabalhoBody">[Opcional — um toque pessoal para humanizar a página.]</p>
       </div>
 
       <div>
-        <a class="btn" href="contato.html">Entrar em contato →</a>
+        <a class="btn" href="contato.html" data-i18n="about.cta">Entrar em contato →</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="contato.html">contato</a></span>
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="contato.html" data-i18n="common.footerContact">contato</a></span>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

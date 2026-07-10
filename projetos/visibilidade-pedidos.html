@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visibilidade de Pedidos: destravando a instalação — Vivian Notrispe</title>
+  <title data-i18n="projects.pedidos.title">Visibilidade de Pedidos: destravando a instalação — Vivian Notrispe</title>
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,49 +17,50 @@
       <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index.html" aria-current="page">Projetos</a></li>
-          <li><a href="../sobre.html">Sobre</a></li>
-          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="../index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="../sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="../contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="case-header wrap">
-      <span class="mono">Design · 2026</span>
-      <h1>Visibilidade de Pedidos: destravando a instalação</h1>
+      <span class="mono"><span data-i18n="projects.pedidos.category">Design</span> · <span data-i18n="projects.pedidos.year">2026</span></span>
+      <h1 data-i18n="projects.pedidos.heading">Visibilidade de Pedidos: destravando a instalação</h1>
 
       <dl class="case-meta">
-        <div><dt>Papel</dt><dd>PM + UX Principal (PMX), DRI da iniciativa</dd></div>
-        <div><dt>Time</dt><dd>1 designer estagiária, 3 devs, 1 engineering manager</dd></div>
-        <div><dt>Duração</dt><dd>2 meses (discovery → entrega)</dd></div>
-        <div><dt>Ferramentas</dt><dd>Figma, Hubspot, Mixpanel</dd></div>
+        <div><dt data-i18n="common.roleLabel">Papel</dt><dd data-i18n="projects.pedidos.role">PM + UX Principal (PMX), DRI da iniciativa</dd></div>
+        <div><dt data-i18n="common.teamLabel">Time</dt><dd data-i18n="projects.pedidos.team">1 designer estagiária, 3 devs, 1 engineering manager</dd></div>
+        <div><dt data-i18n="common.durationLabel">Duração</dt><dd data-i18n="projects.pedidos.duration">2 meses (discovery → entrega)</dd></div>
+        <div><dt data-i18n="common.toolsLabel">Ferramentas</dt><dd data-i18n="projects.pedidos.tools">Figma, Hubspot, Mixpanel</dd></div>
       </dl>
 
       <div class="case-cover">
-        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ilustração combinando o fluxo do pedido (pedido realizado, envio, agendamento e instalação) com uma versão simplificada da página de pedidos, mostrando o resumo por tipo de pedido e a tabela de status.">
+        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.pedidos.coverAlt" aria-label="Ilustração combinando o fluxo do pedido (pedido realizado, envio, agendamento e instalação) com uma versão simplificada da página de pedidos, mostrando o resumo por tipo de pedido e a tabela de status.">
           <defs>
             <marker id="pedidosCoverArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
             </marker>
           </defs>
 
-          <text x="60" y="66" font-family="var(--font-mono)" font-size="15" letter-spacing="1" fill="var(--ink-soft)">FLUXO DO PEDIDO → VISIBILIDADE NO PAINEL</text>
+          <text x="60" y="66" font-family="var(--font-mono)" font-size="15" letter-spacing="1" fill="var(--ink-soft)" data-i18n="projects.pedidos.coverFlowLabel">FLUXO DO PEDIDO → VISIBILIDADE NO PAINEL</text>
 
           <g font-family="var(--font-display)" font-weight="600" font-size="14">
             <rect x="60" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-            <text x="145" y="130" text-anchor="middle" fill="var(--ink)">Pedido</text>
+            <text x="145" y="130" text-anchor="middle" fill="var(--ink)" data-i18n="projects.pedidos.coverPedido">Pedido</text>
 
             <rect x="260" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-            <text x="345" y="130" text-anchor="middle" fill="var(--ink)">Envio</text>
+            <text x="345" y="130" text-anchor="middle" fill="var(--ink)" data-i18n="projects.pedidos.coverEnvio">Envio</text>
 
             <rect x="460" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-            <text x="545" y="130" text-anchor="middle" fill="var(--ink)">Agendamento</text>
+            <text x="545" y="130" text-anchor="middle" fill="var(--ink)" data-i18n="projects.pedidos.coverAgendamento">Agendamento</text>
 
             <rect x="660" y="100" width="170" height="50" rx="25" fill="var(--accent)"/>
-            <text x="745" y="130" text-anchor="middle" fill="var(--paper)">Instalação</text>
+            <text x="745" y="130" text-anchor="middle" fill="var(--paper)" data-i18n="projects.pedidos.coverInstalacao">Instalação</text>
           </g>
 
           <g stroke="var(--accent)" stroke-width="2" marker-end="url(#pedidosCoverArrow)">
@@ -73,21 +74,21 @@
           <circle cx="92" cy="228" r="5" fill="var(--line-strong)"/>
           <circle cx="112" cy="228" r="5" fill="var(--line-strong)"/>
           <circle cx="132" cy="228" r="5" fill="var(--line-strong)"/>
-          <text x="160" y="234" font-family="var(--font-display)" font-weight="600" font-size="20" fill="var(--ink)">Pedidos</text>
+          <text x="160" y="234" font-family="var(--font-display)" font-weight="600" font-size="20" fill="var(--ink)" data-i18n="projects.pedidos.coverPedidosHeading">Pedidos</text>
           <line x1="90" y1="250" x2="870" y2="250" stroke="var(--line)"/>
 
           <g>
             <rect x="90" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
             <rect x="108" y="286" width="8" height="18" rx="2" fill="var(--accent)"/>
-            <text x="128" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">40 <tspan fill="var(--ink-soft)" font-size="12">Compras</tspan></text>
+            <text x="128" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">40 <tspan fill="var(--ink-soft)" font-size="12" data-i18n="projects.pedidos.coverCompras">Compras</tspan></text>
 
             <rect x="350" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
             <rect x="368" y="286" width="8" height="18" rx="2" fill="var(--accent-warm)"/>
-            <text x="388" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">6 <tspan fill="var(--ink-soft)" font-size="12">Trocas</tspan></text>
+            <text x="388" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">6 <tspan fill="var(--ink-soft)" font-size="12" data-i18n="projects.pedidos.coverTrocas">Trocas</tspan></text>
 
             <rect x="610" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
             <rect x="628" y="286" width="8" height="18" rx="2" fill="var(--ink-soft)"/>
-            <text x="648" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">5 <tspan fill="var(--ink-soft)" font-size="12">Devoluções</tspan></text>
+            <text x="648" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">5 <tspan fill="var(--ink-soft)" font-size="12" data-i18n="projects.pedidos.coverDevolucoes">Devoluções</tspan></text>
           </g>
 
           <g fill="var(--line)">
@@ -121,36 +122,38 @@
 
     <section class="case-body wrap">
       <div>
-        <h2>A empresa</h2>
-        <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
-        <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <div data-i18n-html="common.companyBody">
+          <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
+          <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        </div>
       </div>
 
       <div>
-        <h2>Contexto</h2>
-        <p>Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes, maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes.</p>
-        <p>O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado, o que afeta a operação da frota, até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
+        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <p data-i18n-html="projects.pedidos.context.body1">Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes, maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes.</p>
+        <p data-i18n="projects.pedidos.context.body2">O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado, o que afeta a operação da frota, até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
       </div>
 
       <div>
-        <h2>Problema</h2>
-        <p>Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o caminho mais utilizado era abrindo um ticket com atendimento ou CS. Isso não era só um incômodo: sem essa visibilidade, o gestor da frota não conseguia planejar quando parar os veículos para a instalação, nem organizar a operação no dia combinado, nem acompanhar o que tinha ficado pendente para as próximas etapas do onboarding. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <p data-i18n="projects.pedidos.problem.body">Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o caminho mais utilizado era abrindo um ticket com atendimento ou CS. Isso não era só um incômodo: sem essa visibilidade, o gestor da frota não conseguia planejar quando parar os veículos para a instalação, nem organizar a operação no dia combinado, nem acompanhar o que tinha ficado pendente para as próximas etapas do onboarding. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente e nunca tinha sido traduzida para o cliente.</p>
       </div>
 
       <div>
-        <h2>Processo</h2>
-        <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade, desde o pedido do dispositivo até a instalação concluída.</p>
-        <p>O diagnóstico apontou quatro causas específicas para a falta de clareza:</p>
+        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <p data-i18n="projects.pedidos.process.body1">Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade, desde o pedido do dispositivo até a instalação concluída.</p>
+        <p data-i18n="projects.pedidos.process.diagIntro">O diagnóstico apontou quatro causas específicas para a falta de clareza:</p>
         <ul>
-          <li>A data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos, menos relevante pro cliente naquele momento, tinha mais destaque na tela.</li>
-          <li>Cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas.</li>
-          <li>O painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes.</li>
-          <li>Na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</li>
+          <li data-i18n="projects.pedidos.process.diagItem1">A data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos, menos relevante pro cliente naquele momento, tinha mais destaque na tela.</li>
+          <li data-i18n="projects.pedidos.process.diagItem2">Cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas.</li>
+          <li data-i18n="projects.pedidos.process.diagItem3">O painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes.</li>
+          <li data-i18n="projects.pedidos.process.diagItem4">Na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</li>
         </ul>
 
         <figure class="stat-chart stat-chart--wide">
-          <span class="mono">Fluxo do pedido · onde o cliente dependia do CS</span>
-          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do fluxo do pedido em quatro etapas (pedido realizado, envio dos dispositivos, agendamento e instalação), mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
+          <span class="mono" data-i18n="projects.pedidos.process.chart1.label">Fluxo do pedido · onde o cliente dependia do CS</span>
+          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.pedidos.process.chart1.alt" aria-label="Diagrama do fluxo do pedido em quatro etapas (pedido realizado, envio dos dispositivos, agendamento e instalação), mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
             <defs>
               <marker id="pedidosArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
@@ -158,7 +161,7 @@
             </defs>
 
             <rect x="340" y="14" width="220" height="42" rx="21" fill="var(--paper)" stroke="var(--accent-warm)" stroke-width="1.5"/>
-            <text x="450" y="40" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--accent-warm)">cliente liga pro CS</text>
+            <text x="450" y="40" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--accent-warm)" data-i18n="projects.pedidos.process.chart1.clienteLigaCs">cliente liga pro CS</text>
 
             <g stroke="var(--ink-soft)" stroke-width="1.2" stroke-dasharray="3 4">
               <line x1="450" y1="56" x2="340" y2="110"/>
@@ -168,17 +171,17 @@
 
             <g font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--ink)" text-anchor="middle">
               <rect x="30" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-              <text x="120" y="145">Pedido realizado</text>
+              <text x="120" y="145" data-i18n="projects.pedidos.process.chart1.pedidoRealizado">Pedido realizado</text>
 
               <rect x="250" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-              <text x="340" y="137">Envio dos</text>
-              <text x="340" y="155">dispositivos</text>
+              <text x="340" y="137" data-i18n="projects.pedidos.process.chart1.envioLine1">Envio dos</text>
+              <text x="340" y="155" data-i18n="projects.pedidos.process.chart1.envioLine2">dispositivos</text>
 
               <rect x="470" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-              <text x="560" y="145">Agendamento</text>
+              <text x="560" y="145" data-i18n="projects.pedidos.process.chart1.agendamento">Agendamento</text>
 
               <rect x="690" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-              <text x="780" y="145">Instalação</text>
+              <text x="780" y="145" data-i18n="projects.pedidos.process.chart1.instalacao">Instalação</text>
             </g>
 
             <g stroke="var(--accent)" stroke-width="2" marker-end="url(#pedidosArrow)">
@@ -195,72 +198,72 @@
 
             <g font-family="var(--font-mono)" font-size="12" fill="var(--accent-warm)" text-anchor="middle">
               <rect x="250" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
-              <text x="340" y="218">só o CS sabia a</text>
-              <text x="340" y="234">previsão real de chegada</text>
+              <text x="340" y="218" data-i18n="projects.pedidos.process.chart1.gap1Line1">só o CS sabia a</text>
+              <text x="340" y="234" data-i18n="projects.pedidos.process.chart1.gap1Line2">previsão real de chegada</text>
 
               <rect x="470" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
-              <text x="560" y="218">a data ficava escondida</text>
-              <text x="560" y="234">num ticket à parte</text>
+              <text x="560" y="218" data-i18n="projects.pedidos.process.chart1.gap2Line1">a data ficava escondida</text>
+              <text x="560" y="234" data-i18n="projects.pedidos.process.chart1.gap2Line2">num ticket à parte</text>
 
               <rect x="690" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
-              <text x="780" y="218">cliente não sabia o que</text>
-              <text x="780" y="234">já tinha sido instalado</text>
+              <text x="780" y="218" data-i18n="projects.pedidos.process.chart1.gap3Line1">cliente não sabia o que</text>
+              <text x="780" y="234" data-i18n="projects.pedidos.process.chart1.gap3Line2">já tinha sido instalado</text>
             </g>
           </svg>
-          <figcaption>Mapeamento do fluxo de onboarding-instalação: em três das quatro etapas do pedido, a falta de visibilidade só era resolvida com um contato reativo ao CS.</figcaption>
+          <figcaption data-i18n="projects.pedidos.process.chart1.caption">Mapeamento do fluxo de onboarding-instalação: em três das quatro etapas do pedido, a falta de visibilidade só era resolvida com um contato reativo ao CS.</figcaption>
         </figure>
 
-        <p>Trabalhar com o Hubspot e com processos operacionais fora da esfera de produto foi um desafio à parte. Encontramos gaps que não dava para resolver só no front, porque vinham de operações maiores que o time não controlava, e os dados de envio, instalação e devolução viviam em pipelines diferentes, sem nenhum ponto único que os conectasse. Para lidar com isso, especificamos uma nova API que concentrasse essas informações antes de traduzi-las para o cliente, e enxugamos boa parte dessas etapas internas sem comprometer a visibilidade que o cliente via do outro lado.</p>
+        <p data-i18n="projects.pedidos.process.body2">Trabalhar com o Hubspot e com processos operacionais fora da esfera de produto foi um desafio à parte. Encontramos gaps que não dava para resolver só no front, porque vinham de operações maiores que o time não controlava, e os dados de envio, instalação e devolução viviam em pipelines diferentes, sem nenhum ponto único que os conectasse. Para lidar com isso, especificamos uma nova API que concentrasse essas informações antes de traduzi-las para o cliente, e enxugamos boa parte dessas etapas internas sem comprometer a visibilidade que o cliente via do outro lado.</p>
       </div>
 
       <div>
-        <h2>Solução</h2>
-        <p>A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos, hoje espalhadas em tickets internos separados, junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
+        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <p data-i18n="projects.pedidos.solution.body1">A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos, hoje espalhadas em tickets internos separados, junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Página de pedidos · visão geral</span>
-          <img src="../assets/img/pedidos-visao-geral.jpg" alt="Tela da página de pedidos mostrando os cards de resumo de compras, trocas e devoluções, a tabela de pedidos com etapa, data de agendamento e prazo limite, e uma recomendação para agendar instalação.">
-          <figcaption>Visão geral da página de pedidos, com o resumo por tipo de pedido e uma recomendação automática para agendar instalações pendentes.</figcaption>
+          <span class="mono" data-i18n="projects.pedidos.solution.img1Label">Página de pedidos · visão geral</span>
+          <img src="../assets/img/pedidos-visao-geral.jpg" data-i18n-attr="alt=projects.pedidos.solution.img1Alt" alt="Tela da página de pedidos mostrando os cards de resumo de compras, trocas e devoluções, a tabela de pedidos com etapa, data de agendamento e prazo limite, e uma recomendação para agendar instalação.">
+          <figcaption data-i18n="projects.pedidos.solution.img1Caption">Visão geral da página de pedidos, com o resumo por tipo de pedido e uma recomendação automática para agendar instalações pendentes.</figcaption>
         </figure>
 
-        <p>A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status, traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
+        <p data-i18n="projects.pedidos.solution.body2">A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status, traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Página de pedidos · linha do tempo de status</span>
-          <img src="../assets/img/pedidos-timeline.jpg" alt="Tela da página de pedidos mostrando a linha do tempo com as etapas de instalação, envio dos dispositivos e pedido realizado, cada uma com endereço, previsão de chegada e ticket relacionado.">
-          <figcaption>A linha do tempo traduz os status internos de operação (tickets do Hubspot) para uma nomenclatura que o cliente entende sozinho, sem contato com atendimento.</figcaption>
+          <span class="mono" data-i18n="projects.pedidos.solution.img2Label">Página de pedidos · linha do tempo de status</span>
+          <img src="../assets/img/pedidos-timeline.jpg" data-i18n-attr="alt=projects.pedidos.solution.img2Alt" alt="Tela da página de pedidos mostrando a linha do tempo com as etapas de instalação, envio dos dispositivos e pedido realizado, cada uma com endereço, previsão de chegada e ticket relacionado.">
+          <figcaption data-i18n="projects.pedidos.solution.img2Caption">A linha do tempo traduz os status internos de operação (tickets do Hubspot) para uma nomenclatura que o cliente entende sozinho, sem contato com atendimento.</figcaption>
         </figure>
 
-        <p>Ao lado da timeline, desenhamos uma visão de detalhe por dispositivo, que resolve o caso mais comum de dúvida do CS: pedidos com múltiplos dispositivos e datas de instalação diferentes, em que o cliente só queria saber quais já tinham sido instalados.</p>
+        <p data-i18n="projects.pedidos.solution.body3">Ao lado da timeline, desenhamos uma visão de detalhe por dispositivo, que resolve o caso mais comum de dúvida do CS: pedidos com múltiplos dispositivos e datas de instalação diferentes, em que o cliente só queria saber quais já tinham sido instalados.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Página de pedidos · detalhe por dispositivo</span>
-          <img src="../assets/img/pedidos-detalhe-dispositivo.jpg" alt="Tela da página de pedidos mostrando uma tabela com o status individual de cada dispositivo do pedido, veículo associado, endereço de entrega e ticket relacionado.">
-          <figcaption>Visão detalhada por dispositivo, criada para pedidos com múltiplos itens e datas de instalação diferentes.</figcaption>
+          <span class="mono" data-i18n="projects.pedidos.solution.img3Label">Página de pedidos · detalhe por dispositivo</span>
+          <img src="../assets/img/pedidos-detalhe-dispositivo.jpg" data-i18n-attr="alt=projects.pedidos.solution.img3Alt" alt="Tela da página de pedidos mostrando uma tabela com o status individual de cada dispositivo do pedido, veículo associado, endereço de entrega e ticket relacionado.">
+          <figcaption data-i18n="projects.pedidos.solution.img3Caption">Visão detalhada por dispositivo, criada para pedidos com múltiplos itens e datas de instalação diferentes.</figcaption>
         </figure>
 
-        <p>Como parte do mesmo esforço, o time também entregou um atalho de agendamento direto pela página de pedidos, conectado a um agente de agendamento por IA, entrega que vou detalhar num case à parte.</p>
+        <p data-i18n="projects.pedidos.solution.body4">Como parte do mesmo esforço, o time também entregou um atalho de agendamento direto pela página de pedidos, conectado a um agente de agendamento por IA, entrega que vou detalhar num case à parte.</p>
       </div>
 
       <div>
-        <h2>Resultado</h2>
+        <h2 data-i18n="common.sectionResult">Resultado</h2>
 
         <div class="result-stats">
           <div class="result-stat">
-            <span class="value">32%</span>
-            <span class="label">das frotas acessando a página de pedidos em junho (partiu de 0% antes do lançamento)</span>
+            <span class="value" data-i18n="projects.pedidos.result.stat1Value">32%</span>
+            <span class="label" data-i18n="projects.pedidos.result.stat1Label">das frotas acessando a página de pedidos em junho (partiu de 0% antes do lançamento)</span>
           </div>
           <div class="result-stat">
-            <span class="value">40%</span>
-            <span class="label">dos agendamentos feitos direto pelo painel, sem atendimento</span>
+            <span class="value" data-i18n="projects.pedidos.result.stat2Value">40%</span>
+            <span class="label" data-i18n="projects.pedidos.result.stat2Label">dos agendamentos feitos direto pelo painel, sem atendimento</span>
           </div>
         </div>
 
-        <p>Antes do lançamento, estabelecemos a meta de 20% de adoção da nova página de pedidos nos primeiros três meses. Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março. A partir daí a adoção saltou de 0% para um pico de 35% em maio, se estabilizando em 32% em junho, superando a meta com folga. Junto disso, 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+        <p data-i18n="projects.pedidos.result.body1">Antes do lançamento, estabelecemos a meta de 20% de adoção da nova página de pedidos nos primeiros três meses. Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março. A partir daí a adoção saltou de 0% para um pico de 35% em maio, se estabilizando em 32% em junho, superando a meta com folga. Junto disso, 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Acesso à página de pedidos · % das frotas · jan-jun/26</span>
-          <svg viewBox="0 0 900 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando o acesso à página de pedidos subindo de 0% em janeiro e fevereiro para 21% em março, 29% em abril, um pico de 35% em maio, e se estabilizando em 32% em junho, superando a meta de 20%.">
+          <span class="mono" data-i18n="projects.pedidos.result.chart1.label">Acesso à página de pedidos · % das frotas · jan-jun/26</span>
+          <svg viewBox="0 0 900 530" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.pedidos.result.chart1.alt" aria-label="Gráfico de linha mostrando o acesso à página de pedidos subindo de 0% em janeiro e fevereiro para 21% em março, 29% em abril, um pico de 35% em maio, e se estabilizando em 32% em junho, superando a meta de 20%.">
             <defs>
               <linearGradient id="pedidosResultGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
@@ -279,7 +282,7 @@
             <text x="68" y="265" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink)" font-weight="600">20%</text>
             <text x="68" y="375" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">10%</text>
             <text x="68" y="485" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">0%</text>
-            <text x="85" y="253" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">meta: 20%</text>
+            <text x="85" y="253" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.metaLabel">meta: 20%</text>
 
             <path d="M 80 480 L 240 480 L 400 249 L 560 161 L 720 95 L 880 128 L 880 480 L 80 480 Z" fill="url(#pedidosResultGradient)" stroke="none"/>
             <path d="M 80 480 L 240 480 L 400 249 L 560 161 L 720 95 L 880 128" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -293,37 +296,38 @@
 
             <circle cx="720" cy="95" r="6.5" fill="var(--accent-warm)"/>
             <text x="720" y="72" text-anchor="middle" font-family="var(--font-display)" font-size="20" font-weight="700" fill="var(--accent-warm)">35%</text>
-            <text x="720" y="112" text-anchor="middle" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">pico em maio</text>
+            <text x="720" y="112" text-anchor="middle" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.peakLabel">pico em maio</text>
 
             <circle cx="880" cy="128" r="5.5" fill="var(--paper-2)" stroke="var(--accent)" stroke-width="2"/>
             <text x="855" y="150" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink)" font-weight="600">32%</text>
 
-            <text x="80" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jan</text>
-            <text x="240" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">fev</text>
-            <text x="400" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">mar</text>
-            <text x="560" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">abr</text>
-            <text x="720" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">mai</text>
-            <text x="880" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jun</text>
+            <text x="80" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.jan">jan</text>
+            <text x="240" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.fev">fev</text>
+            <text x="400" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.mar">mar</text>
+            <text x="560" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.abr">abr</text>
+            <text x="720" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.mai">mai</text>
+            <text x="880" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.pedidos.result.chart1.jun">jun</text>
           </svg>
-          <figcaption>Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março.</figcaption>
+          <figcaption data-i18n="projects.pedidos.result.chart1.caption">Lançamos para parte da base em fevereiro e liberamos para 100% dos clientes em março.</figcaption>
         </figure>
 
-        <p>O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informações que já existem internamente e nunca foram traduzidas para o usuário. Tornar essas informações visíveis para o cliente é o que de fato reduz o atrito e a dependência de suporte.</p>
+        <p data-i18n="projects.pedidos.result.closing">O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informações que já existem internamente e nunca foram traduzidas para o usuário. Tornar essas informações visíveis para o cliente é o que de fato reduz o atrito e a dependência de suporte.</p>
       </div>
     </section>
 
     <nav class="case-nav wrap">
-      <a href="index.html">← Todos os projetos</a>
-      <a href="recomendacoes-inteligentes.html">Próximo projeto →</a>
+      <a href="index.html" data-i18n="common.allProjects">← Todos os projetos</a>
+      <a href="recomendacoes-inteligentes.html" data-i18n="common.nextProject">Próximo projeto →</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="../contato.html">contato</a></span>
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html" data-i18n="common.footerContact">contato</a></span>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n.js"></script>
 </body>
 </html>
