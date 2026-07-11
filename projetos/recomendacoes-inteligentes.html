@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recomendações Inteligentes: a régua determinística por trás da IA — Vivian Notrispe</title>
+  <title data-i18n="projects.recomendacoes.title">Recomendações Inteligentes: a régua determinística por trás da IA — Vivian Notrispe</title>
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,47 +17,57 @@
       <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index.html" aria-current="page">Projetos</a></li>
-          <li><a href="../sobre.html">Sobre</a></li>
-          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="../index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="../sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="../contato.html" data-i18n="nav.contact">Contato</a></li>
         </ul>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="case-header wrap">
-      <span class="mono">Pesquisa & Produto · 2026</span>
-      <h1>Recomendações Inteligentes: a régua determinística por trás da IA</h1>
+      <span class="mono"><span data-i18n="projects.recomendacoes.category">Pesquisa & Produto</span> · <span data-i18n="projects.recomendacoes.year">2026</span></span>
+      <h1 data-i18n="projects.recomendacoes.heading">Recomendações Inteligentes: a régua determinística por trás da IA</h1>
 
       <dl class="case-meta">
-        <div><dt>Papel</dt><dd>PM + UX Principal (PMX) — DRI da lógica de priorização e motor de gatilho</dd></div>
-        <div><dt>Time</dt><dd>Squad de Account Experience — PO, devs e cientista de dados/IA</dd></div>
-        <div><dt>Duração</dt><dd>~5 meses (discovery → POC → testes com clientes → rollout gradual)</dd></div>
-        <div><dt>Ferramentas</dt><dd>Mastra AI, LLM para personalização, Mixpanel, Figma</dd></div>
+        <div><dt data-i18n="common.roleLabel">Papel</dt><dd data-i18n="projects.recomendacoes.role">PM + UX Principal (PMX) — DRI da lógica de priorização e motor de gatilho</dd></div>
+        <div><dt data-i18n="common.teamLabel">Time</dt><dd data-i18n="projects.recomendacoes.team">Squad de Account Experience — PO, devs e cientista de dados/IA</dd></div>
+        <div><dt data-i18n="common.durationLabel">Duração</dt><dd data-i18n="projects.recomendacoes.duration">~5 meses (discovery → POC → testes com clientes → rollout gradual)</dd></div>
+        <div><dt data-i18n="common.toolsLabel">Ferramentas</dt><dd data-i18n="projects.recomendacoes.tools">Mastra AI, LLM para personalização, Mixpanel, Figma</dd></div>
       </dl>
 
       <div class="case-cover">
-        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do motor de recomendações: sinais do painel e CRM alimentam um motor determinístico de farol e régua de criticidade, que decide o nível da recomendação antes de um LLM personalizar a mensagem final. Abaixo, um exemplo mostra installation_pct 65% e dias sem movimento 9 classificados como farol amarelo e régua urgente, gerando a mensagem 'você já tem 65% da frota instalada, vamos agendar o próximo lote'.">
+        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.recomendacoes.coverAlt" aria-label="Diagrama do motor de recomendações: sinais do painel e CRM alimentam um motor determinístico de farol e régua de criticidade, que decide o nível da recomendação antes de um LLM personalizar a mensagem final. Abaixo, um exemplo mostra installation_pct 65% e dias sem movimento 9 classificados como farol amarelo e régua urgente, gerando a mensagem 'você já tem 65% da frota instalada, vamos agendar o próximo lote'.">
           <defs>
             <marker id="recCoverArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
             </marker>
           </defs>
 
-          <text x="50" y="45" font-family="var(--font-mono)" font-size="14" letter-spacing="1" fill="var(--ink-soft)">SINAIS → REGRAS DETERMINÍSTICAS → PERSONALIZAÇÃO</text>
+          <text x="50" y="45" font-family="var(--font-mono)" font-size="14" letter-spacing="1" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.coverFlowLabel">SINAIS → REGRAS DETERMINÍSTICAS → PERSONALIZAÇÃO</text>
 
           <g font-family="var(--font-display)" font-weight="600" font-size="14" text-anchor="middle">
             <rect x="50" y="70" width="255" height="54" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-            <text x="177" y="102" fill="var(--ink)">Sinais do painel + CRM</text>
+            <text x="177" y="102" fill="var(--ink)" data-i18n="projects.recomendacoes.coverSinais">Sinais do painel + CRM</text>
 
             <rect x="352" y="70" width="255" height="54" rx="10" fill="var(--accent)"/>
-            <text x="479" y="94" fill="var(--paper)">Motor determinístico</text>
-            <text x="479" y="112" font-family="var(--font-mono)" font-weight="400" font-size="11" fill="var(--paper)">farol + régua de criticidade</text>
+            <text x="479" y="94" fill="var(--paper)" data-i18n="projects.recomendacoes.coverMotorLine1">Motor determinístico</text>
+            <text x="479" y="112" font-family="var(--font-mono)" font-weight="400" font-size="11" fill="var(--paper)" data-i18n="projects.recomendacoes.coverMotorLine2">farol + régua de criticidade</text>
 
             <rect x="654" y="70" width="256" height="54" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
-            <text x="782" y="102" fill="var(--ink)">LLM personaliza a mensagem</text>
+            <text x="782" y="102" fill="var(--ink)" data-i18n="projects.recomendacoes.coverLlm">LLM personaliza a mensagem</text>
           </g>
 
           <g stroke="var(--accent)" stroke-width="2" marker-end="url(#recCoverArrow)">
@@ -66,38 +76,38 @@
           </g>
 
           <rect x="50" y="164" width="860" height="340" rx="14" fill="var(--paper)" stroke="var(--line-strong)"/>
-          <text x="74" y="200" font-family="var(--font-mono)" font-size="12" letter-spacing="1" fill="var(--ink-soft)">EXEMPLO</text>
+          <text x="74" y="200" font-family="var(--font-mono)" font-size="12" letter-spacing="1" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.coverExemplo">EXEMPLO</text>
 
           <line x1="360" y1="184" x2="360" y2="484" stroke="var(--line)"/>
           <line x1="616" y1="184" x2="616" y2="484" stroke="var(--line)"/>
 
           <g font-family="var(--font-mono)" font-size="14" fill="var(--ink)">
-            <text x="74" y="240">installation_pct</text>
+            <text x="74" y="240" data-i18n="projects.recomendacoes.coverInstallationPct">installation_pct</text>
             <text x="336" y="240" text-anchor="end" fill="var(--accent)" font-weight="600">65%</text>
 
-            <text x="74" y="280">dias_sem_movimento</text>
+            <text x="74" y="280" data-i18n="projects.recomendacoes.coverDiasSemMovimento">dias_sem_movimento</text>
             <text x="336" y="280" text-anchor="end" fill="var(--accent)" font-weight="600">9</text>
 
-            <text x="74" y="320" font-size="12">next_batch_scheduled_at</text>
-            <text x="336" y="320" text-anchor="end" fill="var(--ink-soft)">nulo</text>
+            <text x="74" y="320" font-size="12" data-i18n="projects.recomendacoes.coverNextBatch">next_batch_scheduled_at</text>
+            <text x="336" y="320" text-anchor="end" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.coverNulo">nulo</text>
           </g>
 
           <g font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">
-            <text x="384" y="222">Farol</text>
+            <text x="384" y="222" data-i18n="projects.recomendacoes.coverFarolLabel">Farol</text>
           </g>
           <rect x="384" y="234" width="130" height="34" rx="17" fill="var(--accent-warm)" fill-opacity="0.18" stroke="var(--accent-warm)"/>
-          <text x="449" y="256" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--accent-warm)">Amarelo</text>
+          <text x="449" y="256" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--accent-warm)" data-i18n="projects.recomendacoes.coverFarolValue">Amarelo</text>
 
           <g font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">
-            <text x="384" y="306">Régua de criticidade</text>
+            <text x="384" y="306" data-i18n="projects.recomendacoes.coverReguaLabel">Régua de criticidade</text>
           </g>
           <rect x="384" y="318" width="180" height="34" rx="17" fill="var(--accent-warm)" fill-opacity="0.28" stroke="var(--accent-warm)"/>
-          <text x="474" y="340" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--accent-warm)">Urgente</text>
+          <text x="474" y="340" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--accent-warm)" data-i18n="projects.recomendacoes.coverReguaValue">Urgente</text>
 
           <g font-family="var(--font-body)" font-size="15" fill="var(--ink)">
-            <text x="640" y="230">"Você já tem 65% da</text>
-            <text x="640" y="252">frota instalada. Vamos</text>
-            <text x="640" y="274">agendar o próximo lote?"</text>
+            <text x="640" y="230" data-i18n="projects.recomendacoes.coverMsgLine1">"Você já tem 65% da</text>
+            <text x="640" y="252" data-i18n="projects.recomendacoes.coverMsgLine2">frota instalada. Vamos</text>
+            <text x="640" y="274" data-i18n="projects.recomendacoes.coverMsgLine3">agendar o próximo lote?"</text>
           </g>
         </svg>
       </div>
@@ -105,110 +115,112 @@
 
     <section class="case-body wrap">
       <div>
-        <h2>A empresa</h2>
-        <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
-        <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <div data-i18n-html="common.companyBody">
+          <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
+          <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        </div>
       </div>
 
       <div>
-        <h2>Contexto</h2>
-        <p>Este projeto nasceu como um desdobramento dos estudos sobre onboarding. Durante esse discovery, desenvolvi uma métrica adaptada de <a href="basic-value.html">Basic Value</a>, utilizada para medir o percentual de ativação básica de uma empresa, ou seja, o quanto ela já configurou o produto para começar a gerar valor. Hoje, essa métrica é utilizada como um dos principais termômetros de risco de churn precoce.</p>
-        <p>Além dos dados quantitativos, a pesquisa qualitativa revelou outro ponto importante: mesmo após ativar a plataforma, muitos clientes não sabiam quais eram os próximos passos. Faltava clareza sobre o potencial da ferramenta, entendimento das funcionalidades disponíveis e uma orientação prática que ajudasse a evoluir o uso.</p>
-        <p>O problema não era falta de interesse. A plataforma oferece dezenas de possibilidades de configuração e, sem qualquer priorização, tudo parecia ter a mesma importância. O resultado era uma alta carga cognitiva logo nos primeiros acessos, dificultando a ativação e reduzindo engajamento no produto.</p>
-        <p>Atuei como PM e UX principal (PMX) no time de Account Experience, e esta foi a segunda frente que assumi como DRI depois da Basic Value: um motor de recomendações que, a partir do que já tinha sido feito no painel e do que ainda faltava para o Basic Value, decide a cada momento qual é a próxima ação que faz sentido mostrar para aquele cliente específico.</p>
+        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <p data-i18n-html="projects.recomendacoes.context.body1">Este projeto nasceu como um desdobramento dos estudos sobre onboarding. Durante esse discovery, desenvolvi uma métrica adaptada de <a href="basic-value.html">Basic Value</a>, utilizada para medir o percentual de ativação básica de uma empresa, ou seja, o quanto ela já configurou o produto para começar a gerar valor. Hoje, essa métrica é utilizada como um dos principais termômetros de risco de churn precoce.</p>
+        <p data-i18n="projects.recomendacoes.context.body2">Além dos dados quantitativos, a pesquisa qualitativa revelou outro ponto importante: mesmo após ativar a plataforma, muitos clientes não sabiam quais eram os próximos passos. Faltava clareza sobre o potencial da ferramenta, entendimento das funcionalidades disponíveis e uma orientação prática que ajudasse a evoluir o uso.</p>
+        <p data-i18n="projects.recomendacoes.context.body3">O problema não era falta de interesse. A plataforma oferece dezenas de possibilidades de configuração e, sem qualquer priorização, tudo parecia ter a mesma importância. O resultado era uma alta carga cognitiva logo nos primeiros acessos, dificultando a ativação e reduzindo engajamento no produto.</p>
+        <p data-i18n="projects.recomendacoes.context.body4">Atuei como PM e UX principal (PMX) no time de Account Experience, e esta foi a segunda frente que assumi como DRI depois da Basic Value: um motor de recomendações que, a partir do que já tinha sido feito no painel e do que ainda faltava para o Basic Value, decide a cada momento qual é a próxima ação que faz sentido mostrar para aquele cliente específico.</p>
       </div>
 
       <div>
-        <h2>Problema</h2>
-        <p>O direcionamento das lideranças era aplicar IA nas soluções, sem um recorte definido de onde ou como. Rapidamente ficou claro que deixar um LLM decidir sozinho o que recomendar e quando é uma aposta arriscada: não temos como auditar por que o modelo recomendou X para o cliente Y, nem garantir que ele nunca mostre duas recomendações concorrentes na mesma sessão. Esse tipo de sobrecarga foi exatamente o que a pesquisa da Basic Value já tinha apontado como causa de abandono.</p>
-        <p>O problema de produto real, então, não era gerar texto personalizado: era decidir, de forma determinística e auditável, qual recomendação vence em cada contexto, antes de qualquer LLM entrar em cena. Essa foi a parte do projeto que assumi como foco principal.</p>
+        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <p data-i18n="projects.recomendacoes.problem.body1">O direcionamento das lideranças era aplicar IA nas soluções, sem um recorte definido de onde ou como. Rapidamente ficou claro que deixar um LLM decidir sozinho o que recomendar e quando é uma aposta arriscada: não temos como auditar por que o modelo recomendou X para o cliente Y, nem garantir que ele nunca mostre duas recomendações concorrentes na mesma sessão. Esse tipo de sobrecarga foi exatamente o que a pesquisa da Basic Value já tinha apontado como causa de abandono.</p>
+        <p data-i18n="projects.recomendacoes.problem.body2">O problema de produto real, então, não era gerar texto personalizado: era decidir, de forma determinística e auditável, qual recomendação vence em cada contexto, antes de qualquer LLM entrar em cena. Essa foi a parte do projeto que assumi como foco principal.</p>
       </div>
 
       <div>
-        <h2>Processo</h2>
-        <p>Mapeei cada uma das jornadas que compõem o Basic Value (Instalação e Setup + Configurações, nesta primeira versão) em sinais objetivos já disponíveis no painel e no CRM: percentual de veículos instalados, dias sem nenhum movimento relevante, se o próximo lote de instalação já tinha data marcada, quantos dos 9 critérios de Setup já haviam sido cumpridos, entre outros. Sobre esses sinais, especifiquei duas camadas de regra:</p>
+        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <p data-i18n="projects.recomendacoes.process.intro">Mapeei cada uma das jornadas que compõem o Basic Value (Instalação e Setup + Configurações, nesta primeira versão) em sinais objetivos já disponíveis no painel e no CRM: percentual de veículos instalados, dias sem nenhum movimento relevante, se o próximo lote de instalação já tinha data marcada, quantos dos 9 critérios de Setup já haviam sido cumpridos, entre outros. Sobre esses sinais, especifiquei duas camadas de regra:</p>
         <ul>
-          <li><strong>Farol de saúde.</strong> Classifica cada conta em Vermelho, Amarelo, Azul ou Verde, avaliado sempre nessa ordem: a primeira condição verdadeira prevalece. Exemplo: dispositivos entregues há 10 ou mais dias sem agendamento cai direto em Vermelho, independente de qualquer outro sinal.</li>
-          <li><strong>Régua de criticidade.</strong> Traduz cada situação operacional específica em um nível de recomendação (Crítico, Urgente, Importante ou Sugestivo), cada um com seu próprio componente de UI e regra de cooldown.</li>
-          <li><strong>Coordenação entre jornadas.</strong> No máximo 1 recomendação Crítica, Urgente ou Importante ativa por vez: se a Instalação estiver em Crítico, o Setup é automaticamente rebaixado para Sugestivo, mesmo que sozinho merecesse um nível mais alto.</li>
-          <li><strong>Framework de supressão.</strong> Toda condição resolvida gera supressão imediata da recomendação, sem esperar o próximo ciclo. Cada nível também tem sua própria escalada progressiva após dispensas repetidas, para não gerar fadiga.</li>
+          <li><strong data-i18n="projects.recomendacoes.process.item1Title">Farol de saúde.</strong> <span data-i18n="projects.recomendacoes.process.item1Body">Classifica cada conta em Vermelho, Amarelo, Azul ou Verde, avaliado sempre nessa ordem: a primeira condição verdadeira prevalece. Exemplo: dispositivos entregues há 10 ou mais dias sem agendamento cai direto em Vermelho, independente de qualquer outro sinal.</span></li>
+          <li><strong data-i18n="projects.recomendacoes.process.item2Title">Régua de criticidade.</strong> <span data-i18n="projects.recomendacoes.process.item2Body">Traduz cada situação operacional específica em um nível de recomendação (Crítico, Urgente, Importante ou Sugestivo), cada um com seu próprio componente de UI e regra de cooldown.</span></li>
+          <li><strong data-i18n="projects.recomendacoes.process.item3Title">Coordenação entre jornadas.</strong> <span data-i18n="projects.recomendacoes.process.item3Body">No máximo 1 recomendação Crítica, Urgente ou Importante ativa por vez: se a Instalação estiver em Crítico, o Setup é automaticamente rebaixado para Sugestivo, mesmo que sozinho merecesse um nível mais alto.</span></li>
+          <li><strong data-i18n="projects.recomendacoes.process.item4Title">Framework de supressão.</strong> <span data-i18n="projects.recomendacoes.process.item4Body">Toda condição resolvida gera supressão imediata da recomendação, sem esperar o próximo ciclo. Cada nível também tem sua própria escalada progressiva após dispensas repetidas, para não gerar fadiga.</span></li>
         </ul>
 
         <figure class="stat-chart">
-          <span class="mono">Régua de criticidade · hierarquia e cooldown</span>
-          <svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama da régua de criticidade com quatro níveis: Crítico, sem cooldown, reexibe a cada login, exemplo dispositivos entregues há 10 ou mais dias sem agendamento; Urgente, cooldown de 24 horas, exemplo progresso parado de 7 a 14 dias sem agendamento; Importante, cooldown de 48 horas, exemplo novo lote de instalação concluído; Sugestivo, cooldown de 7 dias, exemplo frota próxima do threshold de instalação.">
+          <span class="mono" data-i18n="projects.recomendacoes.process.chart1.label">Régua de criticidade · hierarquia e cooldown</span>
+          <svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.recomendacoes.process.chart1.alt" aria-label="Diagrama da régua de criticidade com quatro níveis: Crítico, sem cooldown, reexibe a cada login, exemplo dispositivos entregues há 10 ou mais dias sem agendamento; Urgente, cooldown de 24 horas, exemplo progresso parado de 7 a 14 dias sem agendamento; Importante, cooldown de 48 horas, exemplo novo lote de instalação concluído; Sugestivo, cooldown de 7 dias, exemplo frota próxima do threshold de instalação.">
             <g font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">
               <rect x="0" y="10" width="10" height="58" fill="var(--accent-warm)"/>
-              <text x="26" y="34" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)">Crítico</text>
-              <text x="26" y="56">Dispositivos entregues há 10+ dias sem agendamento</text>
-              <text x="890" y="44" text-anchor="end" fill="var(--accent-warm)" font-weight="600">sem cooldown</text>
+              <text x="26" y="34" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)" data-i18n="projects.recomendacoes.process.chart1.critTitle">Crítico</text>
+              <text x="26" y="56" data-i18n="projects.recomendacoes.process.chart1.critDesc">Dispositivos entregues há 10+ dias sem agendamento</text>
+              <text x="890" y="44" text-anchor="end" fill="var(--accent-warm)" font-weight="600" data-i18n="projects.recomendacoes.process.chart1.critCooldown">sem cooldown</text>
 
               <rect x="0" y="90" width="10" height="58" fill="var(--accent-warm)" fill-opacity="0.55"/>
-              <text x="26" y="114" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)">Urgente</text>
-              <text x="26" y="136">Progresso parado 7–14 dias sem agendamento</text>
-              <text x="890" y="124" text-anchor="end" fill="var(--accent-warm)" font-opacity="0.8" font-weight="600">24h após dismiss</text>
+              <text x="26" y="114" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)" data-i18n="projects.recomendacoes.process.chart1.urgTitle">Urgente</text>
+              <text x="26" y="136" data-i18n="projects.recomendacoes.process.chart1.urgDesc">Progresso parado 7–14 dias sem agendamento</text>
+              <text x="890" y="124" text-anchor="end" fill="var(--accent-warm)" font-opacity="0.8" font-weight="600" data-i18n="projects.recomendacoes.process.chart1.urgCooldown">24h após dismiss</text>
 
               <rect x="0" y="170" width="10" height="58" fill="var(--accent)"/>
-              <text x="26" y="194" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)">Importante</text>
-              <text x="26" y="216">Novo lote de instalação concluído</text>
-              <text x="890" y="204" text-anchor="end" fill="var(--accent)" font-weight="600">48h após dismiss</text>
+              <text x="26" y="194" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)" data-i18n="projects.recomendacoes.process.chart1.impTitle">Importante</text>
+              <text x="26" y="216" data-i18n="projects.recomendacoes.process.chart1.impDesc">Novo lote de instalação concluído</text>
+              <text x="890" y="204" text-anchor="end" fill="var(--accent)" font-weight="600" data-i18n="projects.recomendacoes.process.chart1.impCooldown">48h após dismiss</text>
 
               <rect x="0" y="250" width="10" height="58" fill="var(--accent)" fill-opacity="0.45"/>
-              <text x="26" y="274" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)">Sugestivo</text>
-              <text x="26" y="296">Frota próxima do threshold de instalação</text>
-              <text x="890" y="284" text-anchor="end" fill="var(--accent)" fill-opacity="0.8" font-weight="600">7 dias após dismiss</text>
+              <text x="26" y="274" font-family="var(--font-display)" font-weight="600" font-size="17" fill="var(--ink)" data-i18n="projects.recomendacoes.process.chart1.sugTitle">Sugestivo</text>
+              <text x="26" y="296" data-i18n="projects.recomendacoes.process.chart1.sugDesc">Frota próxima do threshold de instalação</text>
+              <text x="890" y="284" text-anchor="end" fill="var(--accent)" fill-opacity="0.8" font-weight="600" data-i18n="projects.recomendacoes.process.chart1.sugCooldown">7 dias após dismiss</text>
             </g>
           </svg>
-          <figcaption>Cada nível tem seu próprio componente de UI (modal, banner, card flutuante, contextual) e sua própria regra de cooldown. Quanto mais crítico, menos tolerância a ser ignorado.</figcaption>
+          <figcaption data-i18n="projects.recomendacoes.process.chart1.caption">Cada nível tem seu próprio componente de UI (modal, banner, card flutuante, contextual) e sua própria regra de cooldown. Quanto mais crítico, menos tolerância a ser ignorado.</figcaption>
         </figure>
 
-        <p>Só depois que essa camada de regras decide <em>o quê</em> e <em>quando</em> recomendar, um LLM entra para personalizar a <em>mensagem</em> (nome do cliente, tamanho da frota, contagens específicas), nunca a decisão em si.</p>
-        <p>Antes de expor isso a clientes reais, validamos a lógica isoladamente: rodamos o motor sobre dados de uma frota real, usando Mastra AI para orquestrar a chamada ao LLM, e comparamos a saída contra o que a régua determinística previa. Essa etapa também respondeu perguntas operacionais que só aparecem depois que a lógica existe de fato: quantas chamadas de LLM por cliente isso gera, e se cabe rodar o motor a cada acesso ao painel ou só periodicamente (optamos por execução periódica, não em tempo real, por custo). Na sequência, rodamos testes E2E com clientes reais em grupos A/B por feature flag, o que revelou problemas concretos antes do rollout amplo: recomendações de câmera aparecendo para frotas sem câmera instalada, ou um card flutuante duplicando uma sugestão que já tinha sido descartada em outro componente da mesma tela.</p>
+        <p data-i18n-html="projects.recomendacoes.process.body2">Só depois que essa camada de regras decide <em>o quê</em> e <em>quando</em> recomendar, um LLM entra para personalizar a <em>mensagem</em> (nome do cliente, tamanho da frota, contagens específicas), nunca a decisão em si.</p>
+        <p data-i18n="projects.recomendacoes.process.body3">Antes de expor isso a clientes reais, validamos a lógica isoladamente: rodamos o motor sobre dados de uma frota real, usando Mastra AI para orquestrar a chamada ao LLM, e comparamos a saída contra o que a régua determinística previa. Essa etapa também respondeu perguntas operacionais que só aparecem depois que a lógica existe de fato: quantas chamadas de LLM por cliente isso gera, e se cabe rodar o motor a cada acesso ao painel ou só periodicamente (optamos por execução periódica, não em tempo real, por custo). Na sequência, rodamos testes E2E com clientes reais em grupos A/B por feature flag, o que revelou problemas concretos antes do rollout amplo: recomendações de câmera aparecendo para frotas sem câmera instalada, ou um card flutuante duplicando uma sugestão que já tinha sido descartada em outro componente da mesma tela.</p>
       </div>
 
       <div>
-        <h2>Solução</h2>
-        <p>Na prática, essa lógica se traduz em quatro componentes de UI com intrusividade decrescente: modal bloqueante para Crítico, banner persistente para Urgente, card flutuante para Importante e recomendação contextual dentro do fluxo para Sugestivo. A home também muda de acordo com o estágio da frota. Não vou detalhar essa camada de experiência a fundo aqui porque não foi o meu foco principal neste projeto; a régua e a priorização acima são o que sustentam qualquer uma dessas telas.</p>
+        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <p data-i18n="projects.recomendacoes.solution.body1">Na prática, essa lógica se traduz em quatro componentes de UI com intrusividade decrescente: modal bloqueante para Crítico, banner persistente para Urgente, card flutuante para Importante e recomendação contextual dentro do fluxo para Sugestivo. A home também muda de acordo com o estágio da frota. Não vou detalhar essa camada de experiência a fundo aqui porque não foi o meu foco principal neste projeto; a régua e a priorização acima são o que sustentam qualquer uma dessas telas.</p>
 
         <figure class="stat-chart stat-chart--shot">
-          <span class="mono">Home · card flutuante de recomendação</span>
-          <img src="../assets/img/recomendacoes-floating-card-home.png" alt="Home do painel mostrando o progresso de instalação da frota e um card flutuante de recomendação de alta prioridade sugerindo revisar o ranking de comportamento dos motoristas com IA.">
-          <figcaption>O card flutuante aparece sobre a home, priorizado pela régua de criticidade, sem bloquear a navegação do cliente.</figcaption>
+          <span class="mono" data-i18n="projects.recomendacoes.solution.img1Label">Home · card flutuante de recomendação</span>
+          <img src="../assets/img/recomendacoes-floating-card-home.png" data-i18n-attr="alt=projects.recomendacoes.solution.img1Alt" alt="Home do painel mostrando o progresso de instalação da frota e um card flutuante de recomendação de alta prioridade sugerindo revisar o ranking de comportamento dos motoristas com IA.">
+          <figcaption data-i18n="projects.recomendacoes.solution.img1Caption">O card flutuante aparece sobre a home, priorizado pela régua de criticidade, sem bloquear a navegação do cliente.</figcaption>
         </figure>
 
         <figure class="stat-chart stat-chart--shot">
-          <span class="mono">Veículos · recomendação contextual</span>
-          <img src="../assets/img/recomendacoes-banner-veiculos.png" alt="Página de veículos mostrando uma recomendação contextual sugerindo criar locais de interesse a partir de paradas recorrentes detectadas pela IA.">
-          <figcaption>Recomendações contextuais aparecem dentro do próprio fluxo de uso: aqui, sugerindo a criação de locais de interesse a partir de paradas recorrentes da frota.</figcaption>
+          <span class="mono" data-i18n="projects.recomendacoes.solution.img2Label">Veículos · recomendação contextual</span>
+          <img src="../assets/img/recomendacoes-banner-veiculos.png" data-i18n-attr="alt=projects.recomendacoes.solution.img2Alt" alt="Página de veículos mostrando uma recomendação contextual sugerindo criar locais de interesse a partir de paradas recorrentes detectadas pela IA.">
+          <figcaption data-i18n="projects.recomendacoes.solution.img2Caption">Recomendações contextuais aparecem dentro do próprio fluxo de uso: aqui, sugerindo a criação de locais de interesse a partir de paradas recorrentes da frota.</figcaption>
         </figure>
 
-        <p>Escolhemos lançar de forma gradual em vez de liberar para toda a base de uma vez: em março, o motor rodou só para a fatia de frotas com Basic Value mais baixo (cerca de 10% da base), e fomos abrindo para o restante ao longo de abril e maio, acompanhando o comportamento antes de expor a base inteira.</p>
+        <p data-i18n="projects.recomendacoes.solution.body2">Escolhemos lançar de forma gradual em vez de liberar para toda a base de uma vez: em março, o motor rodou só para a fatia de frotas com Basic Value mais baixo (cerca de 10% da base), e fomos abrindo para o restante ao longo de abril e maio, acompanhando o comportamento antes de expor a base inteira.</p>
       </div>
 
       <div>
-        <h2>Resultado</h2>
+        <h2 data-i18n="common.sectionResult">Resultado</h2>
 
         <div class="result-stats">
           <div class="result-stat">
-            <span class="value">7 mil+</span>
-            <span class="label">cliques em CTAs de recomendação entre março e junho (partiu de zero antes do rollout)</span>
+            <span class="value" data-i18n="projects.recomendacoes.result.stat1Value">7 mil+</span>
+            <span class="label" data-i18n="projects.recomendacoes.result.stat1Label">cliques em CTAs de recomendação entre março e junho (partiu de zero antes do rollout)</span>
           </div>
           <div class="result-stat">
-            <span class="value">+34 p.p.</span>
-            <span class="label">de frotas Enterprise com configuração básica completa (52% → 86% do MRR)</span>
+            <span class="value" data-i18n="projects.recomendacoes.result.stat2Value">+34 p.p.</span>
+            <span class="label" data-i18n="projects.recomendacoes.result.stat2Label">de frotas Enterprise com configuração básica completa (52% → 86% do MRR)</span>
           </div>
         </div>
 
-        <p>O rollout gradual levou cerca de dois meses para ganhar tração. A partir de abril, quando a maior parte da base já tinha acesso ao motor, os cliques em CTAs de recomendação saltaram de perto de zero para mais de 7 mil eventos até junho, com cerca de 1,2 mil frotas únicas interagindo pelo menos uma vez.</p>
+        <p data-i18n="projects.recomendacoes.result.body1">O rollout gradual levou cerca de dois meses para ganhar tração. A partir de abril, quando a maior parte da base já tinha acesso ao motor, os cliques em CTAs de recomendação saltaram de perto de zero para mais de 7 mil eventos até junho, com cerca de 1,2 mil frotas únicas interagindo pelo menos uma vez.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Engajamento com recomendações da IA · cliques em CTA · jan-jul/26</span>
-          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando cliques totais em CTAs de recomendação e frotas únicas que clicaram, de janeiro a julho de 2026. Cliques totais saem de zero em fevereiro, sobem para cerca de 2 mil em abril, 4 mil em maio e 7,1 mil em junho, com projeção pontilhada de 7,5 mil em julho. Frotas únicas seguem a mesma curva em escala menor, de zero até 1,2 mil em junho e 1,3 mil projetado em julho.">
+          <span class="mono" data-i18n="projects.recomendacoes.result.chart1.label">Engajamento com recomendações da IA · cliques em CTA · jan-jul/26</span>
+          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.recomendacoes.result.chart1.alt" aria-label="Gráfico de linha mostrando cliques totais em CTAs de recomendação e frotas únicas que clicaram, de janeiro a julho de 2026. Cliques totais saem de zero em fevereiro, sobem para cerca de 2 mil em abril, 4 mil em maio e 7,1 mil em junho, com projeção pontilhada de 7,5 mil em julho. Frotas únicas seguem a mesma curva em escala menor, de zero até 1,2 mil em junho e 1,3 mil projetado em julho.">
             <g font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">
               <circle cx="440" cy="18" r="5" fill="var(--accent)"/>
-              <text x="452" y="22">cliques totais</text>
+              <text x="452" y="22" data-i18n="projects.recomendacoes.result.chart1.cliquesTotais">cliques totais</text>
               <circle cx="560" cy="18" r="5" fill="var(--accent-warm)"/>
-              <text x="572" y="22">frotas únicas</text>
+              <text x="572" y="22" data-i18n="projects.recomendacoes.result.chart1.frotasUnicas">frotas únicas</text>
             </g>
 
             <line x1="60" y1="300" x2="640" y2="300" stroke="var(--line-strong)" stroke-width="1"/>
@@ -238,30 +250,30 @@
             <text x="543.3" y="278" text-anchor="middle" font-family="var(--font-mono)" font-size="12" fill="var(--accent-warm)">1,2K</text>
 
             <g font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" text-anchor="middle">
-              <text x="60" y="322">jan</text>
-              <text x="156.7" y="322">fev</text>
-              <text x="253.3" y="322">mar</text>
-              <text x="350" y="322">abr</text>
-              <text x="446.7" y="322">mai</text>
-              <text x="543.3" y="322">jun</text>
-              <text x="640" y="322">jul*</text>
+              <text x="60" y="322" data-i18n="projects.recomendacoes.result.chart1.jan">jan</text>
+              <text x="156.7" y="322" data-i18n="projects.recomendacoes.result.chart1.fev">fev</text>
+              <text x="253.3" y="322" data-i18n="projects.recomendacoes.result.chart1.mar">mar</text>
+              <text x="350" y="322" data-i18n="projects.recomendacoes.result.chart1.abr">abr</text>
+              <text x="446.7" y="322" data-i18n="projects.recomendacoes.result.chart1.mai">mai</text>
+              <text x="543.3" y="322" data-i18n="projects.recomendacoes.result.chart1.jun">jun</text>
+              <text x="640" y="322" data-i18n="projects.recomendacoes.result.chart1.julProjetado">jul*</text>
             </g>
           </svg>
-          <figcaption>*Julho parcial no momento da coleta. Rollout iniciado com ~10% da base em março, ampliado ao longo de abril e maio.</figcaption>
+          <figcaption data-i18n="projects.recomendacoes.result.chart1.caption">*Julho parcial no momento da coleta. Rollout iniciado com ~10% da base em março, ampliado ao longo de abril e maio.</figcaption>
         </figure>
 
-        <p>A recomendação que mais convertia, de forma consistente, era a de configuração básica (Setup + Config): motoristas, alertas, POIs, grupos, limite de velocidade. Entre outubro de 2025 e junho de 2026, o percentual de MRR com essas configurações concluídas subiu em todos os portes de frota, mas o salto mais visível veio depois de abril, quando o motor passou a cobrir a maior parte da base: contas Enterprise foram de 52% para 86%, Medium de 28% para 52%, e SMB de 11% para 24%.</p>
+        <p data-i18n="projects.recomendacoes.result.body2">A recomendação que mais convertia, de forma consistente, era a de configuração básica (Setup + Config): motoristas, alertas, POIs, grupos, limite de velocidade. Entre outubro de 2025 e junho de 2026, o percentual de MRR com essas configurações concluídas subiu em todos os portes de frota, mas o salto mais visível veio depois de abril, quando o motor passou a cobrir a maior parte da base: contas Enterprise foram de 52% para 86%, Medium de 28% para 52%, e SMB de 11% para 24%.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Configuração básica concluída · % de MRR por porte de frota · out/25-jun/26</span>
-          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linhas mostrando o percentual de MRR com configuração básica concluída por porte de frota. Enterprise sobe de 52% em outubro de 2025 para 86% em junho de 2026. Medium sobe de 28% para 52%. SMB sobe de 11% para 24%. As três curvas aceleram a partir de abril de 2026.">
+          <span class="mono" data-i18n="projects.recomendacoes.result.chart2.label">Configuração básica concluída · % de MRR por porte de frota · out/25-jun/26</span>
+          <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.recomendacoes.result.chart2.alt" aria-label="Gráfico de linhas mostrando o percentual de MRR com configuração básica concluída por porte de frota. Enterprise sobe de 52% em outubro de 2025 para 86% em junho de 2026. Medium sobe de 28% para 52%. SMB sobe de 11% para 24%. As três curvas aceleram a partir de abril de 2026.">
             <g font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">
               <circle cx="340" cy="18" r="5" fill="var(--accent)"/>
-              <text x="352" y="22">Enterprise</text>
+              <text x="352" y="22" data-i18n="projects.recomendacoes.result.chart2.enterprise">Enterprise</text>
               <circle cx="440" cy="18" r="5" fill="var(--accent-warm)"/>
-              <text x="452" y="22">Medium</text>
+              <text x="452" y="22" data-i18n="projects.recomendacoes.result.chart2.medium">Medium</text>
               <circle cx="530" cy="18" r="5" fill="var(--ink-soft)"/>
-              <text x="542" y="22">SMB</text>
+              <text x="542" y="22" data-i18n="projects.recomendacoes.result.chart2.smb">SMB</text>
             </g>
 
             <line x1="60" y1="300" x2="640" y2="300" stroke="var(--line-strong)" stroke-width="1"/>
@@ -292,21 +304,21 @@
             <text x="640" y="250" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" font-weight="600">24%</text>
 
             <g font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" text-anchor="middle">
-              <text x="60" y="322">out/25</text>
-              <text x="205" y="322">dez/25</text>
-              <text x="350" y="322">fev/26</text>
-              <text x="495" y="322">abr/26</text>
-              <text x="640" y="322">jun/26</text>
+              <text x="60" y="322" data-i18n="projects.recomendacoes.result.chart2.out">out/25</text>
+              <text x="205" y="322" data-i18n="projects.recomendacoes.result.chart2.dez">dez/25</text>
+              <text x="350" y="322" data-i18n="projects.recomendacoes.result.chart2.fev">fev/26</text>
+              <text x="495" y="322" data-i18n="projects.recomendacoes.result.chart2.abr">abr/26</text>
+              <text x="640" y="322" data-i18n="projects.recomendacoes.result.chart2.jun">jun/26</text>
             </g>
           </svg>
-          <figcaption>As três curvas seguem trajetórias parecidas, mas a inclinação muda visivelmente a partir de abril, quando o motor passou a cobrir a maior parte da base.</figcaption>
+          <figcaption data-i18n="projects.recomendacoes.result.chart2.caption">As três curvas seguem trajetórias parecidas, mas a inclinação muda visivelmente a partir de abril, quando o motor passou a cobrir a maior parte da base.</figcaption>
         </figure>
 
-        <p>O reflexo disso na métrica-norte do case anterior também ficou visível: a Basic Value estável, que vinha oscilando entre 36% e 40% havia seis meses sem sair do lugar, rompeu esse patamar exatamente na janela em que o motor passou a cobrir a maior parte da base, fechando junho em 50%.</p>
+        <p data-i18n="projects.recomendacoes.result.body3">O reflexo disso na métrica-norte do case anterior também ficou visível: a Basic Value estável, que vinha oscilando entre 36% e 40% havia seis meses sem sair do lugar, rompeu esse patamar exatamente na janela em que o motor passou a cobrir a maior parte da base, fechando junho em 50%.</p>
 
         <figure class="stat-chart">
-          <span class="mono">Basic Value estável · % de MRR · out/25-jun/26</span>
-          <svg viewBox="0 0 960 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico de linha mostrando a Basic Value estável oscilando entre 36% e 40% de outubro de 2025 a março de 2026, e subindo para 50% em junho de 2026, coincidindo com a ampliação do rollout do motor de recomendações a partir de abril.">
+          <span class="mono" data-i18n="projects.recomendacoes.result.chart3.label">Basic Value estável · % de MRR · out/25-jun/26</span>
+          <svg viewBox="0 0 960 480" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.recomendacoes.result.chart3.alt" aria-label="Gráfico de linha mostrando a Basic Value estável oscilando entre 36% e 40% de outubro de 2025 a março de 2026, e subindo para 50% em junho de 2026, coincidindo com a ampliação do rollout do motor de recomendações a partir de abril.">
             <defs>
               <linearGradient id="recBvGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
@@ -338,38 +350,39 @@
               <circle cx="815" cy="216" r="4.5"/>
             </g>
 
-            <text x="80" y="380" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">~37% por 6 meses</text>
+            <text x="80" y="380" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.result.chart3.flatLabel">~37% por 6 meses</text>
 
             <line x1="605" y1="20" x2="605" y2="321.6" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="4 4"/>
-            <text x="612" y="35" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)">rollout ampliado</text>
+            <text x="612" y="35" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.result.chart3.rolloutLabel">rollout ampliado</text>
 
             <circle cx="920" cy="128" r="6.5" fill="var(--accent-warm)"/>
             <text x="920" y="100" text-anchor="end" font-family="var(--font-display)" font-size="26" font-weight="700" fill="var(--accent-warm)">50%</text>
 
-            <text x="80" y="505" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">out/25</text>
-            <text x="500" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">fev/26</text>
-            <text x="920" y="505" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)">jun/26</text>
+            <text x="80" y="505" text-anchor="start" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.result.chart3.out">out/25</text>
+            <text x="500" y="505" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.result.chart3.fev">fev/26</text>
+            <text x="920" y="505" text-anchor="end" font-family="var(--font-mono)" font-size="13" fill="var(--ink-soft)" data-i18n="projects.recomendacoes.result.chart3.jun">jun/26</text>
           </svg>
-          <figcaption>A métrica ficou travada por seis meses e rompeu o patamar na mesma janela em que o motor de recomendações passou a cobrir a maior parte da base. É coincidência de tempo, não prova de causalidade isolada, mas um sinal forte dado o alinhamento com o rollout.</figcaption>
+          <figcaption data-i18n="projects.recomendacoes.result.chart3.caption">A métrica ficou travada por seis meses e rompeu o patamar na mesma janela em que o motor de recomendações passou a cobrir a maior parte da base. É coincidência de tempo, não prova de causalidade isolada, mas um sinal forte dado o alinhamento com o rollout.</figcaption>
         </figure>
 
-        <p>O maior aprendizado deste projeto foi que, num motor de recomendações, a parte determinística é o que sustenta a confiança do time, não a parte generativa. Uma régua de regras auditável permite explicar por que uma recomendação apareceu, prever seu comportamento antes de simular com o LLM e criar guardrails antes de qualquer geração de texto; a personalização por IA só tem espaço para funcionar bem quando já existe uma camada assim decidindo o quê e quando recomendar.</p>
+        <p data-i18n="projects.recomendacoes.result.closing">O maior aprendizado deste projeto foi que, num motor de recomendações, a parte determinística é o que sustenta a confiança do time, não a parte generativa. Uma régua de regras auditável permite explicar por que uma recomendação apareceu, prever seu comportamento antes de simular com o LLM e criar guardrails antes de qualquer geração de texto; a personalização por IA só tem espaço para funcionar bem quando já existe uma camada assim decidindo o quê e quando recomendar.</p>
       </div>
     </section>
 
     <nav class="case-nav wrap">
-      <a href="index.html">← Todos os projetos</a>
-      <a href="basic-value.html">Próximo projeto →</a>
+      <a href="index.html" data-i18n="common.allProjects">← Todos os projetos</a>
+      <a href="basic-value.html" data-i18n="common.nextProject">Próximo projeto →</a>
     </nav>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span class="mono">© 2026 Vivian Notrispe</span>
-      <span class="mono"><a href="../contato.html">contato</a></span>
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html" data-i18n="common.footerContact">contato</a></span>
     </div>
   </footer>
 
   <script src="../assets/js/lightbox.js" defer></script>
+  <script src="../assets/js/i18n.js"></script>
 </body>
 </html>
