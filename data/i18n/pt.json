@@ -239,11 +239,11 @@
       "solution": {
         "body1": "A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos, hoje espalhadas em tickets internos separados, junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.",
         "img1Label": "Página de pedidos · visão geral",
-        "img1Alt": "Tela da página de pedidos mostrando os cards de resumo de compras, trocas e devoluções, a tabela de pedidos com etapa, data de agendamento e prazo limite, e uma recomendação para agendar instalação.",
+        "img1Alt": "Tela da página de pedidos mostrando os cards de resumo de pedidos em andamento, compras, trocas e devoluções, e a tabela de pedidos com etapa, data de agendamento e prazo limite.",
         "img1Caption": "Visão geral da página de pedidos, com o resumo por tipo de pedido e uma recomendação automática para agendar instalações pendentes.",
         "body2": "A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status, traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.",
         "img2Label": "Página de pedidos · linha do tempo de status",
-        "img2Alt": "Tela da página de pedidos mostrando a linha do tempo com as etapas de instalação, envio dos dispositivos e pedido realizado, cada uma com endereço, previsão de chegada e ticket relacionado.",
+        "img2Alt": "Tela da página de pedidos mostrando o resumo do pedido e a linha do tempo de instalação, com cada tentativa detalhando ticket, endereço e previsão de chegada.",
         "img2Caption": "A linha do tempo traduz os status internos de operação (tickets do Hubspot) para uma nomenclatura que o cliente entende sozinho, sem contato com atendimento.",
         "body3": "Ao lado da timeline, desenhamos uma visão de detalhe por dispositivo, que resolve o caso mais comum de dúvida do CS: pedidos com múltiplos dispositivos e datas de instalação diferentes, em que o cliente só queria saber quais já tinham sido instalados.",
         "img3Label": "Página de pedidos · detalhe por dispositivo",

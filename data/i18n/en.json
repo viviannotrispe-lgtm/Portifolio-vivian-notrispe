@@ -239,11 +239,11 @@
       "solution": {
         "body1": "The central deliverable was a new orders page, bringing together in one place device purchases, exchanges and returns, today scattered across separate internal tickets, along with a quick summary of how many orders are in each state and a scheduling recommendation whenever there's a pending installation.",
         "img1Label": "Orders page · overview",
-        "img1Alt": "Orders page screen showing summary cards for purchases, exchanges and returns, the orders table with stage, scheduled date and deadline, and a recommendation to schedule installation.",
+        "img1Alt": "Orders page screen showing summary cards for orders in progress, purchases, exchanges and returns, and the orders table with stage, scheduled date and deadline.",
         "img1Caption": "Overview of the orders page, with a summary by order type and an automatic recommendation to schedule pending installations.",
         "body2": "From this overview, each order opens into a detailed status timeline, translating internal operations statuses into simple wording the customer can follow on their own: order placed, device shipping, installation. Each step shows address, arrival estimate and proposed scheduling dates, with no need for the customer to open a ticket to find this out.",
         "img2Label": "Orders page · status timeline",
-        "img2Alt": "Orders page screen showing the timeline with installation, device shipping and order placed steps, each with address, arrival estimate and related ticket.",
+        "img2Alt": "Orders page screen showing the order summary and installation timeline, with each attempt detailing the related ticket, address and arrival estimate.",
         "img2Caption": "The timeline translates internal operations statuses (Hubspot tickets) into wording the customer understands on their own, without contacting support.",
         "body3": "Alongside the timeline, we designed a per-device detail view, which solves the most common CS question: orders with multiple devices and different installation dates, where the customer just wanted to know which ones had already been installed.",
         "img3Label": "Orders page · per-device detail",
