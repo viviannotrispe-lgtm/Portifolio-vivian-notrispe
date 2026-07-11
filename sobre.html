@@ -10,6 +10,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/design-system-tokens.css">
+  <style>
+    .about-hero { display: flex; gap: 48px; align-items: flex-start; }
+    .about-hero-text { flex: 1; min-width: 0; }
+    .about-portrait { flex: 0 0 240px; }
+    .about-portrait img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 3px rgba(24,24,27,0.06), 0 8px 24px rgba(24,24,27,0.06);
+    }
+    @media (max-width: 720px) {
+      .about-hero { flex-direction: column; }
+      .about-portrait { align-self: center; }
+    }
+  </style>
 </head>
 <body>
 
@@ -38,32 +55,42 @@
   </header>
 
   <main>
-    <section class="case-header wrap">
-      <span class="mono" data-i18n="about.eyebrow">Sobre</span>
-      <h1 data-i18n="about.heading">[Uma frase curta que resume quem você é como profissional.]</h1>
+    <section class="case-header wrap about-hero">
+      <div class="about-hero-text">
+        <span class="mono" data-i18n="about.eyebrow">Sobre</span>
+        <h1 data-i18n="about.heading">Product Designer com foco em estratégia — investigo o problema antes de desenhar a solução.</h1>
 
-      <dl class="case-meta">
-        <div><dt data-i18n="about.baseadoEmLabel">Baseado em</dt><dd data-i18n="about.baseadoEmValue">[Cidade, país]</dd></div>
-        <div><dt data-i18n="about.focoLabel">Foco</dt><dd data-i18n="about.focoValue">[ex: Product & UX Design]</dd></div>
-        <div><dt data-i18n="about.experienciaLabel">Experiência</dt><dd data-i18n="about.experienciaValue">[ex: 5 anos]</dd></div>
-        <div><dt data-i18n="about.disponibilidadeLabel">Disponibilidade</dt><dd data-i18n="about.disponibilidadeValue">[ex: Novos projetos]</dd></div>
-      </dl>
+        <dl class="case-meta">
+          <div><dt data-i18n="about.baseadoEmLabel">Baseada em</dt><dd data-i18n="about.baseadoEmValue">Rio de Janeiro, Brasil</dd></div>
+          <div><dt data-i18n="about.focoLabel">Foco</dt><dd data-i18n="about.focoValue">Product Design & Estratégia</dd></div>
+          <div><dt data-i18n="about.experienciaLabel">Experiência</dt><dd data-i18n="about.experienciaValue">6+ anos em design de produto</dd></div>
+          <div><dt data-i18n="about.disponibilidadeLabel">Disponibilidade</dt><dd data-i18n="about.disponibilidadeValue">Aberta a novos projetos</dd></div>
+        </dl>
+      </div>
+
+      <div class="about-portrait">
+        <img src="assets/img/sobre-retrato.png" data-i18n-attr="alt=about.photoAlt" alt="Vivian Notrispe sorrindo em uma trilha ao ar livre, com boné e casaco corta-vento.">
+      </div>
     </section>
 
     <section class="case-body wrap">
       <div>
         <h2 data-i18n="about.trajetoriaHeading">Trajetória</h2>
-        <p data-i18n="about.trajetoriaBody">[Conte como chegou até aqui: formação, empresas por onde passou, o tipo de problema que mais te interessa resolver.]</p>
+        <p data-i18n="about.trajetoriaBody1">Me formei em Desenho Industrial pela UFF em 2019 e, três anos depois, fiz uma pós em Inovação, Design e Estratégia na ESPM. O nome do curso já entrega bem para onde minha carreira foi depois, mas na época eu ainda não sabia.</p>
+        <p data-i18n="about.trajetoriaBody2">Entrei em design de produto em 2019, numa empresa de e-commerce de produtos físicos e licenciados. Cuidava do roadmap anual, de custo e acompanhamento de produção, e de parcerias com marcas licenciadas, o que incluiu viajar para feiras internacionais na Ásia e visitar as fábricas de perto.</p>
+        <p data-i18n="about.trajetoriaBody3">Em 2021 migrei para produto digital, numa plataforma B2B SaaS de gestão de frotas. Comecei como designer júnior e passei por pleno, supervisão e coordenação de design, sempre em discovery de ponta a ponta, da conversa com o cliente até a interface. Nesse caminho também passei a estruturar time: onboarding de estagiários, mentoria e o Design System da empresa, hoje adotado em quase toda a plataforma.</p>
+        <p data-i18n-html="about.trajetoriaBody4">Mais recentemente acumulei a coordenação de design com um papel híbrido de PM e UX numa iniciativa de escopo organizacional, puxando uma meta estratégica da empresa junto com CS, Supply e Engenharia. Esse projeto está documentado como case aqui no portfólio, no <a href="projetos/basic-value.html">Basic Value</a>.</p>
       </div>
 
       <div>
         <h2 data-i18n="about.comoEuTrabalhoHeading">Como eu trabalho</h2>
-        <p data-i18n="about.comoEuTrabalhoBody">[Seu processo, valores ou princípios de design. O que te diferencia como profissional.]</p>
+        <p data-i18n="about.comoEuTrabalhoBody1">Gosto de investigação e de colocar a mão na massa. Antes de propor qualquer solução, quero entender o problema do jeito que o cliente vive ele: entrevista, gravação de sessão, análise de dado de uso. Não me contento com um diagnóstico genérico, prefiro causas raiz específicas a uma lista vaga de sintomas.</p>
+        <p data-i18n="about.comoEuTrabalhoBody2">Também gosto que esse diagnóstico vire algo que outras áreas conseguem usar, não só um relatório de UX. Prefiro transformar a investigação numa métrica ou num critério de priorização que times como CS, Supply e Produto adotem em conjunto, para que a solução não dependa só de mim para continuar de pé.</p>
       </div>
 
       <div>
         <h2 data-i18n="about.foraDoTrabalhoHeading">Fora do trabalho</h2>
-        <p data-i18n="about.foraDoTrabalhoBody">[Opcional — um toque pessoal para humanizar a página.]</p>
+        <p data-i18n="about.foraDoTrabalhoBody">Estou quase sempre ao ar livre: caminhada, trilha, qualquer desculpa para sair de casa. Também gosto de artesanato e de fazer coisas com as mãos, o contraponto analógico de passar o dia inteiro em frente a uma tela.</p>
       </div>
 
       <div>
