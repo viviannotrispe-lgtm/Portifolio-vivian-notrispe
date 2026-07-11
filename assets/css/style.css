@@ -492,6 +492,70 @@ h1, h2, h3 {
   border: 1px solid var(--line);
 }
 
+/* Variante para screenshots reais de produto: sem o card ao redor (sem borda,
+   fundo ou padding), só o título e a legenda. A imagem fica clicável para
+   ampliar em um lightbox (ver assets/js/lightbox.js). */
+.stat-chart--shot {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 44px 0;
+}
+
+.stat-chart--shot figcaption {
+  margin-bottom: 8px;
+}
+
+.stat-chart--shot img {
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+
+/* ============================================
+   LIGHTBOX (ampliar screenshots ao clicar)
+   ============================================ */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(21, 21, 26, 0.85);
+  z-index: 1000;
+}
+
+.lightbox-overlay.is-open {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 242, 237, 0.4);
+  background: rgba(243, 242, 237, 0.1);
+  color: var(--paper);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(243, 242, 237, 0.2);
+}
+
 /* ============================================
    NÚMEROS EM DESTAQUE (dentro de Resultado)
    ============================================ */
