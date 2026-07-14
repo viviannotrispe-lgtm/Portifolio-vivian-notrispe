@@ -399,12 +399,12 @@
       }
     },
     "arquiteturaNavegacao": {
-      "title": "Navegação em camadas: da arquitetura por feature à arquitetura por jornada — Vivian Notrispe",
+      "title": "Redesign da navegação: da lógica do produto à lógica do cliente — Vivian Notrispe",
       "category": "Design & Produto",
       "year": "2025",
-      "heading": "Navegação em camadas: da arquitetura por feature à arquitetura por jornada",
+      "heading": "Redesign da navegação: da lógica do produto à lógica do cliente",
       "role": "Product Designer, DRI de produto — célula temporária Unified XP",
-      "team": "Squad enxuto — eu (design + decisões de produto) e 1 dev staff",
+      "team": "Time temporário (Product Designer + Front end Engineer)",
       "duration": "~8 meses (discovery → blueprint → teste A/B → migração oficial)",
       "tools": "Figma, FigJam, Mixpanel, Typeform",
       "coverAlt": "Tela de monitoramento em tempo real do painel, com mapa e lista de veículos da frota.",

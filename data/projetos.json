@@ -64,13 +64,13 @@
       "link": "projetos/arquitetura-navegacao.html",
       "destaque": true,
       "pt": {
-        "titulo": "Navegação em camadas: da arquitetura por feature à arquitetura por jornada",
+        "titulo": "Redesign da navegação: da lógica do produto à lógica do cliente",
         "categoria": "Design & Produto",
         "resumo": "Como identifiquei que a navegação organizada por feature travava o crescimento do produto, e redesenhei a arquitetura de informação em camadas por jornada, validada em teste A/B antes da migração de toda a base.",
         "tags": ["Arquitetura de Informação", "Pesquisa", "Design de Produto"]
       },
       "en": {
-        "titulo": "Layered Navigation: from feature-first to journey-first architecture",
+        "titulo": "Navigation Redesign: from product logic to customer logic",
         "categoria": "Design & Product",
         "resumo": "How I found that feature-first navigation was capping product growth, and redesigned the information architecture into journey-based layers, validated through an A/B test before migrating the full customer base.",
         "tags": ["Information Architecture", "Research", "Product Design"]

@@ -399,12 +399,12 @@
       }
     },
     "arquiteturaNavegacao": {
-      "title": "Layered Navigation: from feature-first to journey-first architecture — Vivian Notrispe",
+      "title": "Navigation Redesign: from product logic to customer logic — Vivian Notrispe",
       "category": "Design & Product",
       "year": "2025",
-      "heading": "Layered Navigation: from feature-first to journey-first architecture",
+      "heading": "Navigation Redesign: from product logic to customer logic",
       "role": "Product Designer, product DRI — temporary Unified XP cell",
-      "team": "Lean squad — me (design + product decisions) and 1 staff engineer",
+      "team": "Temporary team (Product Designer + Front-end Engineer)",
       "duration": "~8 months (discovery → blueprint → A/B test → official migration)",
       "tools": "Figma, FigJam, Mixpanel, Typeform",
       "coverAlt": "Real-time monitoring screen from the dashboard, with a map and the fleet's vehicle list.",
