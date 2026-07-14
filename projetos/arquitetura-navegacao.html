@@ -106,59 +106,140 @@
 
       <div>
         <h2 data-i18n="common.sectionProcess">Processo</h2>
-        <p data-i18n="projects.arquiteturaNavegacao.process.body1Intro">Para entender quem de fato usa cada jornada, conduzi sessões de pesquisa com clientes de portes diferentes até fechar oito perfis, organizados em três camadas de autonomia:</p>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body1Intro">Para entender quem de fato usa cada jornada, conduzi sessões de pesquisa com clientes de portes diferentes até fechar oito perfis, organizados em quatro camadas de autonomia:</p>
         <ul>
-          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item1">Gestor estratégico, no topo, dependente de dados consolidados e sem tempo para investigar detalhe.</li>
-          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item2">Implementadores-chave, que traduzem estratégia em operação diária.</li>
-          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item3">Usuários operacionais, que interagem com o produto várias vezes ao dia em tarefas pontuais.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item1">Diretoria, no topo, decide sobre contratos e continuidade de serviços a partir de dados consolidados, sem tempo para investigar detalhe.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item2">Gestão estratégica, que traduz metas do negócio em KPIs de custo, manutenção e segurança da frota.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item3">Implementadores-chave, que transformam essas metas em regras e processos do dia a dia.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item4">Usuários operacionais, que interagem com o produto várias vezes ao dia em tarefas pontuais.</li>
         </ul>
-        <p data-i18n="projects.arquiteturaNavegacao.process.body1Outro">Cada camada consome dado de um jeito diferente — do dado macro e histórico do diretor executivo ao dado micro e em tempo real de quem executa a operação — e isso virou um critério direto de profundidade de navegação: quanto mais operacional a persona, mais raso e imediato o caminho até a informação precisa ser.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body1Outro">Cada camada consome dado de um jeito diferente — do dado macro e histórico da diretoria ao dado micro e em tempo real de quem executa a operação — e isso virou um critério direto de profundidade de navegação: quanto mais operacional a persona, mais raso e imediato o caminho até a informação precisa ser.</p>
 
         <figure class="stat-chart stat-chart--wide">
           <span class="mono" data-i18n="projects.arquiteturaNavegacao.process.personas.label">Personas por camada de autonomia</span>
-          <div class="persona-pyramid">
-            <div data-tier="1">
-              <div class="mono persona-tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier1Label">Gestor estratégico</div>
-              <div class="persona-tier" data-tier="1">
-                <div class="persona-card">
-                  <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p1Name">Diretor executivo</h4>
-                  <span class="persona-meta" data-i18n="projects.arquiteturaNavegacao.process.personas.p1Meta">Autonomia alta · dado macro e histórico</span>
-                  <p data-i18n="projects.arquiteturaNavegacao.process.personas.p1Body">Decide sobre contratos e continuidade de serviços a partir de dados consolidados. Não tem tempo para investigar detalhe.</p>
-                </div>
+          <div class="persona-org-legend mono" aria-hidden="true">
+            <span data-i18n="projects.arquiteturaNavegacao.process.personas.scaleLeft">perfil de dado: tempo real</span>
+            <span>―――――――――――</span>
+            <span data-i18n="projects.arquiteturaNavegacao.process.personas.scaleRight">histórico e consolidado</span>
+          </div>
+          <div class="persona-org">
+            <div class="persona-org__tier">
+              <div class="persona-node persona-node--root" data-tier="1">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier1Label">Diretoria</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p1Name">Diretor executivo</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p1Autonomy">Autonomia alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="119" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p1Bio">Decide sobre contratação e continuidade de serviços a partir da eficiência da frota e dos resultados consolidados pelos gestores.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p1Jtbd">Quando avalia a operação, quer dados consolidados e confiáveis, para decidir sem precisar validar cada número.</span></p>
               </div>
             </div>
-            <div data-tier="2">
-              <div class="mono persona-tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier2Label">Implementador-chave</div>
-              <div class="persona-tier" data-tier="2">
-                <div class="persona-card">
-                  <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p2Name">Diretor de frotas</h4>
-                  <span class="persona-meta" data-i18n="projects.arquiteturaNavegacao.process.personas.p2Meta">Autonomia média/alta · dado semanal</span>
-                  <p data-i18n="projects.arquiteturaNavegacao.process.personas.p2Body">Traduz metas da frota em KPIs de custo, manutenção e segurança.</p>
-                </div>
-                <div class="persona-card">
-                  <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p3Name">Gestor de segurança</h4>
-                  <span class="persona-meta" data-i18n="projects.arquiteturaNavegacao.process.personas.p3Meta">Autonomia média/alta · dado semanal</span>
-                  <p data-i18n="projects.arquiteturaNavegacao.process.personas.p3Body">Define regras de segurança e acompanha treinamentos, bonificações e punições.</p>
-                </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="65" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="195" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="2">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier2Label">Gestor estratégico</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p2Name">Diretor de operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p2Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="106" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p2Bio">Alinha processos operacionais aos objetivos estratégicos da empresa, monitorando KPIs, liderando equipes e garantindo conformidade com políticas e regulamentações.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p2Jtbd">Quando planeja fluxos de trabalho, quer alinhá-los aos objetivos estratégicos, para manter alta eficiência e produtividade.</span></p>
+              </div>
+              <div class="persona-node" data-tier="2">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier2Label">Gestor estratégico</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p3Name">Diretor de frotas</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p3Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="102" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p3Bio">Alinha a gestão da frota aos objetivos da empresa, definindo metas e KPIs de custo, manutenção e segurança.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p3Jtbd">Quando monitora o desempenho da frota, quer acompanhar KPIs de consumo, manutenção e segurança, para identificar oportunidades de otimização.</span></p>
               </div>
             </div>
-            <div data-tier="3">
-              <div class="mono persona-tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier3Label">Usuário operacional</div>
-              <div class="persona-tier" data-tier="3">
-                <div class="persona-card">
-                  <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p4Name">Executor — operação</h4>
-                  <span class="persona-meta" data-i18n="projects.arquiteturaNavegacao.process.personas.p4Meta">Autonomia baixa · dado em tempo real</span>
-                  <p data-i18n="projects.arquiteturaNavegacao.process.personas.p4Body">Ajusta rotas e tarefas dos motoristas em tempo real, várias vezes ao dia.</p>
-                </div>
-                <div class="persona-card">
-                  <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p5Name">Técnico de manutenção</h4>
-                  <span class="persona-meta" data-i18n="projects.arquiteturaNavegacao.process.personas.p5Meta">Autonomia baixa · dado em tempo real</span>
-                  <p data-i18n="projects.arquiteturaNavegacao.process.personas.p5Body">Prioriza reparos e libera ou bloqueia veículos para uso.</p>
-                </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="65" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="195" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="3">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier3Label">Implementador-chave</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p4Name">Gestor de operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p4Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="64" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p4Bio">Supervisiona analistas e condutores, garantindo que serviços e entregas aconteçam com qualidade, e corrige gargalos que travam a produtividade da operação.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p4Jtbd">Quando percebe baixa produtividade, quer identificar gargalos como rotas ineficientes ou veículos ociosos, para agir com melhorias eficazes.</span></p>
+              </div>
+              <div class="persona-node" data-tier="3">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier3Label">Implementador-chave</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p5Name">Gestor de segurança</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p5Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="80" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p5Bio">Implementa e monitora regras de segurança da frota, promovendo treinamentos e gerenciando bonificações e punições.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p5Jtbd">Quando identifica comportamentos de risco, quer aplicar medidas corretivas e treinamentos, para aumentar a segurança da condução.</span></p>
+              </div>
+            </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="20" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="130" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="240" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p6Name">Executor — operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p6Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="21" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p6Bio">Faz a ponte entre motoristas e administração, organizando tarefas diárias e ajustando rotas conforme o imprevisto do dia.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p6Jtbd">Quando surge um imprevisto, quer ajustar rotas e tarefas em tempo real, para manter os motoristas produtivos.</span></p>
+              </div>
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p7Name">Executor — segurança</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p7Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="19" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p7Bio">Verifica e analisa eventos de segurança individualmente, descarta o que não é relevante e escreve perfis de motoristas e relatórios de ocorrência.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p7Jtbd">Quando recebe eventos de segurança, quer avaliar cada um individualmente, para manter só o que é relevante e agir com precisão.</span></p>
+              </div>
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p8Name">Técnico de manutenção</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p8Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="27" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p8Bio">Prioriza reparos, gerencia a equipe de mecânicos e libera ou bloqueia veículos conforme a condição de uso.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p8Jtbd">Quando recebe uma demanda de manutenção, quer priorizar o reparo certo, para manter o veículo seguro e operacional.</span></p>
               </div>
             </div>
           </div>
-          <figcaption data-i18n="projects.arquiteturaNavegacao.process.personas.caption">Oito perfis mapeados em sessões com clientes, reduzidos aqui a cinco representativos por camada. A profundidade de navegação foi desenhada a partir de como cada camada consome dado.</figcaption>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.process.personas.caption">Oito perfis mapeados em sessões com clientes, organizados em quatro camadas de autonomia. A profundidade de navegação foi desenhada a partir de como cada camada consome dado.</figcaption>
         </figure>
 
         <p data-i18n="projects.arquiteturaNavegacao.process.body2">Em paralelo, mapeei a experiência atual cruzando as tarefas de cada persona com as páginas do produto que hoje resolviam essas tarefas, jornada por jornada — operações, manutenção, segurança, custos e compliance. O mapeamento confirmou o problema na prática: a mesma tarefa dependia de páginas espalhadas em partes diferentes do produto, todas no mesmo nível de navegação, sem hierarquia ou agrupamento que guiasse o cliente até elas.</p>

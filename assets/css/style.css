@@ -835,30 +835,49 @@ h1, h2, h3 {
 }
 
 /* ============================================
-   PIRÂMIDE DE PERSONAS (camadas de autonomia)
+   DIAGRAMA DE PERSONAS (árvore por camada de autonomia)
    ============================================ */
-.persona-pyramid {
+.persona-org-legend {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 4px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+
+.persona-org-legend span:nth-child(2) { color: var(--line-strong); }
+
+.persona-org {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
   margin: 8px 0;
 }
 
-.persona-tier {
-  display: grid;
-  gap: 16px;
+.persona-org__tier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
-.persona-tier[data-tier="1"] { grid-template-columns: minmax(0, 340px); justify-content: center; }
-.persona-tier[data-tier="2"] { grid-template-columns: repeat(2, 1fr); }
-.persona-tier[data-tier="3"] { grid-template-columns: repeat(3, 1fr); }
+.persona-org__connector {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: 28px;
+}
 
-.persona-tier-label {
+.persona-org__tier-label {
   text-align: center;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
 }
 
-.persona-card {
+.persona-node {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--paper-2);
@@ -866,32 +885,53 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  max-width: 300px;
 }
 
-.persona-card h4 {
+.persona-node--root {
+  border-color: var(--accent);
+  border-width: 1.5px;
+  background: var(--paper);
+}
+
+.persona-node h4 {
   font-family: var(--font-display);
   font-size: 1rem;
   margin: 0;
 }
 
-.persona-card .persona-meta {
-  font-family: var(--font-mono);
+.persona-node .persona-autonomy {
   font-size: 0.7rem;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
 
-.persona-card p {
+.persona-scale {
+  display: block;
+  width: 100%;
+  height: 14px;
+}
+
+.persona-bio,
+.persona-jtbd {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.persona-jtbd-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  margin-bottom: 2px;
 }
 
 @media (max-width: 720px) {
-  .persona-tier[data-tier="2"],
-  .persona-tier[data-tier="3"] {
-    grid-template-columns: 1fr;
-  }
+  .persona-org__connector { display: none; }
 }
 
 .case-nav {
