@@ -397,6 +397,169 @@
         },
         "closing": "O maior aprendizado deste projeto foi que, num motor de recomendações, a parte determinística é o que sustenta a confiança do time, não a parte generativa. Uma régua de regras auditável permite explicar por que uma recomendação apareceu, prever seu comportamento antes de simular com o LLM e criar guardrails antes de qualquer geração de texto; a personalização por IA só tem espaço para funcionar bem quando já existe uma camada assim decidindo o quê e quando recomendar."
       }
+    },
+    "arquiteturaNavegacao": {
+      "title": "Navegação em camadas: da arquitetura por feature à arquitetura por jornada — Vivian Notrispe",
+      "category": "Design & Produto",
+      "year": "2025",
+      "heading": "Navegação em camadas: da arquitetura por feature à arquitetura por jornada",
+      "role": "Product Designer, DRI de produto — célula temporária Unified XP",
+      "team": "Squad enxuto — eu (design + decisões de produto) e 1 dev staff",
+      "duration": "~8 meses (discovery → blueprint → teste A/B → migração oficial)",
+      "tools": "Figma, FigJam, Mixpanel, Typeform",
+      "coverAlt": "Tela de monitoramento em tempo real do painel, com mapa e lista de veículos da frota.",
+      "context": {
+        "body1": "Fui o Product Designer de uma célula temporária chamada Unified XP, criada para resolver problemas de experiência que atravessavam diferentes times de produto. O time era enxuto. Eu liderava as decisões de produto e design, em parceria com um desenvolvedor staff responsável por implementar as mudanças na navegação.",
+        "body2": "O trabalho começou a partir de uma descoberta importante. Clientes que utilizavam poucas jornadas do produto tinham uma chance maior de churn após o fim do contrato. Meu desafio era entender o que impedia essa adoção e como a experiência do produto poderia ajudar a mudar esse cenário."
+      },
+      "problem": {
+        "body1": "Comecei analisando churn por funcionalidade e a queda de engajamento ao longo do tempo. Os dados mostravam vários sintomas, mas nenhum deles explicava o problema.",
+        "body2": "A resposta apareceu quando deixei de olhar para funcionalidades isoladas e passei a analisar quantas jornadas cada cliente realmente utilizava. As frotas que usavam menos de 1,5 jornada tinham NRR (Net Revenue Retention) de -31%. Já aquelas que utilizavam mais de 3,6 jornadas chegavam a um NRR de +12%. O NPS seguia a mesma tendência: a nota era 75 entre clientes com uso amplo e 50 entre aqueles que utilizavam poucas jornadas.",
+        "body3": "Foi a partir daí que comecei a investigar o que limitava essa adoção. Percebi que a navegação estava organizada por funcionalidades e deixavam em evidência as divisões internas do time de produto, e não focavam nas jornadas e necessidades dos clientes.",
+        "body4": "Além disso, quase toda a retenção do produto era centralizada ao redor da página de monitoramento (mapa em tempo real). Isso deixava a experiência vulnerável: se o GPS ou o sinal falhassem, o cliente dificilmente encontraria valor em outras partes da plataforma. Em clientes Enterprise, esse risco era ainda maior, porque eles precisavam perceber benefícios também em segurança, compliance e redução de custos para justificar contratos maiores.",
+        "body5": "Outro dado chamou minha atenção. Jornadas naturalmente relacionadas, como segurança e vigilância, quase não eram utilizadas em conjunto. Ficou claro que os clientes não faziam essa conexão sozinhos. Se quiséssemos aumentar a adoção entre jornadas, essa relação precisaria ficar evidente na própria experiência do produto.",
+        "chart1": {
+          "label": "NRR e NPS por abrangência de uso",
+          "alt": "Gráfico comparando NRR e NPS entre frotas de baixa e alta abrangência de uso: NRR de -31% para +12%, NPS de 50 para 75.",
+          "baixa": "baixa abrangência",
+          "alta": "alta abrangência",
+          "caption": "Abrangência de uso — quantas jornadas diferentes cada frota usa — se mostrou o melhor preditor de retenção e satisfação, mais do que qualquer feature isolada."
+        }
+      },
+      "process": {
+        "body1Intro": "Para entender quem de fato usa cada jornada, conduzi sessões de pesquisa com clientes de portes diferentes até fechar oito perfis, organizados em três camadas de autonomia:",
+        "body1Item1": "Gestor estratégico, no topo, dependente de dados consolidados e sem tempo para investigar detalhe.",
+        "body1Item2": "Implementadores-chave, que traduzem estratégia em operação diária.",
+        "body1Item3": "Usuários operacionais, que interagem com o produto várias vezes ao dia em tarefas pontuais.",
+        "body1Outro": "Cada camada consome dado de um jeito diferente — do dado macro e histórico do diretor executivo ao dado micro e em tempo real de quem executa a operação — e isso virou um critério direto de profundidade de navegação: quanto mais operacional a persona, mais raso e imediato o caminho até a informação precisa ser.",
+        "personas": {
+          "label": "Personas por camada de autonomia",
+          "tier1Label": "Gestor estratégico",
+          "p1Name": "Diretor executivo",
+          "p1Meta": "Autonomia alta · dado macro e histórico",
+          "p1Body": "Decide sobre contratos e continuidade de serviços a partir de dados consolidados. Não tem tempo para investigar detalhe.",
+          "tier2Label": "Implementador-chave",
+          "p2Name": "Diretor de frotas",
+          "p2Meta": "Autonomia média/alta · dado semanal",
+          "p2Body": "Traduz metas da frota em KPIs de custo, manutenção e segurança.",
+          "p3Name": "Gestor de segurança",
+          "p3Meta": "Autonomia média/alta · dado semanal",
+          "p3Body": "Define regras de segurança e acompanha treinamentos, bonificações e punições.",
+          "tier3Label": "Usuário operacional",
+          "p4Name": "Executor — operação",
+          "p4Meta": "Autonomia baixa · dado em tempo real",
+          "p4Body": "Ajusta rotas e tarefas dos motoristas em tempo real, várias vezes ao dia.",
+          "p5Name": "Técnico de manutenção",
+          "p5Meta": "Autonomia baixa · dado em tempo real",
+          "p5Body": "Prioriza reparos e libera ou bloqueia veículos para uso.",
+          "caption": "Oito perfis mapeados em sessões com clientes, reduzidos aqui a cinco representativos por camada. A profundidade de navegação foi desenhada a partir de como cada camada consome dado."
+        },
+        "body2": "Em paralelo, mapeei a experiência atual cruzando as tarefas de cada persona com as páginas do produto que hoje resolviam essas tarefas, jornada por jornada — operações, manutenção, segurança, custos e compliance. O mapeamento confirmou o problema na prática: a mesma tarefa dependia de páginas espalhadas em partes diferentes do produto, todas no mesmo nível de navegação, sem hierarquia ou agrupamento que guiasse o cliente até elas.",
+        "atual": {
+          "label": "Navegação atual · páginas soltas, sem agrupamento",
+          "alt": "Diagrama mostrando dezesseis páginas do produto no mesmo nível de navegação, sem agrupamento por jornada: monitoramento, trajetos, políticas de frota, câmeras, serviços e entregas, documentos, segurança, análises, gastos e compliance.",
+          "i1": "Monitoramento",
+          "i2a": "Trajetos", "i2b": "(linha do tempo)",
+          "i3a": "Trajetos", "i3b": "(mapa)",
+          "i4": "Políticas de frota",
+          "i5a": "Câmeras", "i5b": "(eventos)",
+          "i6a": "Câmeras", "i6b": "(vídeos)",
+          "i7": "Serviços e entregas",
+          "i8": "Documentos",
+          "i9a": "Segurança", "i9b": "(dashboard)",
+          "i10a": "Segurança", "i10b": "(velocidade)",
+          "i11a": "Segurança", "i11b": "(ranking)",
+          "i12a": "Análises", "i12b": "(produtividade)",
+          "i13a": "Análises", "i13b": "(relatórios)",
+          "i14a": "Gastos", "i14b": "(combustível)",
+          "i15a": "Gastos", "i15b": "(manutenção)",
+          "i16": "Compliance",
+          "caption": "Dezesseis páginas reais do produto, todas no mesmo nível do menu. Nenhuma delas indica a qual jornada do cliente pertence."
+        },
+        "body3Intro": "Antes de propor qualquer solução, validei esses achados com CS, Tecnologia, Vendas e Atendimento. Conduzi sessões de critique para entender como cada área enxergava o problema e quais mudanças realmente fariam diferença.",
+        "body3Lead": "Cada time contribuiu com uma perspectiva diferente.",
+        "body3Item1": "<strong>CS</strong> mostrou onde os clientes perdiam contexto durante o uso e acabavam recorrendo ao suporte.",
+        "body3Item2": "<strong>Vendas</strong> evidenciou que o discurso comercial já era organizado por jornadas, como segurança e redução de custos, enquanto o produto continuava organizado por funcionalidades.",
+        "body3Item3": "<strong>Atendimento</strong> trouxe o volume de chamados gerados apenas porque os usuários não conseguiam encontrar funcionalidades que já existiam.",
+        "body3Item4": "<strong>Tecnologia</strong> ajudou a definir quais mudanças poderiam ser implementadas sem comprometer a arquitetura existente.",
+        "body4": "Com esses aprendizados, desenhei uma nova arquitetura de navegação baseada na forma como os clientes pensavam sobre a operação, e não na estrutura interna do produto.",
+        "body5Lead": "A nova navegação passou a ter:",
+        "body5Item1": "Jornadas de entrada centralizadas com gráficos de visão geral.",
+        "body5Item2": "Jornadas organizadas por contexto de uso, como Operação, Segurança, Eficiência, Compliance e Configurações.",
+        "body5Item3": "Hierarquia de até três níveis, permitindo navegar do panorama geral até relatórios e configurações específicas.",
+        "body5Item4": "Conexões entre jornadas que faziam sentido para o cliente, incentivando a descoberta de funcionalidades relacionadas e ampliando a adoção do produto.",
+        "blueprint": {
+          "label": "Blueprint · navegação em camadas",
+          "alt": "Diagrama da nova arquitetura: um ponto de entrada (torre de controle e visão geral da frota) leva a seis grupos de nível 1 — operação, manutenção, segurança, eficiência e custos, compliance e configurações. O grupo de segurança se desdobra em nível 2 (dashboard, ranking, eventos) e nível 3 (relatórios detalhados, edições avançadas).",
+          "lvlEntrada": "ENTRADA",
+          "entrada1": "Torre de controle",
+          "entrada2": "visão geral da frota",
+          "lvl1": "NÍVEL 1",
+          "n1a": "Operação",
+          "n1b": "Manutenção",
+          "n1c": "Segurança",
+          "n1d1": "Eficiência",
+          "n1d2": "e custos",
+          "n1e": "Compliance",
+          "n1f": "Configurações",
+          "lvl2": "NÍVEL 2",
+          "n2a": "Dashboard",
+          "n2b": "Ranking",
+          "n2c": "Eventos",
+          "lvl3": "NÍVEL 3",
+          "n3a": "Relatórios detalhados",
+          "n3b": "Edições avançadas",
+          "note": "Todos os grupos de Nível 1 seguem a mesma lógica de profundidade — aqui, o exemplo de Segurança.",
+          "caption": "Um ponto de entrada, seis jornadas de Nível 1, e até três camadas de profundidade dentro de cada uma — em vez de dezesseis páginas soltas no mesmo nível."
+        }
+      },
+      "solution": {
+        "intro1": "A solução não era apenas reorganizar a navegação, mas mudar a forma como os clientes exploravam o produto.",
+        "intro2": "Na versão anterior, o menu refletia a estrutura interna da empresa. As funcionalidades eram apresentadas como uma lista de produtos e recursos independentes, exigindo que o cliente soubesse antecipadamente onde encontrar cada informação.",
+        "intro3": "No redesenho a arquitetura da informação passou a refletir a forma como os clientes pensam sobre a gestão da frota, e não como os times de produto estavam organizados.",
+        "intro4": "Cada jornada passou a ter um ponto de entrada próprio, começando por uma visão geral e reunindo, em um mesmo contexto, as funcionalidades relacionadas àquele objetivo. A navegação também ganhou uma estrutura hierárquica de até três níveis, permitindo que o cliente partisse de uma visão consolidada e aprofundasse a análise apenas quando necessário.",
+        "principlesLead": "Essa mudança foi guiada por quatro princípios:",
+        "principle1": "Organizar o produto por jornadas, substituindo uma navegação centrada em funcionalidades.",
+        "principle2": "Começar sempre pelo contexto, oferecendo uma visão geral antes de levar o cliente para telas específicas.",
+        "principle3": "Agrupar funcionalidades relacionadas, facilitando a descoberta de recursos complementares.",
+        "principle4": "Criar conexões entre jornadas, incentivando a exploração do produto e aumentando a adoção entre diferentes áreas.",
+        "closing": "Na prática, isso significou deixar de perguntar \"qual funcionalidade você procura?\" para passar a responder \"qual problema você está tentando resolver?\".",
+        "slider": {
+          "before": "antes",
+          "after": "depois",
+          "beforeAlt": "Navegação antiga, organizada como uma lista única de features.",
+          "afterAlt": "Nova navegação, organizada em dois níveis por jornada.",
+          "rangeLabel": "Arraste para comparar a navegação antiga e a nova",
+          "caption": "Arraste para comparar: a navegação antiga, uma lista única organizada por feature, e a nova navegação em dois níveis, organizada por jornada."
+        },
+        "sidebarCompare": {
+          "alt": "Comparação lado a lado entre a sidebar antiga, uma lista única expandida, e a nova sidebar em dois níveis: coluna de ícones por jornada e lista de páginas ao lado.",
+          "caption": "A sidebar isolada, lado a lado. À esquerda, a navegação antiga: uma lista única e extensa, sem agrupamento por jornada, que crescia a cada nova feature lançada. À direita, a nova sidebar em dois níveis: a coluna de ícones agrupa por jornada (Operação, Segurança, Eficiência...), e a lista ao lado mostra só as páginas e features daquela jornada selecionada."
+        }
+      },
+      "abTest": {
+        "heading": "Teste A/B pré-lançamento",
+        "body1": "Em vez de migrar toda a base de uma só vez, defini uma estratégia de rollout gradual usando feature flag. O objetivo era validar a nova navegação em um ambiente real, entender como os clientes reagiam às mudanças e evoluir a experiência antes da migração definitiva.",
+        "body2": "Durante esse período, 31% dos usuários ativos experimentaram a nova navegação e 25% passaram a utilizá-la de forma recorrente. Além disso, 51% das frotas ativas acessaram a nova versão do painel pelo menos uma vez. Para complementar os dados de uso, apliquei dois questionários: um com 256 respostas de clientes que voltaram para a versão anterior e outro com 159 respostas de quem continuou usando a nova. A percepção geral foi positiva, com uma nota de usabilidade entre 5 e 6 em uma escala de 7, mas os comentários também deixaram claro onde a experiência ainda precisava evoluir.",
+        "chart1": {
+          "label": "Teste A/B · adoção da nova navegação",
+          "alt": "Gráfico de barras mostrando adoção no teste A/B: 31% dos usuários ativos testaram a nova navegação, 25% usaram de forma recorrente, 51% das frotas ativas abriram a nova versão ao menos uma vez.",
+          "i1": "Usuários que testaram",
+          "i2": "Uso recorrente",
+          "i3": "Frotas que abriram 1x+",
+          "i4": "Críticas diretas à nav.",
+          "caption": "Base: questionário de retorno à versão antiga (256 respostas) e questionário de uso da nova versão (159 respostas), enviados durante o período de teste."
+        },
+        "body3": "Transformei cada feedback recorrente em uma melhoria antes da migração oficial. Reposicionei a entrada da área <strong>Minha Frota</strong>, que muitos clientes tinham dificuldade para encontrar. Corrigi o comportamento da barra lateral na página inicial, que abria e fechava de forma inesperada. Também reorganizei a nomenclatura e a ordem da página de relatórios, apontada como o principal ponto de confusão pelos usuários.",
+        "body4": "Com esses ajustes concluídos, defini o plano de lançamento em parceria com Marketing. A estratégia incluiu uma comunicação em fases, treinamento das equipes de Suporte, CS e Vendas e uma migração gradual da base, realizada entre os dias 20 e 22 de agosto de 2025, até alcançar 100% dos clientes."
+      },
+      "result": {
+        "stat1Label": "jornadas usadas por frota, base Mid2+ (meta era 3,5)",
+        "stat2Label": "tickets ou feedbacks negativos na migração oficial",
+        "body1": "A migração oficial fechou sem nenhum ticket ou feedback negativo relacionado à navegação — um contraste direto com os ajustes ainda feitos durante o teste A/B. O pedido mais comum do período pós-lançamento foi por um modo escuro, funcionalidade que não existia nem na versão anterior do produto.",
+        "body2": "Nos meses seguintes, a abrangência de uso subiu de 2,5 para 3,1 jornadas na base de clientes Mid2+ — abaixo da meta de 3,5, mas um avanço real. Em paralelo, seguimos evoluindo pontos que já estavam no plano: adaptação dos filtros globais, reorganização da área de configurações, e um modo escuro, ainda em construção.",
+        "closing": "Esse resultado parcial trouxe um aprendizado que não estava previsto. Pouco depois do lançamento da nova navegação, o produto também lançou um assistente de IA que passou a consolidar informações de várias jornadas em respostas diretas, sem exigir que o cliente navegasse manualmente entre elas. Parte do valor que a métrica de abrangência tentava capturar — o cliente extraindo valor de várias frentes do produto — passou a acontecer por um caminho que a métrica não enxergava. Ainda estamos reaprendendo como medir esse engajamento: abrangência de uso deixou de ser sinônimo direto de valor percebido assim que uma camada de IA passou a costurar as jornadas por trás da navegação."
+      }
     }
   }
 }
