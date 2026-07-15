@@ -142,8 +142,8 @@
         "bottleneck3Body": "After installation, customers found dozens of settings and features with no clear indication of what was a priority."
       },
       "process": {
-        "body1": "The main challenge was that the company had no objective way to answer a simple question: is this customer ready to get value yet? There were dozens of indicators scattered across Product, CS, and Supply, but none showed the real activation level of an account.",
-        "body2": "To solve this, I defined and specified <strong>Basic Value</strong>, a metric calculated daily for each customer. It brought together four pillars of the journey — installation, setup, configuration, and continued use — into a score from 0 to 4, making it possible to track onboarding progress through a single indicator.",
+        "body1": "The main challenge was that the company had no objective way to answer a simple question: <strong>is this customer ready to get value yet?</strong> There were dozens of indicators scattered across Product, CS, and Supply, but none showed the real activation level of an account.",
+        "body2": "To solve this, I defined and specified <strong>Basic Value</strong>, a metric calculated daily for each customer. It brought together four pillars of the journey — installation, setup, configuration, and continued use — into a single score that makes it possible to track onboarding progress.",
         "body3": "Beyond prioritizing at-risk customers, Basic Value created a common language between Product, CS, and Supply. For the first time, every team tracked activation using the same criteria and goals.",
         "compositionChart": {
           "label": "Basic Value composition · from pillars to score",
