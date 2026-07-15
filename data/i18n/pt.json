@@ -32,6 +32,8 @@
     "viewContact": "Ver contato",
     "viewProjects": "Ver projetos",
     "selectedWork": "Trabalhos selecionados",
+    "cardArquiteturaTitle": "Redesign da navegação: da lógica do produto à lógica do cliente",
+    "cardArquiteturaDesc": "Como identifiquei que a navegação organizada por feature travava o crescimento do produto, e redesenhei a arquitetura de informação em camadas por jornada, validada em teste A/B antes da migração de toda a base.",
     "cardPedidosTitle": "Visibilidade de Pedidos: destravando a instalação",
     "cardPedidosDesc": "Como identifiquei que a falta de visibilidade sobre pedidos e agendamento de instalação sobrecarregava o atendimento, e desenhei uma linha do tempo que traduz o status interno da operação para o cliente.",
     "cardRecomendacoesTitle": "Recomendações Inteligentes: a régua determinística por trás da IA",

@@ -32,6 +32,8 @@
     "viewContact": "View contact",
     "viewProjects": "View projects",
     "selectedWork": "Selected work",
+    "cardArquiteturaTitle": "Navigation Redesign: from product logic to customer logic",
+    "cardArquiteturaDesc": "How I found that feature-first navigation was capping product growth, and redesigned the information architecture into journey-based layers, validated through an A/B test before migrating the full customer base.",
     "cardPedidosTitle": "Order Visibility: unblocking installation",
     "cardPedidosDesc": "How I identified that the lack of visibility into orders and installation scheduling was overloading support, and designed a timeline that translates internal operations status for the customer.",
     "cardRecomendacoesTitle": "Smart Recommendations: the deterministic ruleset behind the AI",
