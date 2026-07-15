@@ -14,6 +14,7 @@
     "sectionCompany": "The company",
     "sectionContext": "Context",
     "sectionProblem": "Problem",
+    "sectionDiscovery": "Discovery",
     "sectionProcess": "Process",
     "sectionSolution": "Solution",
     "sectionResult": "Result",
@@ -101,14 +102,53 @@
       "coverStart": "Oct/25",
       "coverEnd": "Jun/26",
       "context": {
-        "body": "Reducing churn was one of the company's few strategic objectives for the cycle, and I was directly responsible for a workstream tied to that objective, sponsored by a director and a working group made up of CS, Supply and scheduling. The initial ask was vague — \"onboarding isn't working\" — with no clear diagnosis of what exactly was broken or which team should act."
+        "body1": "Reducing churn was one of the company's main strategic objectives for that cycle. To support that goal, I ran a discovery on early churn, looking into engagement data, usage patterns, and the customer experience in the first months of the contract.",
+        "body2": "The analysis revealed different factors contributing to that scenario. Installation was one of the main points of friction, but another problem caught my attention: many customers who had already completed that step still struggled to get value from the product. On a platform with dozens of settings and features, it wasn't clear what the next steps were to start extracting value from the solution.",
+        "body3": "Following that discovery, onboarding started being treated as a strategic workstream sponsored by a director and run in partnership with CS, Supply, and Scheduling. My challenge became understanding exactly where customers stopped progressing through the journey, and creating an objective way to measure onboarding quality."
       },
-      "problem": {
-        "body": "I started by investigating the last 12 months of churn data cross-referenced with each customer's configuration history. The main finding: the vast majority of churn in the period came from customers who had never completed even 60% of the platform's basic configuration. The problem wasn't \"churn\" in a generic sense — it was activation. Digging deeper, I found three specific root causes: loss of context in the handoff between Sales and Post-sales (the customer had to reintroduce themselves from scratch); operational friction in the physical device installation process (scheduling, no-shows, vehicle availability); and a first-access experience with high cognitive load, with no clear prioritization of what the customer should do first."
+      "discovery": {
+        "body1": "To understand why so many customers were abandoning the product in the first months, I combined data analysis, qualitative research, and direct observation of the implementation process.",
+        "methodDiagram": {
+          "label": "How I ran the discovery",
+          "step1Title": "Data",
+          "step1Item1": "12 months of churn",
+          "step1Item2": "Product usage patterns",
+          "step1Item3": "Engagement data",
+          "step1Item4": "Platform configuration data",
+          "step2Title": "Research",
+          "step2Item1": "In-depth interviews with customers in onboarding",
+          "step3Title": "Shadowing",
+          "step3Item1": "Customers",
+          "step3Item2": "CS",
+          "step3Item3": "Implementation",
+          "caption": "I cross-referenced quantitative churn and configuration data, qualitative research with customers, and direct observation of the installation and support process."
+        },
+        "body2": "Cross-referencing the last 12 months of churn data with each customer's configuration history, I found a consistent pattern: most customers who canceled their contract had never completed even 60% of the platform's basic configuration. It became clear the problem wasn't just retention, but customers' difficulty reaching a minimum level of activation before starting to get value.",
+        "bottlenecksIntro": "The investigation revealed three bottlenecks that explained this behavior:",
+        "bottleneck1Title": "Loss of context between Sales and Post-sales.",
+        "bottleneck1Body": "Customers had to repeat information and restart part of the journey after signing the contract.",
+        "bottleneck2Title": "Friction in the installation process.",
+        "bottleneck2Body": "Scheduling, vehicle unavailability, and no-shows delayed the start of operations.",
+        "bottleneck3Title": "First access with high cognitive load.",
+        "bottleneck3Body": "After installation, customers found dozens of settings and features with no clear indication of what was a priority."
       },
       "process": {
-        "body1": "To give this diagnosis visibility and turn it into action, I defined and specified <strong>Basic Value</strong>: a score from 0 to 4, calculated daily per customer, that summarizes how \"activated\" a fleet is on the platform across four pillars — installation, setup, configuration and continued use. The metric became the official churn-risk gauge used by CS to prioritize retention conversations, and started feeding automatic recommendations shown inside the product itself.",
-        "body2": "After launch, I ran qualitative research with the CS team to understand, in practice, why some customers reach a healthy Basic Value within a few months while others stay stuck. That step revealed things the quantitative data alone didn't show: installation was the biggest bottleneck — more than the sales process or CS itself; the internal checklist tool was too simple for larger customers; help content was outdated; and there was recurring confusion about rescheduling fees, which created emotional friction right at the start of the customer relationship.",
+        "body1": "The main challenge was that the company had no objective way to answer a simple question: is this customer ready to get value yet? There were dozens of indicators scattered across Product, CS, and Supply, but none showed the real activation level of an account.",
+        "body2": "To solve this, I defined and specified <strong>Basic Value</strong>, a metric calculated daily for each customer. It brought together four pillars of the journey — installation, setup, configuration, and continued use — into a score from 0 to 4, making it possible to track onboarding progress through a single indicator.",
+        "body3": "Beyond prioritizing at-risk customers, Basic Value created a common language between Product, CS, and Supply. For the first time, every team tracked activation using the same criteria and goals.",
+        "compositionChart": {
+          "label": "Basic Value composition · from pillars to score",
+          "alt": "Vertical diagram showing the four Basic Value pillars — installation, setup, configuration, and continued use — composing the final score from 0 to 4.",
+          "instalacao": "Installation",
+          "setup": "Setup",
+          "configuracao": "Configuration",
+          "usoContinuo": "Continued use",
+          "basicValue": "Basic Value (0–4)",
+          "caption": "Each pillar contributes a partial score to the final score, calculated daily per customer."
+        },
+        "body4": "After launching the metric, I ran a new round of qualitative research with the Customer Success team to understand why some customers reached a healthy Basic Value quickly while others stayed stuck.",
+        "body5": "This research revealed problems the data alone couldn't explain. The biggest bottleneck was still installation. I also found that the internal checklist used by CS didn't hold up for larger operations, that some of the help content was outdated, and that the rescheduling process created friction right at the start of the customer relationship.",
+        "body6": "These learnings helped prioritize the next initiatives and showed which Basic Value pillars needed to evolve first.",
         "chart1": {
           "label": "Basic Value pillars · average score (0–4)",
           "alt": "Bar chart showing the average score of the 4 Basic Value pillars: Installation 1.3, Setup 1.1, Basic configuration 0.7, Activation (heavy users) 0.3, on a 0 to 4 scale.",
