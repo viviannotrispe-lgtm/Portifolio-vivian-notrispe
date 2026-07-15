@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="projects.arquiteturaNavegacao.title">Redesign da navegação: da lógica do produto à lógica do cliente — Vivian Notrispe</title>
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/design-system-tokens.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Vivian Notrispe<span>.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="../sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="../contato.html" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+        <div class="lang-switch" data-lang-switch>
+          <button type="button" class="lang-switch__trigger" data-lang-trigger aria-haspopup="listbox" aria-expanded="false">
+            <span data-lang-current>PT BR</span>
+            <svg class="lang-switch__caret" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-switch__menu" data-lang-menu role="listbox" hidden>
+            <li><button type="button" class="lang-switch__option" data-lang-option="pt" role="option">PT BR</button></li>
+            <li><button type="button" class="lang-switch__option" data-lang-option="en" role="option">EN US</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-header wrap">
+      <span class="mono"><span data-i18n="projects.arquiteturaNavegacao.category">Design & Produto</span> · <span data-i18n="projects.arquiteturaNavegacao.year">2025</span></span>
+      <h1 data-i18n="projects.arquiteturaNavegacao.heading">Redesign da navegação: da lógica do produto à lógica do cliente</h1>
+
+      <dl class="case-meta">
+        <div><dt data-i18n="common.roleLabel">Papel</dt><dd data-i18n="projects.arquiteturaNavegacao.role">Product Designer, DRI de produto — célula temporária Unified XP</dd></div>
+        <div><dt data-i18n="common.teamLabel">Time</dt><dd data-i18n="projects.arquiteturaNavegacao.team">Time temporário (Product Designer + Front end Engineer)</dd></div>
+        <div><dt data-i18n="common.durationLabel">Duração</dt><dd data-i18n="projects.arquiteturaNavegacao.duration">~8 meses (discovery → blueprint → teste A/B → migração oficial)</dd></div>
+        <div><dt data-i18n="common.toolsLabel">Ferramentas</dt><dd data-i18n="projects.arquiteturaNavegacao.tools">Figma, FigJam, Mixpanel, Typeform</dd></div>
+      </dl>
+
+      <div class="case-cover">
+        <img src="../assets/img/arquitetura-navegacao-map.png" data-i18n-attr="alt=projects.arquiteturaNavegacao.coverAlt" alt="Tela de monitoramento em tempo real do painel, com mapa e lista de veículos da frota.">
+      </div>
+    </section>
+
+    <section class="case-body wrap">
+      <div>
+        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <div data-i18n-html="common.companyBody">
+          <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
+          <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.context.body1">Fui o Product Designer de uma célula temporária chamada Unified XP, criada para resolver problemas de experiência que atravessavam diferentes times de produto. O time era enxuto. Eu liderava as decisões de produto e design, em parceria com um desenvolvedor staff responsável por implementar as mudanças na navegação.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.context.body2">O trabalho começou a partir de uma descoberta importante. Clientes que utilizavam poucas jornadas do produto tinham uma chance maior de churn após o fim do contrato. Meu desafio era entender o que impedia essa adoção e como a experiência do produto poderia ajudar a mudar esse cenário.</p>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.problem.body1">Comecei analisando churn por funcionalidade e a queda de engajamento ao longo do tempo. Os dados mostravam vários sintomas, mas nenhum deles explicava o problema.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.problem.body2">A resposta apareceu quando deixei de olhar para funcionalidades isoladas e passei a analisar quantas jornadas cada cliente realmente utilizava. As frotas que usavam menos de 1,5 jornada tinham NRR (Net Revenue Retention) de -31%. Já aquelas que utilizavam mais de 3,6 jornadas chegavam a um NRR de +12%. O NPS seguia a mesma tendência: a nota era 75 entre clientes com uso amplo e 50 entre aqueles que utilizavam poucas jornadas.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.problem.body3">Foi a partir daí que comecei a investigar o que limitava essa adoção. Percebi que a navegação estava organizada por funcionalidades e deixavam em evidência as divisões internas do time de produto, e não focavam nas jornadas e necessidades dos clientes.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.problem.body4">Além disso, quase toda a retenção do produto era centralizada ao redor da página de monitoramento (mapa em tempo real). Isso deixava a experiência vulnerável: se o GPS ou o sinal falhassem, o cliente dificilmente encontraria valor em outras partes da plataforma. Em clientes Enterprise, esse risco era ainda maior, porque eles precisavam perceber benefícios também em segurança, compliance e redução de custos para justificar contratos maiores.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.problem.body5">Outro dado chamou minha atenção. Jornadas naturalmente relacionadas, como segurança e vigilância, quase não eram utilizadas em conjunto. Ficou claro que os clientes não faziam essa conexão sozinhos. Se quiséssemos aumentar a adoção entre jornadas, essa relação precisaria ficar evidente na própria experiência do produto.</p>
+
+        <figure class="stat-chart">
+          <span class="mono" data-i18n="projects.arquiteturaNavegacao.problem.chart1.label">NRR e NPS por abrangência de uso</span>
+          <svg viewBox="0 0 700 170" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.arquiteturaNavegacao.problem.chart1.alt" aria-label="Gráfico comparando NRR e NPS entre frotas de baixa e alta abrangência de uso: NRR de -31% para +12%, NPS de 50 para 75.">
+            <circle cx="330" cy="16" r="5" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
+            <text x="340" y="20" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.problem.chart1.baixa">baixa abrangência</text>
+            <circle cx="480" cy="16" r="5" fill="var(--accent)"/>
+            <text x="490" y="20" font-family="var(--font-mono)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.problem.chart1.alta">alta abrangência</text>
+
+            <g font-family="var(--font-mono)" font-size="14">
+              <text x="165" y="76" text-anchor="end" fill="var(--ink)">NRR</text>
+              <line x1="264" y1="71" x2="573" y2="71" stroke="var(--line-strong)" stroke-width="2"/>
+              <circle cx="264" cy="71" r="7" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
+              <circle cx="573" cy="71" r="7" fill="var(--accent)"/>
+              <text x="264" y="55" text-anchor="middle" fill="var(--accent-warm)" font-weight="600">-31%</text>
+              <text x="573" y="55" text-anchor="middle" fill="var(--accent)" font-weight="600">+12%</text>
+
+              <text x="165" y="138" text-anchor="end" fill="var(--ink)">NPS</text>
+              <line x1="415" y1="133" x2="570" y2="133" stroke="var(--line-strong)" stroke-width="2"/>
+              <circle cx="415" cy="133" r="7" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="1.5"/>
+              <circle cx="570" cy="133" r="7" fill="var(--accent)"/>
+              <text x="415" y="117" text-anchor="middle" fill="var(--ink-soft)" font-weight="600">50</text>
+              <text x="570" y="117" text-anchor="middle" fill="var(--accent)" font-weight="600">75</text>
+            </g>
+          </svg>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.problem.chart1.caption">Abrangência de uso — quantas jornadas diferentes cada frota usa — se mostrou o melhor preditor de retenção e satisfação, mais do que qualquer feature isolada.</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body1Intro">Para entender quem de fato usa cada jornada, conduzi sessões de pesquisa com clientes de portes diferentes até fechar oito perfis, organizados em quatro camadas de autonomia:</p>
+        <ul>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item1">Diretoria, no topo, decide sobre contratos e continuidade de serviços a partir de dados consolidados, sem tempo para investigar detalhe.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item2">Gestão estratégica, que traduz metas do negócio em KPIs de custo, manutenção e segurança da frota.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item3">Implementadores-chave, que transformam essas metas em regras e processos do dia a dia.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body1Item4">Usuários operacionais, que interagem com o produto várias vezes ao dia em tarefas pontuais.</li>
+        </ul>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body1Outro">Cada camada consome dado de um jeito diferente — do dado macro e histórico da diretoria ao dado micro e em tempo real de quem executa a operação — e isso virou um critério direto de profundidade de navegação: quanto mais operacional a persona, mais raso e imediato o caminho até a informação precisa ser.</p>
+
+        <figure class="stat-chart stat-chart--wide">
+          <span class="mono" data-i18n="projects.arquiteturaNavegacao.process.personas.label">Personas por camada de autonomia</span>
+          <div class="persona-org-legend mono" aria-hidden="true">
+            <span data-i18n="projects.arquiteturaNavegacao.process.personas.scaleLeft">perfil de dado: tempo real</span>
+            <span>―――――――――――</span>
+            <span data-i18n="projects.arquiteturaNavegacao.process.personas.scaleRight">histórico e consolidado</span>
+          </div>
+          <div class="persona-org">
+            <div class="persona-org__tier">
+              <div class="persona-node persona-node--root" data-tier="1">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier1Label">Diretoria</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p1Name">Diretor executivo</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p1Autonomy">Autonomia alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="119" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p1Bio">Decide sobre contratação e continuidade de serviços a partir da eficiência da frota e dos resultados consolidados pelos gestores.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p1Jtbd">Quando avalia a operação, quer dados consolidados e confiáveis, para decidir sem precisar validar cada número.</span></p>
+              </div>
+            </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="65" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="195" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="2">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier2Label">Gestor estratégico</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p2Name">Diretor de operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p2Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="106" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p2Bio">Alinha processos operacionais aos objetivos estratégicos da empresa, monitorando KPIs, liderando equipes e garantindo conformidade com políticas e regulamentações.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p2Jtbd">Quando planeja fluxos de trabalho, quer alinhá-los aos objetivos estratégicos, para manter alta eficiência e produtividade.</span></p>
+              </div>
+              <div class="persona-node" data-tier="2">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier2Label">Gestor estratégico</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p3Name">Diretor de frotas</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p3Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="102" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p3Bio">Alinha a gestão da frota aos objetivos da empresa, definindo metas e KPIs de custo, manutenção e segurança.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p3Jtbd">Quando monitora o desempenho da frota, quer acompanhar KPIs de consumo, manutenção e segurança, para identificar oportunidades de otimização.</span></p>
+              </div>
+            </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="65" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="195" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="3">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier3Label">Implementador-chave</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p4Name">Gestor de operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p4Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="64" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p4Bio">Supervisiona analistas e condutores, garantindo que serviços e entregas aconteçam com qualidade, e corrige gargalos que travam a produtividade da operação.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p4Jtbd">Quando percebe baixa produtividade, quer identificar gargalos como rotas ineficientes ou veículos ociosos, para agir com melhorias eficazes.</span></p>
+              </div>
+              <div class="persona-node" data-tier="3">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier3Label">Implementador-chave</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p5Name">Gestor de segurança</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p5Autonomy">Autonomia média/alta</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="80" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p5Bio">Implementa e monitora regras de segurança da frota, promovendo treinamentos e gerenciando bonificações e punições.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p5Jtbd">Quando identifica comportamentos de risco, quer aplicar medidas corretivas e treinamentos, para aumentar a segurança da condução.</span></p>
+              </div>
+            </div>
+
+            <svg class="persona-org__connector" viewBox="0 0 260 28" aria-hidden="true" focusable="false">
+              <line x1="130" y1="0" x2="20" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="130" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <line x1="130" y1="0" x2="240" y2="28" stroke="var(--line-strong)" stroke-width="1.5"/>
+            </svg>
+
+            <div class="persona-org__tier">
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p6Name">Executor — operação</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p6Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="21" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p6Bio">Faz a ponte entre motoristas e administração, organizando tarefas diárias e ajustando rotas conforme o imprevisto do dia.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p6Jtbd">Quando surge um imprevisto, quer ajustar rotas e tarefas em tempo real, para manter os motoristas produtivos.</span></p>
+              </div>
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p7Name">Executor — segurança</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p7Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="19" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p7Bio">Verifica e analisa eventos de segurança individualmente, descarta o que não é relevante e escreve perfis de motoristas e relatórios de ocorrência.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p7Jtbd">Quando recebe eventos de segurança, quer avaliar cada um individualmente, para manter só o que é relevante e agir com precisão.</span></p>
+              </div>
+              <div class="persona-node" data-tier="4">
+                <span class="mono persona-org__tier-label" data-i18n="projects.arquiteturaNavegacao.process.personas.tier4Label">Usuário operacional</span>
+                <h4 data-i18n="projects.arquiteturaNavegacao.process.personas.p8Name">Técnico de manutenção</h4>
+                <span class="mono persona-autonomy" data-i18n="projects.arquiteturaNavegacao.process.personas.p8Autonomy">Autonomia baixa</span>
+                <svg class="persona-scale" viewBox="0 0 140 14" aria-hidden="true" focusable="false">
+                  <line x1="6" y1="7" x2="134" y2="7" stroke="var(--line-strong)" stroke-width="2"/>
+                  <circle cx="27" cy="7" r="5" fill="var(--accent)"/>
+                </svg>
+                <p class="persona-bio" data-i18n="projects.arquiteturaNavegacao.process.personas.p8Bio">Prioriza reparos, gerencia a equipe de mecânicos e libera ou bloqueia veículos conforme a condição de uso.</p>
+                <p class="persona-jtbd"><span class="mono persona-jtbd-label">JTBD</span><span data-i18n="projects.arquiteturaNavegacao.process.personas.p8Jtbd">Quando recebe uma demanda de manutenção, quer priorizar o reparo certo, para manter o veículo seguro e operacional.</span></p>
+              </div>
+            </div>
+          </div>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.process.personas.caption">Oito perfis mapeados em sessões com clientes, organizados em quatro camadas de autonomia. A profundidade de navegação foi desenhada a partir de como cada camada consome dado.</figcaption>
+        </figure>
+
+        <p data-i18n="projects.arquiteturaNavegacao.process.body2">Em paralelo, mapeei a experiência atual cruzando as tarefas de cada persona com as páginas do produto que hoje resolviam essas tarefas, jornada por jornada — operações, manutenção, segurança, custos e compliance. O mapeamento confirmou o problema na prática: a mesma tarefa dependia de páginas espalhadas em partes diferentes do produto, todas no mesmo nível de navegação, sem hierarquia ou agrupamento que guiasse o cliente até elas.</p>
+
+        <p data-i18n="projects.arquiteturaNavegacao.process.body3Intro">Antes de propor qualquer solução, validei esses achados com CS, Tecnologia, Vendas e Atendimento. Conduzi sessões de critique para entender como cada área enxergava o problema e quais mudanças realmente fariam diferença.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body3Lead">Cada time contribuiu com uma perspectiva diferente.</p>
+        <ul>
+          <li data-i18n-html="projects.arquiteturaNavegacao.process.body3Item1"><strong>CS</strong> mostrou onde os clientes perdiam contexto durante o uso e acabavam recorrendo ao suporte.</li>
+          <li data-i18n-html="projects.arquiteturaNavegacao.process.body3Item2"><strong>Vendas</strong> evidenciou que o discurso comercial já era organizado por jornadas, como segurança e redução de custos, enquanto o produto continuava organizado por funcionalidades.</li>
+          <li data-i18n-html="projects.arquiteturaNavegacao.process.body3Item3"><strong>Atendimento</strong> trouxe o volume de chamados gerados apenas porque os usuários não conseguiam encontrar funcionalidades que já existiam.</li>
+          <li data-i18n-html="projects.arquiteturaNavegacao.process.body3Item4"><strong>Tecnologia</strong> ajudou a definir quais mudanças poderiam ser implementadas sem comprometer a arquitetura existente.</li>
+        </ul>
+
+        <p data-i18n="projects.arquiteturaNavegacao.process.body4">Com esses aprendizados, desenhei uma nova arquitetura de navegação baseada na forma como os clientes pensavam sobre a operação, e não na estrutura interna do produto.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.process.body5Lead">A nova navegação passou a ter:</p>
+        <ul>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body5Item1">Jornadas de entrada centralizadas com gráficos de visão geral.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body5Item2">Jornadas organizadas por contexto de uso, como Operação, Segurança, Eficiência, Compliance e Configurações.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body5Item3">Hierarquia de até três níveis, permitindo navegar do panorama geral até relatórios e configurações específicas.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.process.body5Item4">Conexões entre jornadas que faziam sentido para o cliente, incentivando a descoberta de funcionalidades relacionadas e ampliando a adoção do produto.</li>
+        </ul>
+
+        <figure class="stat-chart stat-chart--wide">
+          <span class="mono" data-i18n="projects.arquiteturaNavegacao.process.blueprint.label">Blueprint · navegação em camadas</span>
+          <svg viewBox="0 0 760 460" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.arquiteturaNavegacao.process.blueprint.alt" aria-label="Diagrama da nova arquitetura: um ponto de entrada (torre de controle e visão geral da frota) leva a seis grupos de nível 1 — operação, manutenção, segurança, eficiência e custos, compliance e configurações. O grupo de segurança se desdobra em nível 2 (dashboard, ranking, eventos) e nível 3 (relatórios detalhados, edições avançadas).">
+            <text x="20" y="18" font-family="var(--font-mono)" font-size="11" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.process.blueprint.lvlEntrada">ENTRADA</text>
+            <rect x="280" y="24" width="200" height="52" rx="14" fill="var(--accent)"/>
+            <text x="380" y="46" text-anchor="middle" font-family="var(--font-display)" font-size="14" font-weight="600" fill="#fff" data-i18n="projects.arquiteturaNavegacao.process.blueprint.entrada1">Torre de controle</text>
+            <text x="380" y="64" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="#fff" data-i18n="projects.arquiteturaNavegacao.process.blueprint.entrada2">visão geral da frota</text>
+
+            <text x="20" y="108" font-family="var(--font-mono)" font-size="11" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.process.blueprint.lvl1">NÍVEL 1</text>
+            <g stroke="var(--line-strong)" stroke-width="1.5">
+              <line x1="380" y1="76" x2="70" y2="120"/>
+              <line x1="380" y1="76" x2="194" y2="120"/>
+              <line x1="380" y1="76" x2="318" y2="120"/>
+              <line x1="380" y1="76" x2="442" y2="120"/>
+              <line x1="380" y1="76" x2="566" y2="120"/>
+              <line x1="380" y1="76" x2="690" y2="120"/>
+            </g>
+            <g font-family="var(--font-body)" font-size="11.5" fill="var(--ink)">
+              <rect x="15" y="120" width="110" height="46" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <text x="70" y="147" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1a">Operação</text>
+
+              <rect x="139" y="120" width="110" height="46" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <text x="194" y="147" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1b">Manutenção</text>
+
+              <rect x="263" y="120" width="110" height="46" rx="10" fill="var(--paper)" stroke="var(--accent)" stroke-width="2.5"/>
+              <text x="318" y="147" text-anchor="middle" font-weight="600" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1c">Segurança</text>
+
+              <rect x="387" y="120" width="110" height="46" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <text x="442" y="140" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1d1">Eficiência</text>
+              <text x="442" y="154" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1d2">e custos</text>
+
+              <rect x="511" y="120" width="110" height="46" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <text x="566" y="147" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1e">Compliance</text>
+
+              <rect x="635" y="120" width="110" height="46" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="1.5"/>
+              <text x="690" y="147" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n1f">Configurações</text>
+            </g>
+
+            <text x="20" y="216" font-family="var(--font-mono)" font-size="11" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.process.blueprint.lvl2">NÍVEL 2</text>
+            <g stroke="var(--line)" stroke-width="1.5">
+              <line x1="318" y1="166" x2="255" y2="228"/>
+              <line x1="318" y1="166" x2="385" y2="228"/>
+              <line x1="318" y1="166" x2="515" y2="228"/>
+            </g>
+            <g font-family="var(--font-body)" font-size="11.5" fill="var(--ink)">
+              <rect x="200" y="228" width="110" height="40" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+              <text x="255" y="252" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n2a">Dashboard</text>
+
+              <rect x="330" y="228" width="110" height="40" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+              <text x="385" y="252" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n2b">Ranking</text>
+
+              <rect x="460" y="228" width="110" height="40" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+              <text x="515" y="252" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n2c">Eventos</text>
+            </g>
+
+            <text x="20" y="322" font-family="var(--font-mono)" font-size="11" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.process.blueprint.lvl3">NÍVEL 3</text>
+            <g stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4">
+              <line x1="255" y1="268" x2="290" y2="330"/>
+              <line x1="385" y1="268" x2="290" y2="330"/>
+              <line x1="385" y1="268" x2="470" y2="330"/>
+              <line x1="515" y1="268" x2="470" y2="330"/>
+            </g>
+            <g font-family="var(--font-body)" font-size="11.5" fill="var(--ink-soft)">
+              <rect x="215" y="330" width="150" height="40" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <text x="290" y="354" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n3a">Relatórios detalhados</text>
+
+              <rect x="395" y="330" width="150" height="40" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <text x="470" y="354" text-anchor="middle" data-i18n="projects.arquiteturaNavegacao.process.blueprint.n3b">Edições avançadas</text>
+            </g>
+
+            <text x="380" y="420" text-anchor="middle" font-family="var(--font-body)" font-size="12" fill="var(--ink-soft)" data-i18n="projects.arquiteturaNavegacao.process.blueprint.note">Todos os grupos de Nível 1 seguem a mesma lógica de profundidade — aqui, o exemplo de Segurança.</text>
+          </svg>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.process.blueprint.caption">Um ponto de entrada, seis jornadas de Nível 1, e até três camadas de profundidade dentro de cada uma — em vez de dezesseis páginas soltas no mesmo nível.</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.intro1">A solução não era apenas reorganizar a navegação, mas mudar a forma como os clientes exploravam o produto.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.intro2">Na versão anterior, o menu refletia a estrutura interna da empresa. As funcionalidades eram apresentadas como uma lista de produtos e recursos independentes, exigindo que o cliente soubesse antecipadamente onde encontrar cada informação.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.intro3">No redesenho a arquitetura da informação passou a refletir a forma como os clientes pensam sobre a gestão da frota, e não como os times de produto estavam organizados.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.intro4">Cada jornada passou a ter um ponto de entrada próprio, começando por uma visão geral e reunindo, em um mesmo contexto, as funcionalidades relacionadas àquele objetivo. A navegação também ganhou uma estrutura hierárquica de até três níveis, permitindo que o cliente partisse de uma visão consolidada e aprofundasse a análise apenas quando necessário.</p>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.principlesLead">Essa mudança foi guiada por quatro princípios:</p>
+        <ul>
+          <li data-i18n="projects.arquiteturaNavegacao.solution.principle1">Organizar o produto por jornadas, substituindo uma navegação centrada em funcionalidades.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.solution.principle2">Começar sempre pelo contexto, oferecendo uma visão geral antes de levar o cliente para telas específicas.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.solution.principle3">Agrupar funcionalidades relacionadas, facilitando a descoberta de recursos complementares.</li>
+          <li data-i18n="projects.arquiteturaNavegacao.solution.principle4">Criar conexões entre jornadas, incentivando a exploração do produto e aumentando a adoção entre diferentes áreas.</li>
+        </ul>
+        <p data-i18n="projects.arquiteturaNavegacao.solution.closing">Na prática, isso significou deixar de perguntar "qual funcionalidade você procura?" para passar a responder "qual problema você está tentando resolver?".</p>
+
+        <figure class="compare-slider compare-slider--wide" data-compare-slider>
+          <div class="compare-slider__frame">
+            <img class="compare-slider__img compare-slider__after" src="../assets/img/arquitetura-navegacao-nova.png" data-i18n-attr="alt=projects.arquiteturaNavegacao.solution.slider.afterAlt" alt="Nova navegação, organizada em dois níveis por jornada.">
+            <img class="compare-slider__img compare-slider__before" src="../assets/img/arquitetura-navegacao-antiga.png" data-i18n-attr="alt=projects.arquiteturaNavegacao.solution.slider.beforeAlt" alt="Navegação antiga, organizada como uma lista única de features.">
+            <span class="compare-slider__tag compare-slider__tag--before" data-i18n="projects.arquiteturaNavegacao.solution.slider.before">antes</span>
+            <span class="compare-slider__tag compare-slider__tag--after" data-i18n="projects.arquiteturaNavegacao.solution.slider.after">depois</span>
+            <div class="compare-slider__handle"><span class="compare-slider__knob">↔</span></div>
+            <input type="range" min="0" max="100" value="50" autocomplete="off" class="compare-slider__range" data-i18n-attr="aria-label=projects.arquiteturaNavegacao.solution.slider.rangeLabel" aria-label="Arraste para comparar a navegação antiga e a nova">
+          </div>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.solution.slider.caption">Arraste para comparar: a navegação antiga, uma lista única organizada por feature, e a nova navegação em dois níveis, organizada por jornada.</figcaption>
+        </figure>
+
+        <figure class="stat-chart--shot">
+          <figcaption data-i18n="projects.arquiteturaNavegacao.solution.sidebarCompare.caption">A sidebar isolada, lado a lado. À esquerda, a navegação antiga: uma lista única e extensa, sem agrupamento por jornada, que crescia a cada nova feature lançada. À direita, a nova sidebar em dois níveis: a coluna de ícones agrupa por jornada (Operação, Segurança, Eficiência...), e a lista ao lado mostra só as páginas e features daquela jornada selecionada.</figcaption>
+          <img src="../assets/img/arquitetura-navegacao-sidebar-comparativo.png" data-i18n-attr="alt=projects.arquiteturaNavegacao.solution.sidebarCompare.alt" alt="Comparação lado a lado entre a sidebar antiga, uma lista única expandida, e a nova sidebar em dois níveis: coluna de ícones por jornada e lista de páginas ao lado.">
+        </figure>
+      </div>
+
+      <div>
+        <h2 data-i18n="projects.arquiteturaNavegacao.abTest.heading">Teste A/B pré-lançamento</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.abTest.body1">Em vez de migrar toda a base de uma só vez, defini uma estratégia de rollout gradual usando feature flag. O objetivo era validar a nova navegação em um ambiente real, entender como os clientes reagiam às mudanças e evoluir a experiência antes da migração definitiva.</p>
+
+        <p data-i18n="projects.arquiteturaNavegacao.abTest.body2">Durante esse período, 31% dos usuários ativos experimentaram a nova navegação e 25% passaram a utilizá-la de forma recorrente. Além disso, 51% das frotas ativas acessaram a nova versão do painel pelo menos uma vez. Para complementar os dados de uso, apliquei dois questionários: um com 256 respostas de clientes que voltaram para a versão anterior e outro com 159 respostas de quem continuou usando a nova. A percepção geral foi positiva, com uma nota de usabilidade entre 5 e 6 em uma escala de 7, mas os comentários também deixaram claro onde a experiência ainda precisava evoluir.</p>
+
+        <figure class="stat-chart">
+          <span class="mono" data-i18n="projects.arquiteturaNavegacao.abTest.chart1.label">Teste A/B · adoção da nova navegação</span>
+          <svg viewBox="0 0 700 190" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.arquiteturaNavegacao.abTest.chart1.alt" aria-label="Gráfico de barras mostrando adoção no teste A/B: 31% dos usuários ativos testaram a nova navegação, 25% usaram de forma recorrente, 51% das frotas ativas abriram a nova versão ao menos uma vez.">
+            <g font-family="var(--font-mono)" font-size="14" fill="var(--ink)">
+              <text x="195" y="31" text-anchor="end" data-i18n="projects.arquiteturaNavegacao.abTest.chart1.i1">Usuários que testaram</text>
+              <rect x="205" y="16" width="430" height="20" rx="8" fill="var(--line)"/>
+              <rect x="205" y="16" width="133" height="20" rx="8" fill="var(--accent)" fill-opacity="0.75"/>
+              <text x="655" y="31" fill="var(--ink-soft)">31%</text>
+
+              <text x="195" y="73" text-anchor="end" data-i18n="projects.arquiteturaNavegacao.abTest.chart1.i2">Uso recorrente</text>
+              <rect x="205" y="58" width="430" height="20" rx="8" fill="var(--line)"/>
+              <rect x="205" y="58" width="107" height="20" rx="8" fill="var(--accent)" fill-opacity="0.6"/>
+              <text x="655" y="73" fill="var(--ink-soft)">25%</text>
+
+              <text x="195" y="115" text-anchor="end" data-i18n="projects.arquiteturaNavegacao.abTest.chart1.i3">Frotas que abriram 1x+</text>
+              <rect x="205" y="100" width="430" height="20" rx="8" fill="var(--line)"/>
+              <rect x="205" y="100" width="219" height="20" rx="8" fill="var(--accent)"/>
+              <text x="655" y="115" fill="var(--ink-soft)">51%</text>
+
+              <text x="195" y="157" text-anchor="end" data-i18n="projects.arquiteturaNavegacao.abTest.chart1.i4">Críticas diretas à nav.</text>
+              <rect x="205" y="142" width="430" height="20" rx="8" fill="var(--line)"/>
+              <rect x="205" y="142" width="26" height="20" rx="8" fill="var(--accent-warm)"/>
+              <text x="655" y="157" fill="var(--ink-soft)">6%</text>
+            </g>
+          </svg>
+          <figcaption data-i18n="projects.arquiteturaNavegacao.abTest.chart1.caption">Base: questionário de retorno à versão antiga (256 respostas) e questionário de uso da nova versão (159 respostas), enviados durante o período de teste.</figcaption>
+        </figure>
+
+        <p data-i18n-html="projects.arquiteturaNavegacao.abTest.body3">Transformei cada feedback recorrente em uma melhoria antes da migração oficial. Reposicionei a entrada da área <strong>Minha Frota</strong>, que muitos clientes tinham dificuldade para encontrar. Corrigi o comportamento da barra lateral na página inicial, que abria e fechava de forma inesperada. Também reorganizei a nomenclatura e a ordem da página de relatórios, apontada como o principal ponto de confusão pelos usuários.</p>
+
+        <p data-i18n="projects.arquiteturaNavegacao.abTest.body4">Com esses ajustes concluídos, defini o plano de lançamento em parceria com Marketing. A estratégia incluiu uma comunicação em fases, treinamento das equipes de Suporte, CS e Vendas e uma migração gradual da base, realizada entre os dias 20 e 22 de agosto de 2025, até alcançar 100% dos clientes.</p>
+      </div>
+
+      <div>
+        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <p data-i18n="projects.arquiteturaNavegacao.result.body1">A migração oficial fechou sem nenhum ticket ou feedback negativo relacionado à navegação — um contraste direto com os ajustes ainda feitos durante o teste A/B. O pedido mais comum do período pós-lançamento foi por um modo escuro, funcionalidade que não existia nem na versão anterior do produto.</p>
+
+        <div class="result-stats">
+          <div class="result-stat">
+            <span class="value">2,5 <span class="accent-warm">→</span> 3,1</span>
+            <span class="label" data-i18n="projects.arquiteturaNavegacao.result.stat1Label">jornadas usadas por frota, base Mid2+ (meta era 3,5)</span>
+          </div>
+          <div class="result-stat">
+            <span class="value">0</span>
+            <span class="label" data-i18n="projects.arquiteturaNavegacao.result.stat2Label">tickets ou feedbacks negativos na migração oficial</span>
+          </div>
+        </div>
+
+        <p data-i18n="projects.arquiteturaNavegacao.result.body2">Nos meses seguintes, a abrangência de uso subiu de 2,5 para 3,1 jornadas na base de clientes Mid2+ — abaixo da meta de 3,5, mas um avanço real. Em paralelo, seguimos evoluindo pontos que já estavam no plano: adaptação dos filtros globais, reorganização da área de configurações, e um modo escuro, ainda em construção.</p>
+
+        <p data-i18n="projects.arquiteturaNavegacao.result.closing">Esse resultado parcial trouxe um aprendizado que não estava previsto. Pouco depois do lançamento da nova navegação, o produto também lançou um assistente de IA que passou a consolidar informações de várias jornadas em respostas diretas, sem exigir que o cliente navegasse manualmente entre elas. Parte do valor que a métrica de abrangência tentava capturar — o cliente extraindo valor de várias frentes do produto — passou a acontecer por um caminho que a métrica não enxergava. Ainda estamos reaprendendo como medir esse engajamento: abrangência de uso deixou de ser sinônimo direto de valor percebido assim que uma camada de IA passou a costurar as jornadas por trás da navegação.</p>
+      </div>
+    </section>
+
+    <nav class="case-nav wrap">
+      <a href="index.html" data-i18n="common.allProjects">← Todos os projetos</a>
+      <a href="index.html" data-i18n="common.nextProject">Próximo projeto →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="mono" data-i18n="common.copyright">© 2026 Vivian Notrispe</span>
+      <span class="mono"><a href="../contato.html" data-i18n="common.footerContact">contato</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lightbox.js"></script>
+  <script src="../assets/js/compare-slider.js"></script>
+</body>
+</html>
