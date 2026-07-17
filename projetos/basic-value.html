@@ -84,18 +84,129 @@
 
       <div>
         <h2 data-i18n="common.sectionContext">Contexto</h2>
-        <p data-i18n="projects.basicValue.context.body">Redução de churn era um dos poucos objetivos estratégicos da empresa para o ciclo, e eu era a responsável direta por uma frente ligada a esse objetivo, com patrocínio de um diretor e um grupo de trabalho formado por CS, Supply e agendamento. A demanda inicial era vaga — "o onboarding não está funcionando" — sem um diagnóstico claro do que exatamente estava quebrado nem de qual time deveria agir.</p>
+        <p data-i18n="projects.basicValue.context.body1">A redução de churn era um dos principais objetivos estratégicos da empresa naquele ciclo. Para apoiar essa meta, conduzi um discovery sobre churn precoce, investigando dados de engajamento, padrões de uso e a experiência dos clientes nos primeiros meses de contrato.</p>
+        <p data-i18n="projects.basicValue.context.body2">A análise revelou diferentes fatores que contribuíam para esse cenário. A instalação era um dos principais pontos de atrito, mas outro problema chamou minha atenção: muitos clientes que já haviam concluído essa etapa ainda tinham dificuldade para gerar valor no produto. Em uma plataforma com dezenas de configurações e funcionalidades, não estava claro quais eram os próximos passos para começar a extrair valor da solução.</p>
+        <p data-i18n="projects.basicValue.context.body3">A partir desse discovery, o onboarding passou a ser tratado como uma frente estratégica patrocinada por um diretor e conduzida em parceria com CS, Supply e Agendamento. Meu desafio passou a ser entender exatamente onde os clientes deixavam de avançar na jornada e criar uma forma objetiva de medir a qualidade do onboarding.</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProblem">Problema</h2>
-        <p data-i18n="projects.basicValue.problem.body">Comecei investigando os dados de churn dos últimos 12 meses cruzados com o histórico de configuração de cada cliente. O achado principal: a grande maioria do churn do período vinha de clientes que nunca tinham completado nem 60% da configuração básica da plataforma. O problema não era "churn" de forma genérica — era ativação. Aprofundando a investigação, encontrei três causas raízes específicas: perda de contexto na transição entre Vendas e Pós-venda (o cliente precisava se reapresentar do zero); atrito operacional no processo físico de instalação dos dispositivos (agendamento, no-show, disponibilidade de veículo); e uma experiência de primeiro acesso com alta carga cognitiva, sem nenhuma priorização clara do que o cliente devia fazer primeiro.</p>
+        <h2 data-i18n="common.sectionDiscovery">Discovery</h2>
+        <p data-i18n="projects.basicValue.discovery.body1">Para entender por que tantos clientes abandonavam o produto nos primeiros meses, combinei análise de dados, pesquisa qualitativa e observação direta do processo de implementação.</p>
+
+        <figure class="stat-chart">
+          <span class="mono" data-i18n="projects.basicValue.discovery.methodDiagram.label">Como conduzi o discovery</span>
+          <div class="discovery-flow">
+            <div class="discovery-flow__step">
+              <svg class="discovery-flow__icon" viewBox="0 0 32 32" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="6" y1="26" x2="26" y2="26"/>
+                <rect x="8" y="16" width="5" height="10"/>
+                <rect x="14.5" y="10" width="5" height="16"/>
+                <rect x="21" y="19" width="5" height="7"/>
+              </svg>
+              <div class="discovery-flow__content">
+                <h3 data-i18n="projects.basicValue.discovery.methodDiagram.step1Title">Dados</h3>
+                <ul>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step1Item1">12 meses de churn</li>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step1Item2">Padrões de uso do produto</li>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step1Item3">Dados de engajamento</li>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step1Item4">Dados de configuração da plataforma</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="discovery-flow__connector" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="var(--ink-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v10M3 8l5 5 5-5"/></svg>
+            </div>
+
+            <div class="discovery-flow__step">
+              <svg class="discovery-flow__icon" viewBox="0 0 32 32" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="12" y="4" width="8" height="14" rx="4"/>
+                <path d="M8 15a8 8 0 0 0 16 0"/>
+                <line x1="16" y1="23" x2="16" y2="28"/>
+                <line x1="11" y1="28" x2="21" y2="28"/>
+              </svg>
+              <div class="discovery-flow__content">
+                <h3 data-i18n="projects.basicValue.discovery.methodDiagram.step2Title">Pesquisa</h3>
+                <ul>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step2Item1">Entrevistas em profundidade com clientes em onboarding</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="discovery-flow__connector" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="var(--ink-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v10M3 8l5 5 5-5"/></svg>
+            </div>
+
+            <div class="discovery-flow__step">
+              <svg class="discovery-flow__icon" viewBox="0 0 32 32" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="11" r="4"/>
+                <path d="M5 27v-2a7 7 0 0 1 7-7h0a7 7 0 0 1 7 7v2"/>
+                <circle cx="23" cy="9" r="3"/>
+                <path d="M20 16a6 6 0 0 1 8 5.5"/>
+              </svg>
+              <div class="discovery-flow__content">
+                <h3 data-i18n="projects.basicValue.discovery.methodDiagram.step3Title">Shadowing</h3>
+                <ul>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step3Item1">Clientes</li>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step3Item2">CS</li>
+                  <li data-i18n="projects.basicValue.discovery.methodDiagram.step3Item3">Implementação</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <figcaption data-i18n="projects.basicValue.discovery.methodDiagram.caption">Cruzei dados quantitativos de churn e configuração, pesquisa qualitativa com clientes e observação direta do processo de instalação e atendimento.</figcaption>
+        </figure>
+
+        <p data-i18n="projects.basicValue.discovery.body2">Ao cruzar os dados de churn dos últimos 12 meses com o histórico de configuração de cada cliente, encontrei um padrão consistente: a maior parte dos clientes que cancelavam o contrato nunca havia concluído nem 60% das configurações básicas da plataforma. Ficou claro que o problema não era apenas retenção, mas a dificuldade dos clientes em atingir um nível mínimo de ativação antes de começar a gerar valor.</p>
+        <p data-i18n="projects.basicValue.discovery.bottlenecksIntro">A investigação revelou três gargalos que explicavam esse comportamento:</p>
+        <ul>
+          <li><strong data-i18n="projects.basicValue.discovery.bottleneck1Title">Perda de contexto entre Vendas e Pós-venda.</strong> <span data-i18n="projects.basicValue.discovery.bottleneck1Body">Os clientes precisavam repetir informações e recomeçar parte da jornada após a contratação.</span></li>
+          <li><strong data-i18n="projects.basicValue.discovery.bottleneck2Title">Atritos no processo de instalação.</strong> <span data-i18n="projects.basicValue.discovery.bottleneck2Body">Agendamentos, indisponibilidade de veículos e no-shows atrasavam o início da operação.</span></li>
+          <li><strong data-i18n="projects.basicValue.discovery.bottleneck3Title">Primeiro acesso com alta carga cognitiva.</strong> <span data-i18n="projects.basicValue.discovery.bottleneck3Body">Depois da instalação, os clientes encontravam dezenas de configurações e funcionalidades sem qualquer indicação clara do que era prioritário.</span></li>
+        </ul>
       </div>
 
       <div>
         <h2 data-i18n="common.sectionProcess">Processo</h2>
-        <p data-i18n-html="projects.basicValue.process.body1">Para dar visibilidade e ação a esse diagnóstico, defini e especifiquei a <strong>Basic Value</strong>: um score de 0 a 4, calculado diariamente por cliente, que resume o quão "ativada" uma frota está na plataforma a partir de quatro pilares — instalação, setup, configuração e uso contínuo. A métrica virou o termômetro oficial de risco de churn usado por CS para priorizar conversas de retenção, e passou a alimentar recomendações automáticas exibidas dentro do próprio produto.</p>
-        <p data-i18n="projects.basicValue.process.body2">Depois do lançamento, conduzi uma pesquisa qualitativa com o time de CS para entender, na prática, por que alguns clientes atingem uma Basic Value saudável em poucos meses enquanto outros ficam estagnados. Essa etapa revelou pontos que os dados quantitativos sozinhos não mostravam: instalação era o maior gargalo — mais do que o processo comercial ou o próprio CS; a ferramenta de checklist interna era simples demais para clientes maiores; o conteúdo de ajuda estava desatualizado; e havia confusão recorrente sobre cobranças de reagendamento, o que gerava atrito emocional logo no início da relação com o cliente.</p>
+        <p data-i18n-html="projects.basicValue.process.body1">O principal desafio era que a empresa não tinha uma forma objetiva de responder a uma pergunta simples: <strong>esse cliente já está pronto para gerar valor?</strong> Existiam dezenas de indicadores espalhados entre Produto, CS e Supply, mas nenhum mostrava o nível real de ativação de uma conta.</p>
+        <p data-i18n-html="projects.basicValue.process.body2">Para resolver esse problema, defini e especifiquei a <strong>Basic Value</strong>, uma métrica calculada diariamente para cada cliente. Ela reunia quatro pilares da jornada — instalação, setup, configuração e uso contínuo — em uma nota única que permite acompanhar a evolução do onboarding.</p>
+        <p data-i18n="projects.basicValue.process.body3">Além de priorizar clientes em risco, a Basic Value passou a criar uma linguagem comum entre Produto, CS e Supply. Pela primeira vez, todas as áreas passaram a acompanhar a ativação usando os mesmos critérios e objetivos.</p>
+
+        <figure class="stat-chart">
+          <span class="mono" data-i18n="projects.basicValue.process.compositionChart.label">Composição da Basic Value · dos pilares ao score</span>
+          <svg viewBox="0 0 480 460" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.process.compositionChart.alt" aria-label="Diagrama vertical mostrando os quatro pilares da Basic Value — instalação, setup, configuração e uso contínuo — compondo o score final de 0 a 4.">
+            <defs>
+              <marker id="bvCompositionArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
+              </marker>
+            </defs>
+
+            <rect x="90" y="20" width="300" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="240" y="51" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="16" fill="var(--ink)" data-i18n="projects.basicValue.process.compositionChart.instalacao">Instalação</text>
+            <line x1="240" y1="70" x2="240" y2="102" stroke="var(--accent)" stroke-width="2" marker-end="url(#bvCompositionArrow)"/>
+
+            <rect x="90" y="108" width="300" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="240" y="139" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="16" fill="var(--ink)" data-i18n="projects.basicValue.process.compositionChart.setup">Setup</text>
+            <line x1="240" y1="158" x2="240" y2="190" stroke="var(--accent)" stroke-width="2" marker-end="url(#bvCompositionArrow)"/>
+
+            <rect x="90" y="196" width="300" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="240" y="227" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="16" fill="var(--ink)" data-i18n="projects.basicValue.process.compositionChart.configuracao">Configuração</text>
+            <line x1="240" y1="246" x2="240" y2="278" stroke="var(--accent)" stroke-width="2" marker-end="url(#bvCompositionArrow)"/>
+
+            <rect x="90" y="284" width="300" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="240" y="315" text-anchor="middle" font-family="var(--font-display)" font-weight="600" font-size="16" fill="var(--ink)" data-i18n="projects.basicValue.process.compositionChart.usoContinuo">Uso contínuo</text>
+            <line x1="240" y1="334" x2="240" y2="376" stroke="var(--accent)" stroke-width="2" marker-end="url(#bvCompositionArrow)"/>
+
+            <rect x="90" y="382" width="300" height="60" rx="10" fill="var(--paper)" stroke="var(--accent-warm)" stroke-width="2"/>
+            <text x="240" y="419" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="17" fill="var(--accent-warm)" data-i18n="projects.basicValue.process.compositionChart.basicValue">Basic Value (0–4)</text>
+          </svg>
+          <figcaption data-i18n="projects.basicValue.process.compositionChart.caption">Cada pilar contribui com uma nota parcial para o score final, calculado diariamente por cliente.</figcaption>
+        </figure>
+
+        <p data-i18n="projects.basicValue.process.body4">Após o lançamento da métrica, conduzi uma nova rodada de pesquisa qualitativa com o time de Customer Success para entender por que alguns clientes alcançavam uma Basic Value saudável rapidamente, enquanto outros permaneciam estagnados.</p>
+        <p data-i18n="projects.basicValue.process.body5">Essa pesquisa revelou problemas que os dados, sozinhos, não conseguiam explicar. O maior gargalo continuava sendo a instalação. Também identifiquei que o checklist interno utilizado pelo CS deixava de atender operações maiores, que parte do conteúdo de ajuda estava desatualizado e que o processo de reagendamento gerava atritos logo no início da relação com o cliente.</p>
+        <p data-i18n="projects.basicValue.process.body6">Esses aprendizados ajudaram a priorizar as próximas iniciativas e mostraram quais pilares da Basic Value precisavam evoluir primeiro.</p>
+
         <figure class="stat-chart">
           <span class="mono" data-i18n="projects.basicValue.process.chart1.label">Pilares da Basic Value · nota média (0–4)</span>
           <svg viewBox="0 0 700 230" preserveAspectRatio="xMidYMid meet" role="img" data-i18n-attr="aria-label=projects.basicValue.process.chart1.alt" aria-label="Gráfico de barras mostrando a nota média dos 4 pilares da Basic Value: Instalação 1,3, Setup 1,1, Configuração básica 0,7, Ativação (heavy users) 0,3, em escala de 0 a 4.">
