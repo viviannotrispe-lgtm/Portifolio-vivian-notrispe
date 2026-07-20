@@ -51,11 +51,31 @@
       <div class="case-cover">
         <img src="../assets/img/arquitetura-navegacao-map.png" data-i18n-attr="alt=projects.arquiteturaNavegacao.coverAlt" alt="Tela de monitoramento em tempo real do painel, com mapa e lista de veículos da frota.">
       </div>
+
+      <div class="result-highlight">
+        <span class="result-highlight__label" data-i18n="common.tldrLabel">Visão geral</span>
+        <p class="result-highlight__summary" data-i18n="projects.arquiteturaNavegacao.tldr.summary">Redesenhei a arquitetura de navegação do produto, saindo de uma lista de funcionalidades organizada pela estrutura interna do time para uma navegação por jornadas do cliente. A abrangência de uso subiu de 2,5 para 3,1 jornadas por frota, e a migração de 100% da base fechou sem nenhum ticket ou feedback negativo.</p>
+        <dl class="result-highlight__stats">
+          <div>
+            <dt data-i18n="projects.arquiteturaNavegacao.tldr.stat1Label">Jornadas usadas (Mid2+)</dt>
+            <dd>2,5 → <span>3,1</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.arquiteturaNavegacao.tldr.stat2Label">Migração oficial</dt>
+            <dd><span data-i18n="projects.arquiteturaNavegacao.tldr.stat2Value">0 tickets negativos</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.arquiteturaNavegacao.tldr.stat3Label">Frotas que abriram no teste A/B</dt>
+            <dd><span>51%</span></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <section class="case-body wrap">
+      <div class="case-content">
       <div>
-        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <h2 id="empresa" data-i18n="common.sectionCompany">A empresa</h2>
         <div data-i18n-html="common.companyBody">
           <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
           <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
@@ -63,13 +83,13 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <h2 id="contexto" data-i18n="common.sectionContext">Contexto</h2>
         <p data-i18n="projects.arquiteturaNavegacao.context.body1">Fui o Product Designer de uma célula temporária chamada Unified XP, criada para resolver problemas de experiência que atravessavam diferentes times de produto. O time era enxuto. Eu liderava as decisões de produto e design, em parceria com um desenvolvedor staff responsável por implementar as mudanças na navegação.</p>
         <p data-i18n="projects.arquiteturaNavegacao.context.body2">O trabalho começou a partir de uma descoberta importante. Clientes que utilizavam poucas jornadas do produto tinham uma chance maior de churn após o fim do contrato. Meu desafio era entender o que impedia essa adoção e como a experiência do produto poderia ajudar a mudar esse cenário.</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <h2 id="problema" data-i18n="common.sectionProblem">Problema</h2>
         <p data-i18n="projects.arquiteturaNavegacao.problem.body1">Comecei analisando churn por funcionalidade e a queda de engajamento ao longo do tempo. Os dados mostravam vários sintomas, mas nenhum deles explicava o problema.</p>
         <p data-i18n="projects.arquiteturaNavegacao.problem.body2">A resposta apareceu quando deixei de olhar para funcionalidades isoladas e passei a analisar quantas jornadas cada cliente realmente utilizava. As frotas que usavam menos de 1,5 jornada tinham NRR (Net Revenue Retention) de -31%. Já aquelas que utilizavam mais de 3,6 jornadas chegavam a um NRR de +12%. O NPS seguia a mesma tendência: a nota era 75 entre clientes com uso amplo e 50 entre aqueles que utilizavam poucas jornadas.</p>
         <p data-i18n="projects.arquiteturaNavegacao.problem.body3">Foi a partir daí que comecei a investigar o que limitava essa adoção. Percebi que a navegação estava organizada por funcionalidades e deixavam em evidência as divisões internas do time de produto, e não focavam nas jornadas e necessidades dos clientes.</p>
@@ -105,7 +125,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <h2 id="processo" data-i18n="common.sectionProcess">Processo</h2>
         <p data-i18n="projects.arquiteturaNavegacao.process.body1Intro">Para entender quem de fato usa cada jornada, conduzi sessões de pesquisa com clientes de portes diferentes até fechar oito perfis, organizados em quatro camadas de autonomia:</p>
         <ul>
           <li data-i18n="projects.arquiteturaNavegacao.process.body1Item1">Diretoria, no topo, decide sobre contratos e continuidade de serviços a partir de dados consolidados, sem tempo para investigar detalhe.</li>
@@ -339,7 +359,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <h2 id="solucao" data-i18n="common.sectionSolution">Solução</h2>
         <p data-i18n="projects.arquiteturaNavegacao.solution.intro1">A solução não era apenas reorganizar a navegação, mas mudar a forma como os clientes exploravam o produto.</p>
         <p data-i18n="projects.arquiteturaNavegacao.solution.intro2">Na versão anterior, o menu refletia a estrutura interna da empresa. As funcionalidades eram apresentadas como uma lista de produtos e recursos independentes, exigindo que o cliente soubesse antecipadamente onde encontrar cada informação.</p>
         <p data-i18n="projects.arquiteturaNavegacao.solution.intro3">No redesenho a arquitetura da informação passou a refletir a forma como os clientes pensam sobre a gestão da frota, e não como os times de produto estavam organizados.</p>
@@ -372,7 +392,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="projects.arquiteturaNavegacao.abTest.heading">Teste A/B pré-lançamento</h2>
+        <h2 id="teste-ab" data-i18n="projects.arquiteturaNavegacao.abTest.heading">Teste A/B pré-lançamento</h2>
         <p data-i18n="projects.arquiteturaNavegacao.abTest.body1">Em vez de migrar toda a base de uma só vez, defini uma estratégia de rollout gradual usando feature flag. O objetivo era validar a nova navegação em um ambiente real, entender como os clientes reagiam às mudanças e evoluir a experiência antes da migração definitiva.</p>
 
         <p data-i18n="projects.arquiteturaNavegacao.abTest.body2">Durante esse período, 31% dos usuários ativos experimentaram a nova navegação e 25% passaram a utilizá-la de forma recorrente. Além disso, 51% das frotas ativas acessaram a nova versão do painel pelo menos uma vez. Para complementar os dados de uso, apliquei dois questionários: um com 256 respostas de clientes que voltaram para a versão anterior e outro com 159 respostas de quem continuou usando a nova. A percepção geral foi positiva, com uma nota de usabilidade entre 5 e 6 em uma escala de 7, mas os comentários também deixaram claro onde a experiência ainda precisava evoluir.</p>
@@ -411,7 +431,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <h2 id="resultado" data-i18n="common.sectionResult">Resultado</h2>
         <p data-i18n="projects.arquiteturaNavegacao.result.body1">A migração oficial fechou sem nenhum ticket ou feedback negativo relacionado à navegação — um contraste direto com os ajustes ainda feitos durante o teste A/B. O pedido mais comum do período pós-lançamento foi por um modo escuro, funcionalidade que não existia nem na versão anterior do produto.</p>
 
         <div class="result-stats">
@@ -428,6 +448,7 @@
         <p data-i18n="projects.arquiteturaNavegacao.result.body2">Nos meses seguintes, a abrangência de uso subiu de 2,5 para 3,1 jornadas na base de clientes Mid2+ — abaixo da meta de 3,5, mas um avanço real. Em paralelo, seguimos evoluindo pontos que já estavam no plano: adaptação dos filtros globais, reorganização da área de configurações, e um modo escuro, ainda em construção.</p>
 
         <p data-i18n="projects.arquiteturaNavegacao.result.closing">Esse resultado parcial trouxe um aprendizado que não estava previsto. Pouco depois do lançamento da nova navegação, o produto também lançou um assistente de IA que passou a consolidar informações de várias jornadas em respostas diretas, sem exigir que o cliente navegasse manualmente entre elas. Parte do valor que a métrica de abrangência tentava capturar — o cliente extraindo valor de várias frentes do produto — passou a acontecer por um caminho que a métrica não enxergava. Ainda estamos reaprendendo como medir esse engajamento: abrangência de uso deixou de ser sinônimo direto de valor percebido assim que uma camada de IA passou a costurar as jornadas por trás da navegação.</p>
+      </div>
       </div>
     </section>
 
@@ -447,5 +468,6 @@
   <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lightbox.js"></script>
   <script src="../assets/js/compare-slider.js"></script>
+  <script src="../assets/js/case-toc.js"></script>
 </body>
 </html>

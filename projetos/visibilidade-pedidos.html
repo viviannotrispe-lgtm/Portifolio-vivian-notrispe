@@ -127,11 +127,31 @@
           <line x1="90" y1="465" x2="870" y2="465" stroke="var(--line)"/>
         </svg>
       </div>
+
+      <div class="result-highlight">
+        <span class="result-highlight__label" data-i18n="common.tldrLabel">Visão geral</span>
+        <p class="result-highlight__summary" data-i18n="projects.pedidos.tldr.summary">Desenhei uma nova página de pedidos que deu ao cliente visibilidade sobre envio, agendamento e instalação, sem depender do CS. Adoção foi de 0% a 32% da base em quatro meses, superando a meta de 20%, com 40% dos agendamentos passando a ser feitos direto pelo painel.</p>
+        <dl class="result-highlight__stats">
+          <div>
+            <dt data-i18n="projects.pedidos.tldr.stat1Label">Adoção da página de pedidos</dt>
+            <dd>0% → <span>32%</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.pedidos.tldr.stat2Label">Meta do trimestre</dt>
+            <dd><span data-i18n="projects.pedidos.tldr.stat2Value">20% superada</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.pedidos.tldr.stat3Label">Agendamentos sem atendimento</dt>
+            <dd><span>40%</span></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <section class="case-body wrap">
+      <div class="case-content">
       <div>
-        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <h2 id="empresa" data-i18n="common.sectionCompany">A empresa</h2>
         <div data-i18n-html="common.companyBody">
           <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
           <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
@@ -139,18 +159,18 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <h2 id="contexto" data-i18n="common.sectionContext">Contexto</h2>
         <p data-i18n-html="projects.pedidos.context.body1">Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href="basic-value.html">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes, maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes.</p>
         <p data-i18n="projects.pedidos.context.body2">O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado, o que afeta a operação da frota, até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights.</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <h2 id="problema" data-i18n="common.sectionProblem">Problema</h2>
         <p data-i18n="projects.pedidos.problem.body">Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o caminho mais utilizado era abrindo um ticket com atendimento ou CS. Isso não era só um incômodo: sem essa visibilidade, o gestor da frota não conseguia planejar quando parar os veículos para a instalação, nem organizar a operação no dia combinado, nem acompanhar o que tinha ficado pendente para as próximas etapas do onboarding. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente e nunca tinha sido traduzida para o cliente.</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <h2 id="processo" data-i18n="common.sectionProcess">Processo</h2>
         <p data-i18n="projects.pedidos.process.body1">Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade, desde o pedido do dispositivo até a instalação concluída.</p>
         <p data-i18n="projects.pedidos.process.diagIntro">O diagnóstico apontou quatro causas específicas para a falta de clareza:</p>
         <ul>
@@ -226,7 +246,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <h2 id="solucao" data-i18n="common.sectionSolution">Solução</h2>
         <p data-i18n="projects.pedidos.solution.body1">A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos, hoje espalhadas em tickets internos separados, junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
 
         <figure class="stat-chart stat-chart--shot">
@@ -255,7 +275,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <h2 id="resultado" data-i18n="common.sectionResult">Resultado</h2>
 
         <div class="result-stats">
           <div class="result-stat">
@@ -322,6 +342,7 @@
 
         <p data-i18n="projects.pedidos.result.closing">O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informações que já existem internamente e nunca foram traduzidas para o usuário. Tornar essas informações visíveis para o cliente é o que de fato reduz o atrito e a dependência de suporte.</p>
       </div>
+      </div>
     </section>
 
     <nav class="case-nav wrap">
@@ -339,5 +360,6 @@
 
   <script src="../assets/js/lightbox.js" defer></script>
   <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/case-toc.js"></script>
 </body>
 </html>

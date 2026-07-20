@@ -494,12 +494,116 @@ h1, h2, h3 {
 .case-cover img { width: 100%; height: 100%; object-fit: cover; }
 .case-cover svg { width: 100%; height: 100%; display: block; }
 
+/* ============================================
+   RESUMO DE RESULTADO (TL;DR logo após a capa)
+   ============================================ */
+.result-highlight {
+  margin-top: 32px;
+  padding: 28px clamp(16px, 3vw, 32px) 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper-2);
+}
+
+.result-highlight__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.result-highlight__summary {
+  margin: 10px 0 0;
+  font-size: 1.15rem;
+  color: var(--ink);
+  max-width: 62ch;
+}
+
+.result-highlight__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.result-highlight__stats dt {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.result-highlight__stats dd {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  color: var(--ink);
+}
+
+.result-highlight__stats dd span { color: var(--accent-warm); }
+
 .case-body {
-  max-width: 720px;
   margin: 56px auto;
+}
+
+.case-content {
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+/* Sumário lateral: só aparece quando sobra espaço ao lado da coluna de
+   leitura (720px) sem espremer o texto. Abaixo disso, .case-toc some e
+   a navegação entre seções continua só pelo scroll normal. */
+.case-toc { display: none; }
+
+@media (min-width: 1180px) {
+  .case-body.wrap {
+    display: grid;
+    grid-template-columns: 720px 200px;
+    column-gap: 48px;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .case-toc {
+    display: block;
+    position: sticky;
+    top: 108px;
+  }
+}
+
+.case-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left: 1px solid var(--line);
+}
+
+.case-toc a {
+  display: block;
+  padding: 6px 0 6px 16px;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.case-toc a:hover { color: var(--ink); }
+
+.case-toc a.is-active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 500;
 }
 
 .case-body h2 {
@@ -1012,6 +1116,7 @@ h1, h2, h3 {
   .case-meta { grid-template-columns: repeat(2, 1fr); }
   .case-gallery { grid-template-columns: 1fr; }
   .initiative-grid { grid-template-columns: 1fr; }
+  .result-highlight__stats { grid-template-columns: 1fr; }
 }
 
 /* Estado vazio (quando ainda não há projetos cadastrados) */

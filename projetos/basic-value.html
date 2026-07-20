@@ -71,11 +71,31 @@
           <text x="900" y="524" text-anchor="end" font-family="var(--font-mono)" font-size="15" fill="var(--ink-soft)" data-i18n="projects.basicValue.coverEnd">jun/26</text>
         </svg>
       </div>
+
+      <div class="result-highlight">
+        <span class="result-highlight__label" data-i18n="common.tldrLabel">Visão geral</span>
+        <p class="result-highlight__summary" data-i18n="projects.basicValue.tldr.summary">Defini e especifiquei uma métrica de ativação (Basic Value) que levou a base estável de 35% para 51% em 8 meses, superando a meta do semestre e dobrando o engajamento com tarefas de ativação.</p>
+        <dl class="result-highlight__stats">
+          <div>
+            <dt data-i18n="projects.basicValue.tldr.stat1Label">Basic Value estável</dt>
+            <dd>35% → <span>51%</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.basicValue.tldr.stat2Label">Meta do semestre</dt>
+            <dd><span data-i18n="projects.basicValue.tldr.stat2Value">50% superada</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="projects.basicValue.tldr.stat3Label">Engajamento com ativação</dt>
+            <dd><span>2x</span></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <section class="case-body wrap">
+      <div class="case-content">
       <div>
-        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <h2 id="empresa" data-i18n="common.sectionCompany">A empresa</h2>
         <div data-i18n-html="common.companyBody">
           <p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p>
           <p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>
@@ -83,14 +103,14 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <h2 id="contexto" data-i18n="common.sectionContext">Contexto</h2>
         <p data-i18n="projects.basicValue.context.body1">A redução de churn era um dos principais objetivos estratégicos da empresa naquele ciclo. Para apoiar essa meta, conduzi um discovery sobre churn precoce, investigando dados de engajamento, padrões de uso e a experiência dos clientes nos primeiros meses de contrato.</p>
         <p data-i18n="projects.basicValue.context.body2">A análise revelou diferentes fatores que contribuíam para esse cenário. A instalação era um dos principais pontos de atrito, mas outro problema chamou minha atenção: muitos clientes que já haviam concluído essa etapa ainda tinham dificuldade para gerar valor no produto. Em uma plataforma com dezenas de configurações e funcionalidades, não estava claro quais eram os próximos passos para começar a extrair valor da solução.</p>
         <p data-i18n="projects.basicValue.context.body3">A partir desse discovery, o onboarding passou a ser tratado como uma frente estratégica patrocinada por um diretor e conduzida em parceria com CS, Supply e Agendamento. Meu desafio passou a ser entender exatamente onde os clientes deixavam de avançar na jornada e criar uma forma objetiva de medir a qualidade do onboarding.</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionDiscovery">Discovery</h2>
+        <h2 id="discovery" data-i18n="common.sectionDiscovery">Discovery</h2>
         <p data-i18n="projects.basicValue.discovery.body1">Para entender por que tantos clientes abandonavam o produto nos primeiros meses, combinei análise de dados, pesquisa qualitativa e observação direta do processo de implementação.</p>
 
         <figure class="stat-chart">
@@ -167,7 +187,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <h2 id="processo" data-i18n="common.sectionProcess">Processo</h2>
         <p data-i18n-html="projects.basicValue.process.body1">O principal desafio era que a empresa não tinha uma forma objetiva de responder a uma pergunta simples: <strong>esse cliente já está pronto para gerar valor?</strong> Existiam dezenas de indicadores espalhados entre Produto, CS e Supply, mas nenhum mostrava o nível real de ativação de uma conta.</p>
         <p data-i18n-html="projects.basicValue.process.body2">Para resolver esse problema, defini e especifiquei a <strong>Basic Value</strong>, uma métrica calculada diariamente para cada cliente. Ela reunia quatro pilares da jornada — instalação, setup, configuração e uso contínuo — em uma nota única que permite acompanhar a evolução do onboarding.</p>
         <p data-i18n="projects.basicValue.process.body3">Além de priorizar clientes em risco, a Basic Value passou a criar uma linguagem comum entre Produto, CS e Supply. Pela primeira vez, todas as áreas passaram a acompanhar a ativação usando os mesmos critérios e objetivos.</p>
@@ -285,7 +305,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <h2 id="solucao" data-i18n="common.sectionSolution">Solução</h2>
         <p data-i18n="projects.basicValue.solution.intro">Com o diagnóstico validado, o projeto avançou em duas frentes que ajudei a especificar:</p>
         <p><strong data-i18n="projects.basicValue.solution.governancaTitle">Governança da métrica.</strong> <span data-i18n="projects.basicValue.solution.governancaBody">Alinhei com lideranças de Produto, CS e Supply os critérios oficiais da Basic Value — o que cada pilar mede, como cada time deveria acompanhar por safra de clientes, e uma métrica complementar de "tempo até a ativação básica" — transformando a métrica em linguagem comum entre áreas que antes media sucesso cada uma à sua maneira.</span></p>
         <p><strong data-i18n="projects.basicValue.solution.onboardingTitle">Onboarding inteligente.</strong> <span data-i18n="projects.basicValue.solution.onboardingBody">Escrevi o PRD de um sistema de onboarding progressivo guiado por IA, que usa o contexto coletado no primeiro acesso para priorizar automaticamente uma única recomendação por vez — em vez de sobrecarregar o cliente com tudo de uma vez —, com bloqueio de funcionalidades avançadas até os pré-requisitos básicos serem cumpridos e planos de ativação cada vez mais personalizados nas versões seguintes do produto.</span></p>
@@ -342,7 +362,7 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <h2 id="resultado" data-i18n="common.sectionResult">Resultado</h2>
         <p data-i18n="projects.basicValue.result.body1">A Basic Value deixou de ser um projeto de produto isolado e virou meta estratégica compartilhada entre CS, Supply e Produto, com grupos de trabalho próprios formados a partir dela. Nos primeiros meses após o lançamento das primeiras iniciativas — checklist de ativação, indicadores de completude e FAQ no painel — o engajamento com tarefas de ativação dobrou na comparação anual, e quase metade dos clientes que interagiram pela primeira vez com essas tarefas completou pelo menos uma etapa da Basic Value.</p>
         <p data-i18n="projects.basicValue.result.body2">No momento em que a meta foi definida, apenas 35% da base tinha uma Basic Value estável. Estabelecemos a meta de chegar a 50% ao longo do semestre seguinte — e, com um conjunto de iniciativas cross-funcionais entre CS, Supply e Produto, batemos 51%, superando o objetivo.</p>
 
@@ -483,6 +503,7 @@
 
         <p data-i18n="projects.basicValue.result.closing">Meu maior aprendizado neste projeto foi como uma métrica bem desenhada funciona como ferramenta de alinhamento organizacional, não só de produto: a Basic Value deu a times historicamente desconectados — CS, logística e produto — uma linguagem comum para priorizar o que realmente importava para o cliente perceber valor mais rápido.</p>
       </div>
+      </div>
     </section>
 
     <nav class="case-nav wrap">
@@ -499,5 +520,6 @@
   </footer>
 
   <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/case-toc.js"></script>
 </body>
 </html>

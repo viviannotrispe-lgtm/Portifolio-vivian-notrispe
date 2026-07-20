@@ -10,6 +10,13 @@
   e adicione as chaves projects.SLUG.* correspondentes em
   ../data/i18n/pt.json e ../data/i18n/en.json — sem isso, o texto
   desaparece ao trocar de idioma (data-i18n só troca o que existe no JSON).
+
+  SUMÁRIO LATERAL (case-toc.js)
+  Cada h2 de seção dentro de .case-content precisa de um id (empresa,
+  contexto, problema, processo, solucao, resultado) — é ele que vira o
+  âncora do sumário lateral sticky, montado automaticamente pelo script
+  case-toc.js a partir desses ids. Não remova a div.case-content nem os
+  ids, e não esqueça de incluir o script no fim do body.
 -->
 <!doctype html>
 <html lang="pt-BR">
@@ -66,23 +73,24 @@
     </section>
 
     <section class="case-body wrap">
+      <div class="case-content">
       <div>
-        <h2 data-i18n="common.sectionCompany">A empresa</h2>
+        <h2 id="empresa" data-i18n="common.sectionCompany">A empresa</h2>
         <div data-i18n-html="common.companyBody"></div>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionContext">Contexto</h2>
+        <h2 id="contexto" data-i18n="common.sectionContext">Contexto</h2>
         <p data-i18n="projects.SLUG.context.body">[Qual era a situação antes do projeto? Quem pediu, por quê, e qual era a expectativa inicial.]</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProblem">Problema</h2>
+        <h2 id="problema" data-i18n="common.sectionProblem">Problema</h2>
         <p data-i18n="projects.SLUG.problem.body">[Qual problema específico você estava resolvendo? O que tornava isso difícil?]</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionProcess">Processo</h2>
+        <h2 id="processo" data-i18n="common.sectionProcess">Processo</h2>
         <p data-i18n="projects.SLUG.process.body">[Como você chegou na solução: pesquisa, hipóteses, iterações, decisões-chave.]</p>
         <div class="case-gallery">
           <div class="ph"></div>
@@ -91,13 +99,14 @@
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionSolution">Solução</h2>
+        <h2 id="solucao" data-i18n="common.sectionSolution">Solução</h2>
         <p data-i18n="projects.SLUG.solution.body">[O que foi entregue de fato. Pode incluir mais imagens/telas aqui.]</p>
       </div>
 
       <div>
-        <h2 data-i18n="common.sectionResult">Resultado</h2>
+        <h2 id="resultado" data-i18n="common.sectionResult">Resultado</h2>
         <p data-i18n="projects.SLUG.result.body">[Qual foi o impacto: métricas, aprendizados, feedback. Se não tiver números, fale do impacto qualitativo.]</p>
+      </div>
       </div>
     </section>
 
@@ -115,5 +124,6 @@
   </footer>
 
   <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/case-toc.js"></script>
 </body>
 </html>
