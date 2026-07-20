@@ -22,6 +22,8 @@
     "teamLabel": "Team",
     "durationLabel": "Duration",
     "toolsLabel": "Tools",
+    "tldrLabel": "Overview",
+    "tocAriaLabel": "Case outline",
     "companyBody": "<p>In this project I worked as a PM at a B2B vehicle telemetry platform: hardware installed on vehicles plus a software dashboard that together give fleet managers visibility into location, driving behavior, maintenance and operations. The contract is recurring, sold to fleets of very different sizes, from small carriers to enterprise operations with thousands of vehicles.</p><p>After the sale, the customer goes through two stages before actually extracting value: physical installation of the devices, and dashboard configuration (drivers, alerts, geofences, groups). Only after that does the data turn into real fleet management. The company calls this initial stage activation.</p>"
   },
   "home": {
@@ -110,6 +112,13 @@
       "coverLabel": "STABLE BASIC VALUE · % OF MRR",
       "coverStart": "Oct/25",
       "coverEnd": "Jun/26",
+      "tldr": {
+        "summary": "I defined and specified an activation metric (Basic Value) that took the stable base from 35% to 51% in 8 months, beating the semester goal and doubling engagement with activation tasks.",
+        "stat1Label": "Stable Basic Value",
+        "stat2Label": "Semester goal",
+        "stat2Value": "50% beaten",
+        "stat3Label": "Engagement with activation"
+      },
       "context": {
         "body1": "Reducing churn was one of the company's main strategic objectives for that cycle. To support that goal, I ran a discovery on early churn, looking into engagement data, usage patterns, and the customer experience in the first months of the contract.",
         "body2": "The analysis revealed different factors contributing to that scenario. Installation was one of the main points of friction, but another problem caught my attention: many customers who had already completed that step still struggled to get value from the product. On a platform with dozens of settings and features, it wasn't clear what the next steps were to start extracting value from the solution.",
@@ -252,6 +261,13 @@
       "coverCompras": "Purchases",
       "coverTrocas": "Exchanges",
       "coverDevolucoes": "Returns",
+      "tldr": {
+        "summary": "I designed a new orders page that gave customers visibility into shipping, scheduling and installation, without depending on CS. Adoption went from 0% to 32% of the base in four months, beating the 20% goal, with 40% of scheduling now done directly through the dashboard.",
+        "stat1Label": "Orders page adoption",
+        "stat2Label": "Quarter goal",
+        "stat2Value": "20% beaten",
+        "stat3Label": "Scheduling without support"
+      },
       "context": {
         "body1": "This project came out of a qualitative research finding from the <a href=\"basic-value.html\">Basic Value</a> case: installation was the biggest activation bottleneck for customers, bigger even than the sales process or CS itself. I worked as PM and principal designer (PMX) on the Account Experience team, responsible for onboarding new customers.",
         "body2": "The platform setup depends on a physical step: installing telemetry devices on the fleet's vehicles or machinery, without which data doesn't start being read correctly. That means the customer has to wait for the device to arrive, schedule an installation date, count on a technician's availability on the requested date, and leave the vehicle out of operation, which affects fleet operations, until installation is complete. Only after that does the dashboard start populating with data and insights."
@@ -349,6 +365,13 @@
       "coverMsgLine1": "\"You already have 65% of",
       "coverMsgLine2": "your fleet installed. Let's",
       "coverMsgLine3": "schedule the next batch?\"",
+      "tldr": {
+        "summary": "I specified the deterministic logic behind an AI-guided recommendation engine, which generated over 7,000 CTA clicks between March and June and took basic configuration for Enterprise fleets from 52% to 86%, breaking a 6-month plateau in the stable Basic Value metric.",
+        "stat1Label": "Clicks on recommendations",
+        "stat1Value": "7,000+",
+        "stat2Label": "Basic config. (Enterprise)",
+        "stat3Label": "Stable Basic Value"
+      },
       "context": {
         "body1": "This project came about as an extension of the onboarding studies. During that discovery, I developed a metric adapted from <a href=\"basic-value.html\">Basic Value</a>, used to measure a company's basic activation percentage, i.e. how much of the product it has already set up to start generating value. Today, that metric is used as one of the main gauges of early churn risk.",
         "body2": "Beyond the quantitative data, qualitative research revealed another important point: even after activating the platform, many customers didn't know what the next steps were. There was a lack of clarity about the tool's potential, understanding of the available features, and practical guidance to help evolve usage.",
@@ -457,6 +480,13 @@
       "duration": "~8 months (discovery → blueprint → A/B test → official migration)",
       "tools": "Figma, FigJam, Mixpanel, Typeform",
       "coverAlt": "Real-time monitoring screen from the dashboard, with a map and the fleet's vehicle list.",
+      "tldr": {
+        "summary": "I redesigned the product's navigation architecture, moving from a feature list organized around the team's internal structure to a navigation built around customer journeys. Usage breadth rose from 2.5 to 3.1 journeys per fleet, and the 100% base migration closed with zero negative tickets or feedback.",
+        "stat1Label": "Journeys used (Mid2+)",
+        "stat2Label": "Official migration",
+        "stat2Value": "0 negative tickets",
+        "stat3Label": "Fleets that opened it in the A/B test"
+      },
       "context": {
         "body1": "I was the Product Designer for a temporary cell called Unified XP, created to solve experience problems that cut across different product teams. The team was lean. I led product and design decisions, partnering with a staff engineer responsible for implementing the navigation changes.",
         "body2": "The work started from an important discovery. Customers who used few of the product's journeys had a higher chance of churning at the end of their contract. My challenge was to understand what was blocking that adoption and how the product experience could help change that scenario."

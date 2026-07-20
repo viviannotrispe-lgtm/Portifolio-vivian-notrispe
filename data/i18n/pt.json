@@ -22,6 +22,8 @@
     "teamLabel": "Time",
     "durationLabel": "Duração",
     "toolsLabel": "Ferramentas",
+    "tldrLabel": "Visão geral",
+    "tocAriaLabel": "Sumário do case",
     "companyBody": "<p>Neste projeto atuei como PM em uma plataforma B2B de telemetria veicular: hardware instalado nos veículos e um painel de software que juntos dão ao gestor de frota visibilidade sobre localização, comportamento de direção, manutenção e operação. O contrato é recorrente, vendido para frotas de portes bem diferentes, de pequenas transportadoras a operações enterprise com milhares de veículos.</p><p>Depois da venda, o cliente passa por duas etapas antes de começar a extrair valor de fato: a instalação física dos dispositivos, e a configuração do painel (motoristas, alertas, geocercas, grupos). Só depois disso os dados viram gestão real da frota. Essa etapa inicial é o que a empresa chama de ativação.</p>"
   },
   "home": {
@@ -110,6 +112,13 @@
       "coverLabel": "BASIC VALUE ESTÁVEL · % DE MRR",
       "coverStart": "out/25",
       "coverEnd": "jun/26",
+      "tldr": {
+        "summary": "Defini e especifiquei uma métrica de ativação (Basic Value) que levou a base estável de 35% para 51% em 8 meses, superando a meta do semestre e dobrando o engajamento com tarefas de ativação.",
+        "stat1Label": "Basic Value estável",
+        "stat2Label": "Meta do semestre",
+        "stat2Value": "50% superada",
+        "stat3Label": "Engajamento com ativação"
+      },
       "context": {
         "body1": "A redução de churn era um dos principais objetivos estratégicos da empresa naquele ciclo. Para apoiar essa meta, conduzi um discovery sobre churn precoce, investigando dados de engajamento, padrões de uso e a experiência dos clientes nos primeiros meses de contrato.",
         "body2": "A análise revelou diferentes fatores que contribuíam para esse cenário. A instalação era um dos principais pontos de atrito, mas outro problema chamou minha atenção: muitos clientes que já haviam concluído essa etapa ainda tinham dificuldade para gerar valor no produto. Em uma plataforma com dezenas de configurações e funcionalidades, não estava claro quais eram os próximos passos para começar a extrair valor da solução.",
@@ -252,6 +261,13 @@
       "coverCompras": "Compras",
       "coverTrocas": "Trocas",
       "coverDevolucoes": "Devoluções",
+      "tldr": {
+        "summary": "Desenhei uma nova página de pedidos que deu ao cliente visibilidade sobre envio, agendamento e instalação, sem depender do CS. Adoção foi de 0% a 32% da base em quatro meses, superando a meta de 20%, com 40% dos agendamentos passando a ser feitos direto pelo painel.",
+        "stat1Label": "Adoção da página de pedidos",
+        "stat2Label": "Meta do trimestre",
+        "stat2Value": "20% superada",
+        "stat3Label": "Agendamentos sem atendimento"
+      },
       "context": {
         "body1": "Esse projeto nasceu de um achado da pesquisa qualitativa do case <a href=\"basic-value.html\">Basic Value</a>: instalação era o maior gargalo de ativação dos clientes, maior até do que o processo comercial ou o próprio CS. Atuei como PM e designer principal (PMX) no time de Account Experience, responsável pelo onboarding de novos clientes.",
         "body2": "O setup da plataforma depende de uma etapa física: a instalação de dispositivos de telemetria nos veículos ou maquinários da frota, sem a qual os dados não começam a ser lidos corretamente. Isso significa que o cliente precisa esperar o dispositivo chegar, agendar uma data de instalação, contar com a disponibilidade de um técnico na data solicitada e deixar o veículo parado, o que afeta a operação da frota, até a instalação ser concluída. Só depois disso o dashboard passa a ser populado com dados e insights."
@@ -349,6 +365,13 @@
       "coverMsgLine1": "\"Você já tem 65% da",
       "coverMsgLine2": "frota instalada. Vamos",
       "coverMsgLine3": "agendar o próximo lote?\"",
+      "tldr": {
+        "summary": "Especifiquei a lógica determinística por trás de um motor de recomendações guiado por IA, que gerou mais de 7 mil cliques em CTAs entre março e junho e levou a configuração básica de frotas Enterprise de 52% para 86%, destravando um platô de 6 meses na Basic Value estável.",
+        "stat1Label": "Cliques em recomendações",
+        "stat1Value": "7 mil+",
+        "stat2Label": "Config. básica (Enterprise)",
+        "stat3Label": "Basic Value estável"
+      },
       "context": {
         "body1": "Este projeto nasceu como um desdobramento dos estudos sobre onboarding. Durante esse discovery, desenvolvi uma métrica adaptada de <a href=\"basic-value.html\">Basic Value</a>, utilizada para medir o percentual de ativação básica de uma empresa, ou seja, o quanto ela já configurou o produto para começar a gerar valor. Hoje, essa métrica é utilizada como um dos principais termômetros de risco de churn precoce.",
         "body2": "Além dos dados quantitativos, a pesquisa qualitativa revelou outro ponto importante: mesmo após ativar a plataforma, muitos clientes não sabiam quais eram os próximos passos. Faltava clareza sobre o potencial da ferramenta, entendimento das funcionalidades disponíveis e uma orientação prática que ajudasse a evoluir o uso.",
@@ -457,6 +480,13 @@
       "duration": "~8 meses (discovery → blueprint → teste A/B → migração oficial)",
       "tools": "Figma, FigJam, Mixpanel, Typeform",
       "coverAlt": "Tela de monitoramento em tempo real do painel, com mapa e lista de veículos da frota.",
+      "tldr": {
+        "summary": "Redesenhei a arquitetura de navegação do produto, saindo de uma lista de funcionalidades organizada pela estrutura interna do time para uma navegação por jornadas do cliente. A abrangência de uso subiu de 2,5 para 3,1 jornadas por frota, e a migração de 100% da base fechou sem nenhum ticket ou feedback negativo.",
+        "stat1Label": "Jornadas usadas (Mid2+)",
+        "stat2Label": "Migração oficial",
+        "stat2Value": "0 tickets negativos",
+        "stat3Label": "Frotas que abriram no teste A/B"
+      },
       "context": {
         "body1": "Fui o Product Designer de uma célula temporária chamada Unified XP, criada para resolver problemas de experiência que atravessavam diferentes times de produto. O time era enxuto. Eu liderava as decisões de produto e design, em parceria com um desenvolvedor staff responsável por implementar as mudanças na navegação.",
         "body2": "O trabalho começou a partir de uma descoberta importante. Clientes que utilizavam poucas jornadas do produto tinham uma chance maior de churn após o fim do contrato. Meu desafio era entender o que impedia essa adoção e como a experiência do produto poderia ajudar a mudar esse cenário."
